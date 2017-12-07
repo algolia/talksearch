@@ -1,8 +1,4 @@
 ---
-title: ⚡ Homepage
-layout: single-column.pug
+title: TalkSearch
+layout: home.pug
 ---
-
-# Homepage
-
-Hello
