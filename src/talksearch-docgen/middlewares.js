@@ -66,6 +66,9 @@ module.exports = {
     ...common,
     cleanCSS({
       files: 'stylesheets/**/*.css',
+      cleanCSS: {
+        rebase: false,
+      },
     }),
     layouts('pug'),
   ],
