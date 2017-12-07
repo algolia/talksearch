@@ -7,11 +7,9 @@
 - [What is it](#what-is-it)
 - [Requirements](#requirements)
 - [Initial setup](#initial-setup)
-- [Publish docs to https://community.algolia.com/a-super-project](#publish-docs-to-httpscommunityalgoliacoma-super-project)
 - [Local development](#local-development)
-- [Changes to be done before going live](#changes-to-be-done-before-going-live)
+- [Publish docs to https://community.algolia.com/talksearch](#publish-docs-to-httpscommunityalgoliacomtalksearch)
 - [Project structure](#project-structure)
-- [Contributing](#contributing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
