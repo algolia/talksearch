@@ -9,6 +9,7 @@
 - [Initial setup](#initial-setup)
 - [Local development](#local-development)
 - [Publish docs to https://community.algolia.com/talksearch](#publish-docs-to-httpscommunityalgoliacomtalksearch)
+- [Test build](#test-build)
 - [Assets and links references](#assets-and-links-references)
 - [Project structure](#project-structure)
 
