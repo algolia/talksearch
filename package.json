@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "NODE_ENV=development node src/community-project-boilerplate-docgen/start.js",
-    "docs:build": "NODE_ENV=production node src/community-project-boilerplate-docgen/build.js",
+    "start": "NODE_ENV=development node src/talksearch-docgen/start.js",
+    "docs:build": "NODE_ENV=production node src/talksearch-docgen/build.js",
     "docs:update": "ROOT_PATH=/talksearch/ yarn docs:build && doctoc --maxlevel 2 README.md CONTRIBUTING.md",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -27,15 +27,13 @@
   "renovate": {
     "extends": [
       "config:application",
-      "schedule:weekends"
-    ],
-    "timezone": "Europe/Paris",
-    "semanticCommits": true,
-    "rebaseStalePrs": true,
-    "minor": {
-      "automerge": true,
-      "automergeType": "branch-push"
-    }
+      "schedule:weekends",
+      ":automergeMinor",
+      ":automergeBranchPush",
+      ":semanticCommits",
+      ":rebaseStalePrs",
+      ":timezone(Europe/Paris)"
+    ]
   },
   "workspaces": [
     "src/*"

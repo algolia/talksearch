@@ -1,4 +1,4 @@
-# community-project-boilerplate
+# Talksearch website
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -17,7 +17,7 @@
 
 ## What is it
 
-A simple community boilerplate to replicate Algolia websites like InstantSearch*.
+The repository hosting the Talksearch website
 
 ## Requirements
 
@@ -29,23 +29,22 @@ To run this project, you will need:
 ## Initial setup
 
 ```sh
-git clone git@github.com:algolia/community-project-boilerplate.git a-super-project
-cd a-super-project
-rm -rf .git
-git init
-git remote add origin git@github.com:algolia/a-super-project.git
+git clone git@github.com:algolia/talksearch.git
+cd talksearch
 yarn
-yarn docs:update
-git add docs README.md CONTRIBUTING.md
-git commit -m 'first commit'
-git push
 ```
 
-## Publish docs to https://community.algolia.com/a-super-project
+## Local development
 
-You need to activate GitHub pages for your repository (in settings on GitHub), choose "master branch /docs folder".
+```sh
+yarn start
+```
 
-Every time you want to update your production website, do:
+Go to https://localhost:3000. There should be auto reload for almost everything, but when it fails just restart the server.
+
+## Publish docs to https://community.algolia.com/talksearch
+
+Every time you want to update the production website, do:
 
 ```sh
 yarn docs:update
@@ -54,30 +53,10 @@ git commit -m 'docs(update): something'
 git push
 ```
 
-At some point this will be moved to Netlify.
-
-## Local development
-
-```sh
-yarn
-yarn start
-```
-
-Go to https://localhost:3000. There should be auto reload for almost everything, but when it fails just restart the server.
-
-## Changes to be done before going live
-
-- Rename any folder and replace any occurence of `community-project-boilerplate` to `a-super-project`.
-- Remove `meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')` from [src/community-project-boilerplate-docgen/layouts/common/meta.pug](./src/community-project-boilerplate-docgen/layouts/common/meta.pug).
-
 ## Project structure
 
-- Pages (index, about..) are in [src/community-project-boilerplate-docgen/src](./src/community-project-boilerplate-docgen/src)
-- Layouts are in [src/community-project-boilerplate-docgen/layouts](./src/community-project-boilerplate-docgen/layouts)
-- JS and images are in [src/community-project-boilerplate-docgen/assets](./src/community-project-boilerplate-docgen/assets)
-- Stylesheets are in [src/community-project-boilerplate-docgen/src/stylesheets](./src/community-project-boilerplate-docgen/src/stylesheets)
-
-## Contributing
-
-See [CONTRIBUTING](./CONTRIBUTING.md).
+- Pages (index, about..) are in [src/talksearch/src](./src/talksearch/src)
+- Layouts are in [src/talksearch/layouts](./src/talksearch/layouts)
+- JS and images are in [src/talksearch/assets](./src/talksearch/assets)
+- Stylesheets are in [src/talksearch/src/stylesheets](./src/talksearch/src/stylesheets)
 
