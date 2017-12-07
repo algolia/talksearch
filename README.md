@@ -1,5 +1,15 @@
 # Talksearch website
 
+![TalkSearch](.github/logo-talksearch-line@2x.png)
+
+> This is part of the [TalkSearch](https://community.algolia.com/talksearch)
+> project by [Algolia](https://algolia.com)
+
+[Website](https://community.algolia.com/talksearch) |
+[embed](https://github.com/algolia/talksearch-embed) |
+[scraper](https://github.com/algolia/talksearch-scraper) |
+[**landing page source**](https://github.com/algolia/talksearch)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
