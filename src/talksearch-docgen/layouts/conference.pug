@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+  head
+    include ./common/meta.pug
+  body
+    include ./common/header.pug
+    .spacer80
+    .fullpage-container
+      iframe(src="https://talksearch-embed.algolia.com/?i=dotconferences")
+    script(src=webpack.assets['js/common.js'])
+    script(src=webpack.assets['js/main.js'])
