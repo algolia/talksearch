@@ -2,6 +2,7 @@ const headings = require('metalsmith-headings');
 const layouts = require('metalsmith-layouts');
 const msWebpack = require('ms-webpack');
 const sass = require('metalsmith-sass');
+const cleanCSS = require('metalsmith-clean-css');
 const assets = require('./plugins/assets.js');
 const helpers = require('./plugins/helpers.js');
 const ignore = require('./plugins/ignore.js');
@@ -63,6 +64,9 @@ module.exports = {
       },
     }),
     ...common,
+    cleanCSS({
+      files: 'stylesheets/**/*.css',
+    }),
     layouts('pug'),
   ],
 };

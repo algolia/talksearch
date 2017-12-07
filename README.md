@@ -9,6 +9,7 @@
 - [Initial setup](#initial-setup)
 - [Local development](#local-development)
 - [Publish docs to https://community.algolia.com/talksearch](#publish-docs-to-httpscommunityalgoliacomtalksearch)
+- [Assets and links references](#assets-and-links-references)
 - [Project structure](#project-structure)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -40,6 +41,8 @@ yarn start
 
 Go to https://localhost:3000. There should be auto reload for almost everything, but when it fails just restart the server.
 
+Then go to http://localhost:8080
+
 ## Publish docs to https://community.algolia.com/talksearch
 
 Every time you want to update the production website, do:
@@ -49,6 +52,15 @@ yarn docs:update
 git add docs README.md CONTRIBUTING.md
 git commit -m 'docs(update): something'
 git push
+```
+
+## Test build
+
+This will run the build of the website and serve it. Useful when you are modifying production middlewares and want to ensure
+the resulting website will be working. Like when adding CSS minification.
+
+```sh
+yarn docs:test-build
 ```
 
 ## Assets and links references
