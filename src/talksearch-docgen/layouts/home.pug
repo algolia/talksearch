@@ -30,31 +30,31 @@ html(lang="en")
                   a(href="dotconferences.html") dotConferences
           .col-sm-6
             .m500
-              form.elevation2.p-xlarge.radius6.fill-white
+              form(method="POST",action="https://go.pardot.com/l/139121/2017-12-07/279szp").elevation2.p-xlarge.radius6.fill-white
                 h2.text-thin Get Started, it's free
                 .spacer16
                 .form-group
                   label Email
                     span.text-thin  - we'll send you the next steps
-                  input.form-control(type="text", placeholder="enter a valid email")
+                  input.form-control(name="email",type="text", placeholder="enter a valid email")
                 .form-group
                   label YouTube channel or playlist URL
-                  input.form-control(type="text", placeholder="https://youtube.com/")
+                  input.form-control(name="youtubeUrl",type="text", placeholder="https://youtube.com/")
                 .form-group
                   label Your conference avatar URL
                     span.text-thin  (256x256px min)
-                  input.form-control(type="text", placeholder="https://pbs.twimg.com/…400x400.jpg")
+                  input.form-control(name="avatarUrl",type="text", placeholder="https://pbs.twimg.com/…400x400.jpg")
                 .checkbox
                   label
-                    input(type="checkbox")
+                    input(name="newsletter",type="checkbox")
                     | Receive Algolia newsletter, written by our dev team. 
                 .checkbox
                   label
-                    input(type="checkbox")
+                    input(name="official",type="checkbox")
                     | I'm an official organizer of this conference
                 .spacer40
                 .text-center
-                  button.btn.btn-cta.w200(type="button") Submit
+                  button.btn.btn-cta.w200(type="submit") Submit
                 .spacer16
 
       .spacer120
