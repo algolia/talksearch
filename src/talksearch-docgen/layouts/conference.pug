@@ -6,6 +6,6 @@ html(lang="en")
     include ./common/header.pug
     .spacer80
     .fullpage-container
-      iframe(src="https://talksearch-embed.algolia.com/?i=dotconferences")
+      iframe(src=`https://talksearch-embed.algolia.com/?i=${index}`)
     script(src=webpack.assets['js/common.js'])
     script(src=webpack.assets['js/main.js'])

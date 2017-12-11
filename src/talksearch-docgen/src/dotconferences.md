@@ -1,4 +1,5 @@
 ---
-title: TalkSearch
+title: dotConferences
 layout: conference.pug
+index: dotconferences
 ---
