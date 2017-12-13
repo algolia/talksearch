@@ -4,8 +4,29 @@ html(lang="en")
     include ./common/meta.pug
   body
     include ./common/header.pug
-    .spacer80
+    .fullpage-header
+      .spacer80
+      .spacer32
+      .m600.m-l-r-auto
+        .row.hidden-sm.hidden-xs
+          .col-sm-6.text-right
+            .logo-placeholder
+          .col-sm-6
+            a(href="/",title="TalkSearch home")
+              img(src="assets/images/logo-talksearch-white.svg", width=200)
+            p.color-white A tool to help conference organizers make all their videos searchable & interactive
+        
+      h1.text-center.color-white.text-thin Explore talk from&nbsp;
+        =title
+      .spacer32
     .fullpage-container
       iframe(src=`https://talksearch-embed.algolia.com/?i=${index}`)
     script(src=webpack.assets['js/common.js'])
     script(src=webpack.assets['js/main.js'])
+    script.
+      const client = algoliasearch('FOQUAZ6YNS', '72ee3a317835b8618eda01c6fcc88f77')
+      const index = client.initIndex('METADATA');
+      index.getObject(indexName).then(data => {
+        //do something with it
+      })
+    
