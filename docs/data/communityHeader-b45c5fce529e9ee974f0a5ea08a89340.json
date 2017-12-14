@@ -67,5 +67,6 @@
       "image": "<img src='assets/images/github-icon.svg'/>",
       "url": "https://github.com/algolia/talksearch"
     }
-  ]
+  ],
+  "docsearch": null
 }
