@@ -11,7 +11,7 @@ html(lang="en")
       .spacer40
       .container.text-center.m600
         h2.text-thin.color-white Make it searchable!
-        p.color-portage Provide Algolia with a YouTube playlist of videos, and Algolia will index & transcribe them, providing you with an embeddable search & video-viewing experience for your website.
+        p.color-portage If your conference or meetup has a YouTube playlist of videos, it can also have a TalkSearch! Algolia will the transcripts from each video and give you back a search page just for your event.
         .spacer80
 
     .fill-athens-gray
@@ -20,10 +20,11 @@ html(lang="en")
         .row
           .col-sm-6
             .m400
-              h2.text-thin Reach out today
-              p.color-portage Conference organizers are invited to fill out the TalkSearch request form - we’ll send them a snippet of code to add to their website, which will generate an instant search experience.
+              h2.text-thin How it works
+              p.color-portage Conference and meetup organizers are invited to fill out the TalkSearch request form to the right. Algolia will index your videos and email you back a link to your event's unique search experience that you can link to from anywhere.
+              p.color-portage Question? Reach us at community@algolia.com.
               .spacer40
-              h2.text-thin See it live on
+              h2.text-thin See it live
               //- img(src="assets/images/devrelcon.png", width=180)
               ul
                 li
@@ -31,7 +32,7 @@ html(lang="en")
                 li
                   a(href="jsconf-bp.html") JSConf Budapest
                 li
-                  a(href="searchparty.html") SearchParty
+                  a(href="searchparty.html") Algolia Search Party
                 li
                   a(href="techlunch.html") TechLunch
                 li
@@ -40,27 +41,23 @@ html(lang="en")
           .col-sm-6
             .m500
               form(method="POST",action="https://go.pardot.com/l/139121/2017-12-07/279szp").elevation2.p-xlarge.radius6.fill-white
-                h2.text-thin Get Started, it's free
+                h2.text-thin Get Started. 100% free.
                 .spacer16
                 .form-group
                   label Email
                     span.text-thin  - we'll send you the next steps
-                  input.form-control(name="email",type="text", placeholder="enter a valid email")
+                  input.form-control(name="email",type="text", placeholder="organizer@conference.org")
                 .form-group
                   label YouTube channel or playlist URL
                   input.form-control(name="youtubeUrl",type="text", placeholder="https://youtube.com/")
                 .form-group
-                  label Your conference avatar URL
+                  label Conference or meetup logo URL
                     span.text-thin  (256x256px min)
                   input.form-control(name="avatarUrl",type="text", placeholder="https://pbs.twimg.com/…400x400.jpg")
                 .checkbox
                   label
-                    input(name="newsletter",type="checkbox")
-                    | Receive Algolia newsletter, written by our dev team. 
-                .checkbox
-                  label
                     input(name="official",type="checkbox")
-                    | I'm an official organizer of this conference
+                    | I help organize this conference or meetup
                 .spacer40
                 .text-center
                   button.btn.btn-cta.w200(type="submit") Submit
