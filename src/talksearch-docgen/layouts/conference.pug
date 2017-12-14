@@ -14,8 +14,8 @@ html(lang="en")
           .col-sm-6
             a(href="/",title="TalkSearch home")
               img(src="assets/images/logo-talksearch-white.svg", width=200)
-            p.color-white A tool to help conference organizers make all their videos searchable & interactive
-        
+            p.color-white Search conference video titles and transcripts, powered by Algolia
+
       h1.text-center.color-white.text-thin Explore talks from&nbsp;
         =title
       .spacer32
@@ -29,4 +29,3 @@ html(lang="en")
       index.getObject(indexName).then(data => {
         //do something with it
       })
-    
