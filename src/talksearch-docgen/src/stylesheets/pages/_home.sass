@@ -1,12 +1,20 @@
 .algc-menu__search
   display: none !important
 
-.demo-container
+.demo-fix
   max-width: 800px
   height: 634px
   position: relative
   z-index: 100
   width: 96%
+
+.demo-container
+  max-width: 800px
+  height: 634px
+  z-index: 100
+  width: 96%
+  position: absolute
+  top: 390px
   @media (max-width: 600px)
     height: 1060px
 
@@ -21,7 +29,7 @@
     height: 950px
   iframe
     overflow-y: hidden
-    position: relative
+    // position: relative
     width: 100%
     height: 100%
     border: none
@@ -42,7 +50,7 @@
   height: 1200px
   background: #F7F7FF
 
-  iframe
+  object
     overflow-y: hidden
     position: relative
     width: 100%
