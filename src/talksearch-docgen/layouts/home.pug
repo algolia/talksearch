@@ -28,7 +28,7 @@ html(lang="en")
                 a(href="mailto:community@algolia.com") community@algolia.com.
               .spacer16
               h2.text-thin See it live
-              //- img(src="assets/images/devrelcon.png", width=180)
+              .spacer16
               ul.list-unstyled
                 li.fill-white.m-b.radius6.p-small
                   a.h4(href="dotconferences.html")
@@ -68,28 +68,70 @@ html(lang="en")
               .spacer40
           .col-sm-6
             .m500.m-l-r-auto
-              form(method="POST",action="https://go.pardot.com/l/139121/2017-12-07/279szp").elevation2.p-xlarge.radius6.fill-white
-                h2.text-thin Get Started. 100% free.
-                .spacer16
-                .form-group
-                  label Email
-                    span.text-thin  - we'll send you the next steps
-                  input.form-control(name="email",type="text", placeholder="organizer@conference.org")
-                .form-group
-                  label YouTube channel or playlist URL
-                  input.form-control(name="youtubeUrl",type="text", placeholder="https://youtube.com/")
-                .form-group
-                  label Conference or meetup logo URL
-                    span.text-thin  (256x256px min)
-                  input.form-control(name="avatarUrl",type="text", placeholder="https://pbs.twimg.com/…400x400.jpg")
-                .checkbox
-                  label
-                    input(name="official",type="checkbox")
-                    | I help organize this event
-                .spacer40
-                .text-center
-                  button.btn.btn-cta.w200(type="submit") Submit
-                .spacer16
+              .elevation2.p-xlarge.radius6.fill-white
+                form#talksearch-interest(method="post",action="https://go.pardot.com/l/139121/2017-12-07/279szp")
+                  h2.text-thin Get Started. 100% free.
+                  .spacer16
+                  .form-group
+                    label Email
+                      span.text-thin  - we'll send you the next steps
+                    input.form-control(name="email",type="email", required, placeholder="organizer@conference.org")
+                  .form-group
+                    label YouTube channel or playlist URL
+                    input.form-control(name="youtubeUrl",type="url", required, placeholder="https://youtube.com/")
+                  .form-group
+                    label Conference or meetup logo URL
+                      span.text-thin  (256x256px min)
+                    input.form-control(name="avatarUrl",type="url", placeholder="https://pbs.twimg.com/…400x400.jpg")
+                  .spacer16
+                  .checkbox
+                    label
+                      input(name="official",type="checkbox")
+                      | I help organize this event
+                  .spacer40
+                  .text-center
+                    button.form-submit-btn.btn.btn-cta.w200(type="submit")
+                      | Join the program
+                  .spacer16
+                .error
+                .form-msg-success.p-large.hide
+                  i.m-r.icon-check.color-shamrock
+                  span.h3 Thank you!
+                  .spacer16
+                  P.text-muted We'll review your request shortly, after making sure your website is eligible to TalkSearch.
+                  p.text-muted This is a manual process and can take some time.
+                  p.text-muted We'll then email you the code you need to integrate on your website
+                  
+                script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+                script.
+                  
+                  var formElementID = 'talksearch-interest';
+                  var $formElement = $('#'+formElementID);
+                  var partdotFormHandlerURL = $formElement.attr('action');
+                  var $formButton = $formElement.find('.form-submit-btn');
+                  var $iframe = document.createElement('iframe');
+                  var $formMsgSuccess = $('.form-msg-success');
+                  $iframe.height=0;
+                  $iframe.width=0;
+                  $iframe.style.position="absolute";
+                  $iframe.style.left="-100000px";
+                  $iframe.style.top="-100000px";
+                                    
+                  $formElement.on('submit',function(e){
+                    e.preventDefault();
+                    $formButton.text('submitting...');
+                    $iframe.src = partdotFormHandlerURL + '?' + $formElement.serialize();
+                    
+                    $iframe.onload = function(e,r) {
+                      $formButton.text('Submitted!');
+                      $formMsgSuccess.removeClass('hide');
+                      $formElement.addClass('hide');
+                    };
+                  });
+                  
+                  $(document).ready(function(){
+                    $('body').append($iframe);
+                  });
 
       .spacer120
       .spacer120
