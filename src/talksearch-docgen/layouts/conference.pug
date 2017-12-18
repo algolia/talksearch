@@ -2,9 +2,9 @@ doctype html
 html(lang="en")
   head
     include ./common/meta.pug
-    include ./GTM-head.pug
+    include ./common/GTM-head.pug
   body
-    include ./GTM-body.pug
+    include ./common/GTM-body.pug
     include ./common/header.pug
     .fullpage-header
       .spacer80
@@ -26,9 +26,3 @@ html(lang="en")
       iframe(src=`https://talksearch-embed.algolia.com/?i=${index}` allowfullscreen)
     script(src=webpack.assets['js/common.js'])
     script(src=webpack.assets['js/main.js'])
-    script.
-      const client = algoliasearch('FOQUAZ6YNS', '72ee3a317835b8618eda01c6fcc88f77')
-      const index = client.initIndex('METADATA');
-      index.getObject(indexName).then(data => {
-        //do something with it
-      })
