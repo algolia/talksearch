@@ -5,7 +5,7 @@
   "dependencies": {
     "@babel/core": "7.0.0-beta.35",
     "@babel/preset-env": "7.0.0-beta.36",
-    "@babel/preset-react": "7.0.0-beta.35",
+    "@babel/preset-react": "7.0.0-beta.36",
     "algolia-aerial": "1.2.6",
     "algolia-frontend-components": "0.0.34",
     "async": "2.6.0",
