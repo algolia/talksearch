@@ -60,11 +60,11 @@
     "@babel/helper-explode-assignable-expression" "7.0.0-beta.36"
     "@babel/types" "7.0.0-beta.36"
 
-"@babel/helper-builder-react-jsx@7.0.0-beta.35":
-  version "7.0.0-beta.35"
-  resolved "https://registry.yarnpkg.com/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.0.0-beta.35.tgz#2a4f84183458100f5c9ac712f474b088d04593bd"
+"@babel/helper-builder-react-jsx@7.0.0-beta.36":
+  version "7.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.0.0-beta.36.tgz#8c284832c67bebafe589b85ee24d8e61b2ea3fea"
   dependencies:
-    "@babel/types" "7.0.0-beta.35"
+    "@babel/types" "7.0.0-beta.36"
     esutils "^2.0.0"
 
 "@babel/helper-call-delegate@7.0.0-beta.36":
@@ -232,9 +232,9 @@
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-async-generators/-/plugin-syntax-async-generators-7.0.0-beta.36.tgz#6c5d1d9606e6875fc0548345c2d67c1ea5e029b4"
 
-"@babel/plugin-syntax-jsx@7.0.0-beta.35":
-  version "7.0.0-beta.35"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.0.0-beta.35.tgz#fd802ab4d7aabdfdb8467d9541987afc051e6f99"
+"@babel/plugin-syntax-jsx@7.0.0-beta.36":
+  version "7.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.0.0-beta.36.tgz#ed12dafe2cb9d3533050d3935d703ef168143371"
 
 "@babel/plugin-syntax-object-rest-spread@7.0.0-beta.36":
   version "7.0.0-beta.36"
@@ -357,28 +357,28 @@
     "@babel/helper-call-delegate" "7.0.0-beta.36"
     "@babel/helper-get-function-arity" "7.0.0-beta.36"
 
-"@babel/plugin-transform-react-display-name@7.0.0-beta.35":
-  version "7.0.0-beta.35"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-display-name/-/plugin-transform-react-display-name-7.0.0-beta.35.tgz#c3771de177c4fa3ec8eb8b51475b51821b1e9164"
+"@babel/plugin-transform-react-display-name@7.0.0-beta.36":
+  version "7.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-display-name/-/plugin-transform-react-display-name-7.0.0-beta.36.tgz#9a404aae61efcb08176434f813f0996024af6ee2"
 
-"@babel/plugin-transform-react-jsx-self@7.0.0-beta.35":
-  version "7.0.0-beta.35"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.0.0-beta.35.tgz#007d1ba47e1716b0777d4edbb10120ea0857a6a0"
+"@babel/plugin-transform-react-jsx-self@7.0.0-beta.36":
+  version "7.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.0.0-beta.36.tgz#e6cded1d86a37bea8331e73239d22ad991a359fa"
   dependencies:
-    "@babel/plugin-syntax-jsx" "7.0.0-beta.35"
+    "@babel/plugin-syntax-jsx" "7.0.0-beta.36"
 
-"@babel/plugin-transform-react-jsx-source@7.0.0-beta.35":
-  version "7.0.0-beta.35"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.0.0-beta.35.tgz#6b12fb5db5e57c8ae0448869c7aa9f89243f00ce"
+"@babel/plugin-transform-react-jsx-source@7.0.0-beta.36":
+  version "7.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.0.0-beta.36.tgz#ee186e8de63a052f2e4da79a543523949f9e89ae"
   dependencies:
-    "@babel/plugin-syntax-jsx" "7.0.0-beta.35"
+    "@babel/plugin-syntax-jsx" "7.0.0-beta.36"
 
-"@babel/plugin-transform-react-jsx@7.0.0-beta.35":
-  version "7.0.0-beta.35"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.0.0-beta.35.tgz#f5f35e2c50f6254cc3fb3d9c9e76d27ead302b43"
+"@babel/plugin-transform-react-jsx@7.0.0-beta.36":
+  version "7.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.0.0-beta.36.tgz#8e672b7340beaa235d38801a6181f1dc2aed6e8a"
   dependencies:
-    "@babel/helper-builder-react-jsx" "7.0.0-beta.35"
-    "@babel/plugin-syntax-jsx" "7.0.0-beta.35"
+    "@babel/helper-builder-react-jsx" "7.0.0-beta.36"
+    "@babel/plugin-syntax-jsx" "7.0.0-beta.36"
 
 "@babel/plugin-transform-regenerator@7.0.0-beta.36":
   version "7.0.0-beta.36"
@@ -460,15 +460,15 @@
     invariant "^2.2.2"
     semver "^5.3.0"
 
-"@babel/preset-react@7.0.0-beta.35":
-  version "7.0.0-beta.35"
-  resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.0.0-beta.35.tgz#e7c6f6dfc4817c9ec23be81e4886fe80cef11ea9"
+"@babel/preset-react@7.0.0-beta.36":
+  version "7.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.0.0-beta.36.tgz#c108d34477ab7110839128a1c4bc27a520ac0ac9"
   dependencies:
-    "@babel/plugin-syntax-jsx" "7.0.0-beta.35"
-    "@babel/plugin-transform-react-display-name" "7.0.0-beta.35"
-    "@babel/plugin-transform-react-jsx" "7.0.0-beta.35"
-    "@babel/plugin-transform-react-jsx-self" "7.0.0-beta.35"
-    "@babel/plugin-transform-react-jsx-source" "7.0.0-beta.35"
+    "@babel/plugin-syntax-jsx" "7.0.0-beta.36"
+    "@babel/plugin-transform-react-display-name" "7.0.0-beta.36"
+    "@babel/plugin-transform-react-jsx" "7.0.0-beta.36"
+    "@babel/plugin-transform-react-jsx-self" "7.0.0-beta.36"
+    "@babel/plugin-transform-react-jsx-source" "7.0.0-beta.36"
 
 "@babel/template@7.0.0-beta.31":
   version "7.0.0-beta.31"
