@@ -36,7 +36,7 @@
     "nodemon": "1.14.9",
     "postcss": "6.0.15",
     "postcss-loader": "2.0.10",
-    "postcss-scss": "1.0.2",
+    "postcss-scss": "1.0.3",
     "pug": "2.0.0-rc.4",
     "react": "16.2.0",
     "react-dom": "16.2.0",
