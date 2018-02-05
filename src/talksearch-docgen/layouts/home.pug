@@ -69,24 +69,24 @@ html(lang="en")
           .col-sm-6
             .m500.m-l-r-auto
               .elevation2.p-xlarge.radius6.fill-white
-                form#talksearch-interest(method="post",action="https://go.pardot.com/l/139121/2017-12-07/279szp")
+                form#talksearch-interest(method="post",action="https://go.pardot.com/l/139121/2017-12-07/279szp",name="talksearchInterest")
                   h2.text-thin Get Started. 100% free.
                   .spacer16
                   .form-group
                     label Email
                       span.text-thin  - we'll send you the next steps
-                    input.form-control(name="email",type="email", required, placeholder="organizer@conference.org")
+                    input.form-control(name="email",type="email",id="emailInput", required, placeholder="organizer@conference.org")
                   .form-group
                     label YouTube channel or playlist URL
-                    input.form-control(name="youtubeUrl",type="url", required, placeholder="https://youtube.com/")
+                    input.form-control(name="youtubeUrl",type="url",id="youtubeUrlInput", required, placeholder="https://youtube.com/")
                   .form-group
                     label Conference or meetup logo URL
                       span.text-thin  (256x256px min)
-                    input.form-control(name="avatarUrl",type="url", placeholder="https://pbs.twimg.com/…400x400.jpg")
+                    input.form-control(name="avatarUrl",type="url",id="avatarUrlInput", placeholder="https://pbs.twimg.com/…400x400.jpg")
                   .spacer16
                   .checkbox
                     label
-                      input(name="official",type="checkbox")
+                      input(name="official", id="officialInput", type="checkbox")
                       | I help organize this event
                   .spacer40
                   .text-center
@@ -98,11 +98,11 @@ html(lang="en")
                   i.m-r.icon-check.color-shamrock
                   span.h3 Thank you!
                   .spacer16
-                  P.text-muted We'll review your request shortly, after making sure your website is eligible to TalkSearch.
+                  P.text-muted We'll review your request and make sure your channel is eligible for TalkSearch.
                   p.text-muted This is a manual process and can take some time.
                   p.text-muted We'll then email you the code you need to integrate on your website
                   
-                script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+                script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
                 script.
                   
                   var formElementID = 'talksearch-interest';
