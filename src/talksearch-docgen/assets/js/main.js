@@ -22,26 +22,25 @@ console.log('Welcome to main page');
 const tsInterest = document.getElementById('talksearch-interest');
 
 function convertToBoolean(value) {
-  return (value == 'on') ? true : false;
+  return value === 'on';
 }
 
 function submitToZapier(e) {
-
   const tsDetails = {
     referrer: window.location.hostname,
     emailAddress: document.getElementById('emailInput').value,
     youtubeUrl: document.getElementById('youtubeUrlInput').value,
     avatarUrl: document.getElementById('avatarUrlInput').value,
-    official: convertToBoolean(document.getElementById('officialInput').value)
-  }
+    official: convertToBoolean(document.getElementById('officialInput').value),
+  };
 
-  fetch('https://hooks.zapier.com/hooks/catch/2876439/zoe69y/',{ 
+  fetch('https://hooks.zapier.com/hooks/catch/2876439/zoe69y/', {
     method: 'post',
-    body: JSON.stringify(tsDetails)
-  }).then(function(response){
-    console.log('Form Submitted'+response.body);
-  });
-  
+    body: JSON.stringify(tsDetails),
+  }).then(response =>
+    // eslint-disable-next-line no-console
+    console.log(`Form Submitted${response.body}`)
+  );
 }
 
-tsInterest.addEventListener('submit', submitToZapier)
+if (tsInterest) tsInterest.addEventListener('submit', submitToZapier);
