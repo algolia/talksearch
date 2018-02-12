@@ -23,6 +23,6 @@ html(lang="en")
         =title
       .spacer32
     .fullpage-container
-      iframe(src=`https://talksearch-embed.algolia.com/${index}` allowfullscreen)
+      iframe(src=`https://talksearch-embed.algolia.com/?i=${index}` allowfullscreen)
     script(src=webpack.assets['js/common.js'])
     script(src=webpack.assets['js/main.js'])
