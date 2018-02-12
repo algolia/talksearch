@@ -1,6 +1,6 @@
 ---
 title: DinosaurJS
 layout: conference.pug
-index: DinosaurJS
+index: dinosaurjsconf
 conf_img: assets/images/logo-dinosaurjs.png
 ---
