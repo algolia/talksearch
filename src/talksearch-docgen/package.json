@@ -10,7 +10,7 @@
     "algolia-frontend-components": "0.0.34",
     "async": "2.6.0",
     "autoprefixer": "7.2.6",
-    "babel-loader": "8.0.0-beta.0",
+    "babel-loader": "8.0.0-beta.2",
     "babel-polyfill": "6.26.0",
     "browser-sync": "2.23.6",
     "chokidar": "2.0.2",
