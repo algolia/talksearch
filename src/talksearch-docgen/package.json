@@ -48,7 +48,7 @@
     "style-loader": "0.20.1",
     "uglifyjs-webpack-plugin": "1.2.1",
     "webpack": "3.11.0",
-    "webpack-dev-middleware": "2.0.5",
+    "webpack-dev-middleware": "2.0.6",
     "webpack-hot-middleware": "2.21.0"
   }
 }
