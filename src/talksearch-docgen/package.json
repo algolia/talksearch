@@ -17,7 +17,7 @@
     "clipboard": "1.7.1",
     "codemirror": "5.34.0",
     "compression": "1.7.1",
-    "css-loader": "0.28.9",
+    "css-loader": "0.28.10",
     "escape-html": "1.0.3",
     "glob": "7.1.2",
     "happypack": "4.0.1",
