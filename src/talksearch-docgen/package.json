@@ -16,7 +16,7 @@
     "chokidar": "2.0.2",
     "clipboard": "1.7.1",
     "codemirror": "5.35.0",
-    "compression": "1.7.1",
+    "compression": "1.7.2",
     "css-loader": "0.28.9",
     "escape-html": "1.0.3",
     "glob": "7.1.2",
