@@ -13,7 +13,7 @@
     "babel-loader": "8.0.0-beta.2",
     "babel-polyfill": "6.26.0",
     "browser-sync": "2.23.6",
-    "chokidar": "2.0.2",
+    "chokidar": "2.0.3",
     "clipboard": "2.0.0",
     "codemirror": "5.35.0",
     "compression": "1.7.2",
