@@ -22,7 +22,7 @@
     "glob": "7.1.2",
     "happypack": "4.0.1",
     "hasha": "3.0.0",
-    "jstransformer-markdown-it": "2.0.0",
+    "jstransformer-markdown-it": "2.1.0",
     "lodash": "4.17.5",
     "markdown-it": "8.4.1",
     "markdown-it-anchor": "4.0.0",
