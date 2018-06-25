@@ -46,7 +46,7 @@
     "sass-loader": "6.0.7",
     "stat-mode": "0.2.2",
     "style-loader": "0.21.0",
-    "uglifyjs-webpack-plugin": "1.2.5",
+    "uglifyjs-webpack-plugin": "1.2.7",
     "webpack": "3.12.0",
     "webpack-dev-middleware": "2.0.6",
     "webpack-hot-middleware": "2.22.2"
