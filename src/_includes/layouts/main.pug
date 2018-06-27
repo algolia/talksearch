@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    - var siteTitle = settings.site.title;
+    - var siteDescription = settings.site.description;
+    - var siteUrl = settings.site.url;
+    - var ogImage = siteUrl + 'img/og_image.png';
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title=siteTitle
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content=siteDescription)
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content='@Algolia')
+    meta(name='twitter:creator', content='@Algolia')
+    meta(property='og:url', content=siteUrl)
+    meta(property='og:title', content=siteTitle)
+    meta(property='og:description', content=siteDescription)
+    meta(property='og:image', content=ogImage)
+    link(type="text/css", rel="stylesheet", href="/style.css")
+    body
+      .header This is the header
+      .content
+        |!{content}
+

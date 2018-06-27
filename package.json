@@ -1,45 +1,21 @@
 {
   "name": "talksearch",
-  "private": true,
-  "version": "1.0.0",
-  "scripts": {
-    "start": "NODE_ENV=development node src/talksearch-docgen/start.js",
-    "docs:build": "NODE_ENV=production node src/talksearch-docgen/build.js",
-    "docs:update": "ROOT_PATH=/talksearch/ yarn docs:build && doctoc --maxlevel 2 README.md",
-    "docs:test-build": "ROOT_PATH=/ yarn docs:build && http-server docs/",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "test": "yarn lint && yarn docs:build && git checkout docs && git clean -f docs"
+  "version": "0.0.0",
+  "description": "The easiest way to add search to your conference videos.",
+  "repository": "https://github.com/algolia/talksearch.git",
+  "bugs": {
+    "url": "https://github.com/algolia/talksearch/issues"
   },
-  "devDependencies": {
-    "babel-eslint": "8.2.2",
-    "doctoc": "1.3.1",
-    "eslint": "4.19.1",
-    "eslint-config-algolia": "13.1.0",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-import": "2.10.0",
-    "eslint-plugin-prettier": "2.6.0",
-    "http-server": "0.11.1",
-    "prettier": "1.11.1"
-  },
-  "engines": {
-    "node": "^9.2.0",
-    "yarn": "^1.3.2"
-  },
-  "renovate": {
-    "extends": [
-      "config:application",
-      "schedule:weekends",
-      ":automergeMinor",
-      ":automergeBranchPush",
-      ":semanticCommits",
-      ":rebaseStalePrs",
-      ":timezone(Europe/Paris)"
-    ]
-  },
-  "workspaces": [
-    "src/*"
-  ],
+  "homepage": "https://community.algolia.com/talksearch",
   "license": "MIT",
-  "author": "Algolia, Inc. (https://www.algolia.com)"
+  "scripts": {
+    "build": "./scripts/build",
+    "serve": "./scripts/serve"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.4.0",
+    "fragments.css": "^1.0.12-alpha",
+    "parcel-bundler": "^1.9.3"
+  }
 }
