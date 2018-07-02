@@ -1,3 +1,5 @@
+@import "../node_modules/fragments.css/dist/fragments.css";
+
 body {
   background: red;
 }

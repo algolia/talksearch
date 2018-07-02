@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+postcss \
+  ./src/style.css \
+  --config ./postcss.config.js \
+  --output ./dist/style.css

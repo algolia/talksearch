@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
-eleventy --input=./src --output=./src/_dist
+eleventy
+yarn run build:css
