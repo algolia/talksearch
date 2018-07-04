@@ -10,10 +10,8 @@
   "license": "MIT",
   "scripts": {
     "build": "babel-node ./scripts/build/index.js",
-    "build:css": "./scripts/build-css",
     "lint": "./scripts/lint",
-    "serve": "babel-node ./scripts/build/serve.js",
-    "serve:css": "./scripts/serve-css"
+    "serve": "babel-node ./scripts/build/serve.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -41,6 +39,8 @@
     "markdown-it": "^8.4.1",
     "mkdirp": "^0.5.1",
     "normalize.css": "^8.0.0",
+    "p-all": "^1.0.0",
+    "p-map": "^1.2.0",
     "pify": "^3.0.0",
     "postcss": "^6.0.23",
     "postcss-cli": "^5.0.1",

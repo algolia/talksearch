@@ -4,6 +4,7 @@ import path from 'path';
 import frontMatter from 'front-matter';
 import markdownIt from 'markdown-it';
 import pug from 'pug';
+import pMap from 'p-map';
 const markdown = markdownIt();
 
 export default {
@@ -49,13 +50,13 @@ export default {
   async run() {
     // Convert markdown to HTML
     const markdownFiles = await helper.getFiles('*.md');
-    _.each(markdownFiles, async filepath => {
+    await pMap(markdownFiles, async filepath => {
       await this.compile(filepath);
     });
   },
 
-  async watch() {
-    await this.run();
+  // Listen to changes in markdown and layouts and rebuild them
+  watch() {
     // Update HTML on each markdown change
     helper.watch('./src/*.md', filepath => {
       this.compile(filepath);
