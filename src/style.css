@@ -2,11 +2,8 @@
 @import "../node_modules/fragments.css/dist/fragments.css";
 
 
-.hind {
-  /* Google font image */
-}
-.poppins {
-}
+.hind { font-family: 'Hind', sans-serif; }
+.poppins { font-family: 'Poppins', sans-serif; }
 
 .pos-fixed {
 }
