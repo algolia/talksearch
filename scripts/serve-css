@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-postcss \
-  ./src/style.css \
-  --config ./postcss.config.js \
-  --output ./tmp/serve/style.css \
-  --watch

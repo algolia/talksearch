@@ -1,8 +1,14 @@
 extends main.pug
-
-block kuzak
-  .bg-red
-    .bg-blue This is a sidebar
-    .bg-green
-      div This is the content
-      div!=content
+block content
+  .bgtb-white-moon.pt-3x.pb-3.poppins
+    .max-w-lg.m-auto.text-center
+      .text-8.uppercase.tracking-poppins.text-solstice.bold=title
+  .bg-white
+    .max-w-xl.m-auto.flrnw.debug
+      .fln.w-20
+        div Introduction
+        div How it works
+        div One record
+        div Front-end
+      .documentation-content.fla.text-2.text-cosmos.px-3.py-2
+          !=content

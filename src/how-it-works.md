@@ -1,8 +1,7 @@
 ---
 layout: two-columns
+title: How does this work?
 ---
-
-# How does this work?
 
 The TalkSearch project is made of two main parts: a crawler and a front-end
 library called TalkSearch.js

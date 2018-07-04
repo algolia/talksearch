@@ -1,19 +1,22 @@
-@import "normalize.css";
-@import "../node_modules/fragments.css/dist/fragments.css";
+/* stylelint-disable at-rule-no-unknown */
+@tailwind preflight; 
+@tailwind utilities;
+
+.debug, .debug * { outline: 1px solid gold; }
+
+.hind { font-family: "Hind", sans-serif; }
+.poppins { font-family: "Poppins", sans-serif; }
 
 
-.hind { font-family: 'Hind', sans-serif; }
-.poppins { font-family: 'Poppins', sans-serif; }
-
-.pos-fixed {
+.bgtb-white-moon {
+  background-image: linear-gradient(#fff, #f5f5fa)
 }
 
-.gradient-white-moon {
-
+.documentation-content p {
+  @apply .mb-1;
+  @apply .leading-2;
 }
-
-
-body {
-  /* background: red; */
+.documentation-content h2 {
+  @apply .text-solstice .text-6;
+  @apply .mb-1
 }
-

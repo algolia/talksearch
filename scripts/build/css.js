@@ -1,7 +1,7 @@
 import helper from './helper';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
-import atImport from 'postcss-import';
+import tailwind from 'tailwindcss';
 import path from 'path';
 import pMap from 'p-map';
 
@@ -12,7 +12,10 @@ export default {
     if (this.COMPILER) {
       return this.COMPILER;
     }
-    return (this.COMPILER = postcss([atImport, autoprefixer]));
+    return (this.COMPILER = postcss([
+      tailwind('./tailwind.config.js'),
+      autoprefixer,
+    ]));
   },
   // Compile the css source file to dist
   async compile(source) {
@@ -37,8 +40,14 @@ export default {
 
   // Listen to changes in css files and rebuild them
   watch() {
+    // Rebuild files when changed
     helper.watch('./src/*.css', filepath => {
       this.compile(filepath);
+    });
+    // Rebuild all files when tailwind config is changed
+    helper.watch('./tailwind.config.js', () => {
+      this.COMPILER = null;
+      this.run();
     });
   },
 };
