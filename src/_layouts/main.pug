@@ -1,13 +1,13 @@
 doctype html
 html(lang='en')
   head
-    - var siteTitle = settings.site.title;
-    - var siteDescription = settings.site.description;
-    - var siteUrl = settings.site.url;
-    - var ogImage = siteUrl + 'img/og_image.png';
+    - const siteTitle = site.title;
+    - const siteDescription = site.description;
+    - const siteUrl = site.url;
+    - const ogImage = siteUrl + 'img/og_image.png';
     meta(charset='utf-8')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title=siteTitle
+    meta('http-equiv'='x-ua-compatible',content='ie-edge')
+    title= siteTitle
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(name='description', content=siteDescription)
     meta(name='twitter:card', content='summary_large_image')
@@ -19,7 +19,7 @@ html(lang='en')
     meta(property='og:image', content=ogImage)
     link(type="text/css", rel="stylesheet", href="/style.css")
     body
-      .header This is the header
-      .content
-        |!{content}
+      .header.pos-fixed.bgc-nova.w-100p.p-16 Header
+      .content.pt-24.max-w-xl.m-auto
+        block kuzak
 

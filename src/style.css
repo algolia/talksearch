@@ -1,5 +1,21 @@
+@import "normalize.css";
 @import "../node_modules/fragments.css/dist/fragments.css";
 
+
+.hind {
+  /* Google font image */
+}
+.poppins {
+}
+
+.pos-fixed {
+}
+
+.gradient-white-moon {
+
+}
+
+
 body {
-  background: red;
+  /* background: red; */
 }

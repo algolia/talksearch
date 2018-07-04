@@ -1,5 +1,5 @@
 ---
-layout: layouts/homepage.pug
+layout: homepage
 ---
 # This is my title
 

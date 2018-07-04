@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-
-eleventy
-yarn run build:css

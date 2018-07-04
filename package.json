@@ -9,38 +9,43 @@
   "homepage": "https://community.algolia.com/talksearch",
   "license": "MIT",
   "scripts": {
-    "build": "./scripts/build",
+    "build": "babel-node ./scripts/build/index.js",
     "build:css": "./scripts/build-css",
     "lint": "./scripts/lint",
     "serve": "./scripts/serve",
     "serve:css": "./scripts/serve-css"
   },
   "dependencies": {
-    "live-server": "^1.2.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.4.0",
     "@babel/cli": "^7.0.0-beta.51",
     "@babel/core": "^7.0.0-beta.51",
     "@babel/node": "^7.0.0-beta.51",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
-    "autoprefixer": "^8.6.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
-    "babel-jest": "^23.0.1",
     "babel-plugin-dynamic-import-node-sync": "^2.0.1",
+    "autoprefixer": "^8.6.4",
+    "chalk": "^2.4.1",
     "eslint": "4.19.1",
     "eslint-config-algolia": "^13.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-prettier": "^2.6.0",
-    "fragments.css": "^1.0.12-alpha",
-    "jest": "^23.0.0",
+    "fragments.css": "^1.0.48-alpha",
+    "front-matter": "^2.3.0",
+    "glob": "^7.1.2",
+    "live-server": "^1.2.0",
+    "lodash": "^4.17.10",
+    "markdown-it": "^8.4.1",
+    "mkdirp": "^0.5.1",
+    "normalize.css": "^8.0.0",
+    "pify": "^3.0.0",
     "postcss": "^6.0.23",
     "postcss-cli": "^5.0.1",
     "postcss-import": "^11.1.0",
-    "prettier": "1.9.2"
+    "prettier": "1.9.2",
+    "pug": "^2.0.3"
   }
 }

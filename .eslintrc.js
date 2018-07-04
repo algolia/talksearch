@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['algolia', 'algolia/jest'],
+  extends: ['algolia'],
   globals: {
   },
   rules: {

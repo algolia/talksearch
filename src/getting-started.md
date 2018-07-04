@@ -1,5 +1,5 @@
 ---
-layout: layouts/two-columns.pug
+layout: two-columns
 ---
 # Subpage
 
