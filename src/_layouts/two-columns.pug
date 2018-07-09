@@ -3,12 +3,19 @@ block content
   .bgtb-white-moon.pt-3x.pb-3.poppins
     .max-w-lg.m-auto.text-center
       .text-8.uppercase.tracking-poppins.text-solstice.bold=title
-  .bg-white
-    .max-w-xl.m-auto.flrnw.debug
-      .fln.w-20
-        div Introduction
-        div How it works
-        div One record
-        div Front-end
-      .documentation-content.fla.text-2.text-cosmos.px-3.py-2
-          !=content
+  .h-100.flrnw.max-w-xl.m-auto
+    .fln.w-25
+      // Adding subsections from markdown
+      .sticky.pin-t.top-2x.pl-3.text-3
+        ul.list-reset
+          each link in sidebar
+            li
+              a.block.pt-1.text-solstice(href=link.url)=link.title
+              if link.headings
+                ul.list-reset.pl-2.pt-0x
+                  each sublink in link.headings
+                    li
+                      a.block.p-0x.text-telluric.hover_text-nebula(href=`${link.url}#${sublink.anchor}`)=sublink.title
+
+    .documentation-content.fla.text-2.px-3.py-2
+        !=content

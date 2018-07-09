@@ -3,5 +3,23 @@
     "title": "TalkSearch",
     "description": "The easiest way to add search to your conference videos.",
     "url": "https://community.algolia.com/talksearch"
-  }
+  },
+  "sidebar": [
+    {
+      "title": "What is TalkSearch?",
+      "url": "/what-is-talksearch.html"
+    }, 
+    {
+      "title": "Anatomy of a record",
+      "url": "/anatomy-of-a-record.html"
+    }, 
+    {
+      "title": "How it works",
+      "url": "/how-it-works.html"
+    }, 
+    {
+      "title": "Building the front-end",
+      "url": "front-end.html"
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 ---
 layout: two-columns
+title: Anatomy of a record
 ---
 
-# Anatomy of a record
 
 All records created by TalkSearch will follow a similar pattern of nested keys,
 documented here. Use this page as a reference when building your own template,

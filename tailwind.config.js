@@ -34,13 +34,13 @@ const colors = {
   mars: '#f695a0',
   mercury: '#5bbfdd',
   moon: '#f5f5fa',
-  nebula: '#5468ff',
+  nebula: '#5468ff', // links
   neptune: '#7178cc',
   nova: '#848ab8',
   proton: '#c5c9e0',
   saturn: '#f8be9a',
-  solstice: '#3a416f',
-  telluric: '#5d6494',
+  solstice: '#3a416f', // Headers
+  telluric: '#5d6494', // Text
   venus: '#ea71bc',
   // Algolia variations
   'neptune-0': '#3944a0',
@@ -163,6 +163,18 @@ const fontScale = {
   '8': '3.5rem', // 56px
 };
 
+const fontWeights = {
+  hairline: 100,
+  thin: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+};
+
 const zIndex = {
   auto: 'auto',
   '-2': -20,
@@ -184,12 +196,13 @@ const opacity = {
   '100': '1',
 };
 
-const shortNames = {
-  bold: {
-    fontWeight: 'bold',
-  },
-};
-const utilities = {
+// Use font-weight without prefixes (.bold, .thin, etc)
+const customFontWeight = _.reduce(fontWeights, (result, value, key) =>
+  _.assign(result, {
+    [`${key}`]: { fontWeight: value },
+  })
+);
+const customUtilities = {
   'outline-none': {
     outline: 'none',
   },
@@ -201,7 +214,7 @@ const utilities = {
     filter: 'blur(10px)',
   },
 };
-const flexbox = {
+const customFlexbox = {
   flrnw: {
     display: 'flex',
     flexDirection: 'row',
@@ -263,6 +276,15 @@ const flexbox = {
     justifyContent: 'space-between',
   },
 };
+// Use the spacing scale for top/right/bottom/let positioning
+const customPositions = _.reduce(spacingScale, (result, value, key) =>
+  _.assign(result, {
+    [`top-${key}`]: { top: value },
+    [`right-${key}`]: { top: value },
+    [`bottom-${key}`]: { top: value },
+    [`left-${key}`]: { top: value },
+  })
+);
 
 function addCustomClasses(customClasses) {
   return ({ addUtilities }) => {
@@ -272,13 +294,15 @@ function addCustomClasses(customClasses) {
 }
 
 const plugins = [
-  addCustomClasses(shortNames),
-  addCustomClasses(flexbox),
-  addCustomClasses(utilities),
+  addCustomClasses(customFontWeight),
+  addCustomClasses(customFlexbox),
+  addCustomClasses(customUtilities),
+  addCustomClasses(customPositions),
 ];
 
 module.exports = {
   textSizes: fontScale,
+  fontWeights,
   width: widthScale,
   minWidth: widthScale,
   maxWidth: widthScale,
@@ -356,17 +380,6 @@ module.exports = {
       'Courier New',
       'monospace',
     ],
-  },
-  fontWeights: {
-    hairline: 100,
-    thin: 200,
-    light: 300,
-    normal: 400,
-    medium: 500,
-    semibold: 600,
-    bold: 700,
-    extrabold: 800,
-    black: 900,
   },
   // Line-height
   leading: {
