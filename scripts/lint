@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 
-eslint ./src/*.js
+# eslint .
+
+stylelint ./src/**/*.css

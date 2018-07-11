@@ -1,0 +1,36 @@
+/* Debug utilities */
+.debug,
+.debug * {
+  outline: 1px solid gold;
+}
+
+/* See classes on hover */
+.debug-class *[class] {
+  outline: 1px solid green;
+  cursor: pointer;
+  &:before {
+    position: absolute;
+    margin-top: -2rem;
+    content: attr(class);
+    @apply .code .text-white .p-0x;
+    @apply .hidden;
+    @apply .bg-green;
+  }
+  &:hover {
+    &:before {
+      @apply .inline;
+    }
+  }
+  *[class] {
+    outline: 1px solid orange;
+    &:before {
+      @apply .bg-orange;
+    }
+    *[class] {
+      outline: 1px solid red;
+      &:before {
+        @apply .bg-red;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
   head
-    - const siteTitle = site.title;
+    - const siteTitle = current.title || site.title
     - const siteDescription = site.description;
     - const siteUrl = site.url;
     - const ogImage = siteUrl + 'img/og_image.png';

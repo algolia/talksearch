@@ -2,20 +2,25 @@ extends main.pug
 block content
   .bgtb-white-moon.pt-3x.pb-3.poppins
     .max-w-lg.m-auto.text-center
-      .text-8.uppercase.tracking-poppins.text-solstice.bold=title
-  .h-100.flrnw.max-w-xl.m-auto
+      .text-8.uppercase.tracking-poppins.text-solstice.bold=current.title
+  .flrnw.max-w-xl.m-auto
     .fln.w-25
       // Adding subsections from markdown
-      .sticky.pin-t.top-2x.pl-3.text-3
-        ul.list-reset
-          each link in sidebar
-            li
-              a.block.pt-1.text-solstice(href=link.url)=link.title
-              if link.headings
-                ul.list-reset.pl-2.pt-0x
-                  each sublink in link.headings
-                    li
-                      a.block.p-0x.text-telluric.hover_text-nebula(href=`${link.url}#${sublink.anchor}`)=sublink.title
+      .sticky.pin-t.top-2x.h-100vh-2x.pl-2.pb-2.overflow-y-auto
+        each category in sidebar
+          .category.text-nebula.poppins.uppercase.mt-1=category.title
+          ul.list-reset.pt-05.pb-1.text-2
+            each page in category.pages
+              - var isCurrent = current.url === page.url
+              - var additionalClasses = isCurrent ? 'text-nebula' : 'text-solstice'
+              li
+                a.block.py-0x(href=page.url, class=additionalClasses)=page.title
+                - var hasSubLinks = (page.headings && page.headings.length)
+                if hasSubLinks
+                  ul.list-reset.pl-1.text-2
+                    each heading in page.headings
+                      li
+                        a.block.py-0x.text-telluric(href=`${page.url}#${heading.anchor}`)=heading.title
 
-    .documentation-content.fla.text-2.px-3.py-2
-        !=content
+    .documentation-content.fla.text-2.px-3.py-2.overflow-hidden
+        !=current.content

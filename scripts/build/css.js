@@ -2,6 +2,8 @@ import helper from './helper';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 import tailwind from 'tailwindcss';
+import postcssNested from 'postcss-nested';
+import postcssImport from 'postcss-import';
 import path from 'path';
 import pMap from 'p-map';
 
@@ -13,7 +15,9 @@ export default {
       return this.COMPILER;
     }
     return (this.COMPILER = postcss([
+      postcssImport(),
       tailwind('./tailwind.config.js'),
+      postcssNested,
       autoprefixer,
     ]));
   },
@@ -41,8 +45,8 @@ export default {
   // Listen to changes in css files and rebuild them
   watch() {
     // Rebuild files when changed
-    helper.watch('./src/*.css', filepath => {
-      this.compile(filepath);
+    helper.watch('./src/**/*.css', () => {
+      this.run();
     });
     // Rebuild all files when tailwind config is changed
     helper.watch('./tailwind.config.js', () => {

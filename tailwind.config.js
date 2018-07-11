@@ -19,10 +19,12 @@ const colors = {
   pink: '#f66d9b',
   'black-pure': '#000',
   // Alpha
+  'black-10': 'rgba(0, 0, 0, .10)',
   'black-25': 'rgba(0, 0, 0, .25)',
   'black-50': 'rgba(0, 0, 0, .5)',
   'black-65': 'rgba(0, 0, 0, .65)',
   'black-75': 'rgba(0, 0, 0, .75)',
+  'black-90': 'rgba(0, 0, 0, .90)',
   'white-10': 'rgba(255, 255, 255, .10)',
   'white-25': 'rgba(255, 255, 255, .25)',
   'white-50': 'rgba(255, 255, 255, .5)',
@@ -175,6 +177,15 @@ const fontWeights = {
   black: 900,
 };
 
+const borderRadius = {
+  '0': '0',
+  '1': '.125rem',
+  '2': '.25rem',
+  '3': '.5rem',
+  auto: '6px',
+  '100': '9999px',
+};
+
 const zIndex = {
   auto: 'auto',
   '-2': -20,
@@ -285,6 +296,19 @@ const customPositions = _.reduce(spacingScale, (result, value, key) =>
     [`left-${key}`]: { top: value },
   })
 );
+// Add calculated height and width with cropped parts, like .h-100vh-3
+const customCroppedVhVw = _.reduce(dimensionScale, (result, value, key) => {
+  // Only do it for simple scale and half/scales
+  const isSimpleScale = key.length === 1;
+  const isHalfScale = key.length === 2 && key[1] === 'x';
+  if (!(isSimpleScale || isHalfScale)) {
+    return result;
+  }
+  return _.assign(result, {
+    [`h-100vh-${key}`]: { height: `calc(100vh - ${value})` },
+    [`w-100vw-${key}`]: { width: `calc(100vw - ${value})` },
+  });
+});
 
 function addCustomClasses(customClasses) {
   return ({ addUtilities }) => {
@@ -298,6 +322,7 @@ const plugins = [
   addCustomClasses(customFlexbox),
   addCustomClasses(customUtilities),
   addCustomClasses(customPositions),
+  addCustomClasses(customCroppedVhVw),
 ];
 
 module.exports = {
@@ -319,6 +344,7 @@ module.exports = {
   colors,
   zIndex,
   opacity,
+  borderRadius,
 
   plugins,
   screens: {
@@ -338,13 +364,6 @@ module.exports = {
     '3': '8px',
   },
   borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
-  borderRadius: {
-    none: '0',
-    sm: '.125rem',
-    default: '.25rem',
-    lg: '.5rem',
-    full: '9999px',
-  },
   fonts: {
     sans: [
       'system-ui',

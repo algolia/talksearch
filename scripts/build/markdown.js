@@ -4,10 +4,17 @@ import path from 'path';
 import frontMatter from 'front-matter';
 import markdownIt from 'markdown-it';
 import markdownItAnchor from 'markdown-it-anchor';
+import markdownItHighlight from 'markdown-it-highlightjs';
 import cheerio from 'cheerio';
 import pug from 'pug';
 import pMap from 'p-map';
-const markdown = markdownIt().use(markdownItAnchor);
+const markdown = markdownIt()
+  .use(markdownItAnchor, {
+    permalink: true,
+    permalinkClass: 'anchor',
+    permalinkSymbol: '',
+  })
+  .use(markdownItHighlight);
 
 export default {
   // Return an object of all the generic site data
@@ -27,29 +34,42 @@ export default {
       };
     });
   },
-  // Return the HTML version of the specified markdown file
-  async markdownToHtml(filepath) {
+  // Build a markdown file to an html file
+  async compile(filepath) {
     const siteData = await this.siteData();
+    const sourceBasename = path.basename(filepath, '.md');
+    const destination = `./dist/${sourceBasename}.html`;
+    const currentUrl = `/${sourceBasename}.html`;
 
     // Read file, and extract front-matter from raw text
     const rawContent = await helper.readFile(filepath);
     const parsed = frontMatter(rawContent);
     const fileData = parsed.attributes;
-    const markdownBody = parsed.body;
+
+    // Update {{config}} placeholders
+    let markdownBody = parsed.body;
+    _.each(siteData.config, (value, key) => {
+      markdownBody = _.replace(
+        markdownBody,
+        new RegExp(`{{${key}}}`, 'g'),
+        value
+      );
+    });
 
     // Convert markdown to html
     const htmlBody = markdown.render(markdownBody);
 
-    // Add the hierarchy of headings to the sidebar links
+    // Add the hierarchy of headings to the matching link in the sidebar
     const headings = this.getHeadings(htmlBody);
-    const currentPageBasename = path.basename(filepath, '.md');
-    const currentPageIndex = _.findKey(siteData.sidebar, link => {
-      const linkBasename = path.basename(link.url, '.html');
-      return linkBasename === currentPageBasename;
+    const sidebar = _.clone(siteData.sidebar);
+    _.each(sidebar, category => {
+      _.each(category.pages, page => {
+        const linkBasename = path.basename(page.url, '.html');
+        if (linkBasename === sourceBasename) {
+          page.headings = headings; // eslint-disable-line no-param-reassign
+        }
+      });
     });
-    if (currentPageIndex) {
-      _.set(siteData, `sidebar.${currentPageIndex}.headings`, headings);
-    }
 
     // Init layout
     const layoutName = fileData.layout;
@@ -60,17 +80,16 @@ export default {
     // Compile layout
     const compileData = {
       ...siteData,
-      ...fileData,
-      content: htmlBody,
+      sidebar,
+      current: {
+        url: currentUrl,
+        content: htmlBody,
+        ...fileData,
+      },
     };
-    return pugCompile(compileData);
-  },
+    const htmlContent = pugCompile(compileData);
 
-  // Build a markdown file to an html file
-  async compile(filepath) {
-    const htmlContent = await this.markdownToHtml(filepath);
-    const basename = path.basename(filepath, '.md');
-    const destination = `./dist/${basename}.html`;
+    // Save to disk
     await helper.writeFile(destination, htmlContent);
   },
 
@@ -90,6 +109,10 @@ export default {
     });
     // Rebuild all markdown on layout change
     helper.watch('./src/_layouts/*.pug', () => {
+      this.run();
+    });
+    // Rebuild everything on data change
+    helper.watch('./src/_data.json', () => {
       this.run();
     });
   },

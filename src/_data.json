@@ -4,22 +4,50 @@
     "description": "The easiest way to add search to your conference videos.",
     "url": "https://community.algolia.com/talksearch"
   },
+  "config": {
+    "InstantSearchVersion": "2.8.1",
+    "TalkSearchVersion": "0.0.8",
+    "TalkSearchAppId": "8J7GPSC0XN"
+  },
   "sidebar": [
     {
-      "title": "What is TalkSearch?",
-      "url": "/what-is-talksearch.html"
-    }, 
+      "title": "Essentials",
+      "pages": [
+        {
+          "title": "What is TalkSearch?",
+          "url": "/what-is-talksearch.html"
+        }
+      ]
+    },
     {
-      "title": "Anatomy of a record",
-      "url": "/anatomy-of-a-record.html"
-    }, 
+      "title": "Back-end",
+      "pages": [
+        {
+          "title": "The crawler",
+          "url": "/crawler.html"
+        },
+        {
+          "title": "Config files",
+          "url": "/config-files.html"
+        }
+      ]
+    },
     {
-      "title": "How it works",
-      "url": "/how-it-works.html"
-    }, 
-    {
-      "title": "Building the front-end",
-      "url": "front-end.html"
+      "title": "Front-end",
+      "pages": [
+        {
+          "title": "TalkSearch.js",
+          "url": "/talksearch-js.html"
+        },
+        {
+          "title": "InstantSearch.js",
+          "url": "/instantsearch-js.html"
+        },
+        {
+          "title": "Inside a record",
+          "url": "/anatomy-of-a-record.html"
+        }
+      ]
     }
   ]
 }

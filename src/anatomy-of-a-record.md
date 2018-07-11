@@ -1,37 +1,21 @@
 ---
 layout: two-columns
-title: Anatomy of a record
+title: Inside a record
 ---
 
-
-All records created by TalkSearch will follow a similar pattern of nested keys,
-documented here. Use this page as a reference when building your own template,
-to see what data is available.
+All TalkSearch records follow the same schema of nested keys. Each top key
+contains informations regarding a specific aspect of the result, such as the
+`channel`, `playlist`, `video` or even `speakers` or `caption`. Use this page as
+a reference to see what each key contains.
 
 _Note: If you're using TalkSearch.js, you shouldn't have to worry about any of
 those. It's all already handled in the template for you._
-
-## Foreword
-
-Each TalkSearch record represents _one line of caption of a specific video_.
-This means that for each video in your playlist, you'll have hundreds of
-records. All those records will have a lot of metadata in common (like the
-video title or playlist description), and only differ in the content of the
-caption.
-
-This can seem counter-intuitive but is done to offer a better relevance. Doing
-so allows us to have granularity of results up to the exact moment in time where
-the speaker is saying the keyword you typed. This then allow in the front-end to
-display the exact matching sentence and jump directly to the video at the exact
-time.
-
-## Example record
 
 Here is an example of a full record:
 
 ```json
 {
-  "objectID": "11d227100f19d6d54a226221905845845f194d208a87876e60da9832f38f2ca8"
+  "objectID": "11d227100f19d6d54a226221905845845f194d208a87876e60da9832f38f2ca8",
   "channel": {
     "id": "UCSRhwaM00ay0fasnsw6EXKA",
     "title": "dotconferences"
@@ -41,12 +25,12 @@ Here is an example of a full record:
     "name": "dotJS"
   },
   "playlist": {
-    "description": "Our first dotConference on November 30th , 2012.\r\n\r\nOfficial conference website:\r\nhttp://2012.dotjs.eu/",
+    "description": "Our first dotConference on November 30th , 2012.",
     "id": "PLMW8Xq7bXrG77SV1VAAiAciRyq3VSC2Gq",
     "title": "dotJS 2012"
   },
   "video": {
-    "description": "Filmed in Paris on Nov 30th, 2012. More talks on http://dotconferences.eu\n\nSlides: http://fat.github.com/slides-os-guilt/",
+    "description": "Filmed in Paris on Nov 30th, 2012.",
     "duration": {
       "minutes": 26,
       "seconds": 33
@@ -114,12 +98,7 @@ Here is an example of a full record:
 }
 ```
 
-### objectId
-
-The `objectID` contains a unique identifier for each record, used internally for
-indexing.
-
-### channel
+## channel
 
 The `channel` key contains data relative to the YouTube channel. You can think
 of a channel more or less as a YouTube user.
@@ -136,25 +115,7 @@ the YouTube API.
 }
 ```
 
-### conference
-
-The `conference` key contains data relative to the conference event itself. This
-data is guessed from the playlist name, but can be overwritten in each
-individual config if needed.
-
-It contains a `year` and `name` key. Both those keys can be used for
-faceting.
-
-```json
-{
-  "conference": {
-    "year": 2012,
-    "name": "dotJS"
-  }
-}
-```
-
-### playlist
+## playlist
 
 The `playlist` key contains data relative to the YouTube playlist defined in the
 config.
@@ -164,14 +125,14 @@ It contains a `description`, `id` and `title` key, all extracted from the YouTub
 ```json
 {
   "playlist": {
-    "description": "Our first dotConference on November 30th , 2012.\r\n\r\nOfficial conference website:\r\nhttp://2012.dotjs.eu/",
+    "description": "Our first dotConference on November 30th , 2012.",
     "id": "PLMW8Xq7bXrG77SV1VAAiAciRyq3VSC2Gq",
     "title": "dotJS 2012"
   }
 }
 ```
 
-### video
+## video
 
 The `video` key is the one that contains the most information, so let's break it
 down:
@@ -201,8 +162,9 @@ Finally, the `thumbnails` key contains the video thumbnail at different
 resolutions, along with the dimensions.
 
 ```
+{
   "video": {
-    "description": "Filmed in Paris on Nov 30th, 2012. More talks on http://dotconferences.eu\n\nSlides: http://fat.github.com/slides-os-guilt/",
+    "description": "Filmed in Paris on Nov 30th, 2012.",
     "duration": {
       "minutes": 26,
       "seconds": 33
@@ -258,27 +220,7 @@ resolutions, along with the dimensions.
 }
 ```
 
-### speakers
-
-The `speakers` key contains the list of identified speakers in the video. Note
-that YouTube does not provide this information so we fallback to some NLP on the
-video titles, but this might not be 100% accurate.
-
-If your video titles contain the speaker name, it can be extracted from there
-instead, which yields much better results (but requires all your titles to
-follow the same pattern).
-
-```json
-{
-  "speakers": [
-    {
-      "name": "Fat"
-    }
-  ]
-}
-```
-
-### caption
+## caption
 
 The `caption` contains information about the current matching line of caption.
 If no caption is actually matching (for example if you're doing an empty query),
@@ -303,9 +245,53 @@ the caption itself.
 }
 ```
 
+## conference
+
+The `conference` key contains data relative to the conference event itself. This
+data is guessed from the playlist name, but can be overwritten in each
+individual config if needed.
+
+It contains a `year` and `name` key. Both those keys can be used for
+faceting.
+
+```json
+{
+  "conference": {
+    "year": 2012,
+    "name": "dotJS"
+  }
+}
+```
+
+## speakers
+
+The `speakers` key contains the list of identified speakers in the video. Note
+that YouTube does not provide this information so we fallback to some NLP on the
+video titles, but this might not be 100% accurate.
+
+If your video titles contain the speaker name, it can be extracted from there
+instead, which yields much better results (but requires all your titles to
+follow the same pattern).
+
+```json
+{
+  "speakers": [
+    {
+      "name": "Fat"
+    }
+  ]
+}
+```
+
+## objectId
+
+The `objectID` contains a unique identifier for each record, used internally for
+indexing. You shouldn't have to worry about this one.
+
+
 ## Dynamic highlighting
 
-All search results are returned with an key called [\_highlightResult][1]. This
+All search results are returned with a key called [\_highlightResult][1]. This
 key is dynamic and based on the input search keyword.
 
 It will contain highlighted versions of the matching elements in the response.

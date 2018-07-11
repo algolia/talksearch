@@ -1,31 +1,58 @@
-/* stylelint-disable at-rule-no-unknown */
-@tailwind preflight; 
-@tailwind utilities;
-
-.debug, .debug * { outline: 1px solid gold; }
-
-/* Fonts */
-.hind { font-family: "Hind", sans-serif; }
-.poppins { font-family: "Poppins", sans-serif; }
+@import "./_styles/tailwind.css";
+@import "./_styles/debug.css";
+@import "./_styles/fonts.css";
+@import "./_styles/highlight.css";
 
 /* Gradients */
-.bgtb-white-moon { background-image: linear-gradient(#fff, #f5f5fa) }
+.bgtb-white-moon {
+  background-image: linear-gradient(#fff, #f5f5fa);
+}
 
 /* Global styles */
-a, a:active { 
+a,
+a:active {
   @apply .cursor-pointer;
   @apply .text-nebula .no-underline;
 }
-a:hover, a:focus {
+a:hover,
+a:focus {
   @apply .underline;
 }
 
-/* Content converted form markdown */
-.documentation-content p {
-  @apply .mb-1;
-  @apply .leading-2;
+code {
+  @apply .code .text--1 .text-mars-0;
+  @apply .p-0x;
+  @apply .bg-moon;
+  @apply .rounded-1;
 }
-.documentation-content h2 {
-  @apply .text-solstice .text-4 .normal;
-  @apply .mb-1
+
+/* Content converted form markdown */
+.documentation-content {
+  /* Paragraphs */
+  p {
+    @apply .leading-2 my-1;
+  }
+  ul {
+    @apply .leading-2 my-1;
+  }
+  /* Titles */
+  h2 {
+    @apply .text-solstice .text-5 .normal;
+    @apply .mb-1;
+    /* Trick to have heading scroll into view and not being hidden by header */
+    &:before {
+      content: "";
+      display: block;
+      @apply .h-2x;
+    }
+    .anchor {
+      @apply .hidden;
+      &:after {
+        content: "#";
+      }
+    }
+    &:hover .anchor {
+      @apply .inline-block;
+    }
+  }
 }

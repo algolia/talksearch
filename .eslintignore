@@ -1,0 +1,5 @@
+node_modules/*
+
+# Allow linting of hidden js files (ignored by default)
+!.*js
+
