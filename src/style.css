@@ -8,6 +8,7 @@
   background-image: linear-gradient(#fff, #f5f5fa);
 }
 
+
 /* Global styles */
 a,
 a:active {
@@ -17,6 +18,27 @@ a:active {
 a:hover,
 a:focus {
   @apply .underline;
+}
+
+/* Custom styles */
+.custom-search-input {
+  /* Inputs are always too high of 2px, so we put it down, but we also add some
+   * specific padding around it, to center it
+   **/
+  padding-top: calc(.5rem + 2px);
+  @apply .pb-05;
+}
+.custom-community-projects {
+  width: 400px;
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: .25s;
+  will-change: opacity;
+}
+.custom-community-link:hover .custom-community-projects {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 code {

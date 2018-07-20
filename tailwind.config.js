@@ -155,6 +155,7 @@ const marginScale = {
 const fontScale = {
   '-2': '0.75rem',
   '-1': '0.875rem',
+  '0': '0px',
   '1': '1rem', // 16px
   '2': '1.125rem', // 18px
   '3': '1.25rem', // 20px
@@ -268,10 +269,10 @@ const customFlexbox = {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  flrar: {
+  flral: {
     justifyContent: 'flex-start',
   },
-  flral: {
+  flrar: {
     justifyContent: 'flex-end',
   },
   flcat: {
@@ -432,7 +433,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover'],
+    backgroundColors: ['responsive', 'hover', 'focus'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],

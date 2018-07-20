@@ -107,13 +107,12 @@ export default {
     helper.watch('./src/*.md', filepath => {
       this.compile(filepath);
     });
-    // Rebuild all markdown on layout change
-    helper.watch('./src/_layouts/*.pug', () => {
-      this.run();
-    });
-    // Rebuild everything on data change
-    helper.watch('./src/_data.json', () => {
-      this.run();
-    });
+    // Rebuild everything when a layout, include or data changes
+    helper.watch(
+      ['./src/_layouts/*.pug', './src/_includes/*.pug', './src/_data.json'],
+      () => {
+        this.run();
+      }
+    );
   },
 };
