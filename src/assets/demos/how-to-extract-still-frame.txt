@@ -1,0 +1,3 @@
+Just run:
+
+convert 'animated.gif[0]' still.png

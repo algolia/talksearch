@@ -1,80 +1,86 @@
 /* eslint-disable import/no-commonjs */
 const _ = require('lodash');
+const algoliaColors = {
+  moon: '#f5f5fa',
+  proton: '#c5c9e0',
+  nova: '#848ab8',
+  telluric: '#5d6494', // Text
+  solstice: '#3a416f', // Headers
+  cosmos: '#21243d',
+  nebula: '#5468ff', // links
+
+  'neptune-2': '#3A46A1',
+  'neptune-1': '#5560B5',
+  neptune: '#707BCC',
+  'neptune--1': '#8D97E3',
+  'neptune--2': '#A6B0F9',
+
+  'mercury-2': '#008FBA',
+  'mercury-1': '#2DA7CB',
+  mercury: '#5BBFDD',
+  'mercury--1': '#88d6ee',
+  'mercury--2': '#b5eeff',
+
+  'jupiter-2': '#3ab2bd',
+  'jupiter-1': '#61c5c8',
+  jupiter: '#89d9d3',
+  'jupiter--1': '#b0ecde',
+  'jupiter--2': '#d7ffe9',
+
+  'saturn-2': '#ec8b63',
+  'saturn-1': '#f3a57e',
+  saturn: '#f8be9a',
+  'saturn--1': '#fcd7b7',
+  'saturn--2': '#fdf1d4',
+
+  'mars-2': '#ed5a6a',
+  'mars-1': '#f27885',
+  mars: '#f695a0',
+  'mars--1': '#fbb3ba',
+  'mars--2': '#ffd0d5',
+
+  'venus-2': '#ae3e88',
+  'venus-1': '#d44fa4',
+  venus: '#ea71bc',
+  'venus--1': '#f89ad3',
+  'venus--2': '#ffcae9',
+};
 const colors = {
+  ...algoliaColors,
   transparent: 'transparent',
   inherit: 'inherit',
-
-  // Raw colors
-  white: '#ffffff',
-  black: '#22292F',
-  gray: '#777777',
-  red: '#e3342f',
-  orange: '#f6993f',
-  yellow: '#ffed4a',
-  green: '#38c172',
-  teal: '#4dc0b5',
-  blue: '#3490dc',
-  indigo: '#6574cd',
-  purple: '#9561e2',
-  pink: '#f66d9b',
+  'white-pure': '#FFF',
   'black-pure': '#000',
+  white: algoliaColors.moon,
+  black: algoliaColors.cosmos,
+  grey: algoliaColors.proton,
+  'grey-1': algoliaColors.nova,
+  'grey-2': algoliaColors.telluric,
+  'grey-3': algoliaColors.solstice,
+
+  red: algoliaColors.mars,
+  orange: algoliaColors.saturn,
+  yellow: algoliaColors['saturn--2'],
+  green: algoliaColors.jupiter,
+  teal: algoliaColors.mercury,
+  blue: algoliaColors.nebula,
+  indigo: algoliaColors.neptune,
+  purple: algoliaColors['venus-2'],
+  pink: algoliaColors.venus,
+
   // Alpha
   'black-10': 'rgba(0, 0, 0, .10)',
   'black-25': 'rgba(0, 0, 0, .25)',
-  'black-50': 'rgba(0, 0, 0, .5)',
+  'black-50': 'rgba(0, 0, 0, .50)',
   'black-65': 'rgba(0, 0, 0, .65)',
   'black-75': 'rgba(0, 0, 0, .75)',
   'black-90': 'rgba(0, 0, 0, .90)',
   'white-10': 'rgba(255, 255, 255, .10)',
   'white-25': 'rgba(255, 255, 255, .25)',
-  'white-50': 'rgba(255, 255, 255, .5)',
+  'white-50': 'rgba(255, 255, 255, .50)',
   'white-65': 'rgba(255, 255, 255, .65)',
   'white-75': 'rgba(255, 255, 255, .75)',
-  // Algolia
-  cosmos: '#21243d',
-  jupiter: '#89d9d3',
-  mars: '#f695a0',
-  mercury: '#5bbfdd',
-  moon: '#f5f5fa',
-  nebula: '#5468ff', // links
-  neptune: '#7178cc',
-  nova: '#848ab8',
-  proton: '#c5c9e0',
-  saturn: '#f8be9a',
-  solstice: '#3a416f', // Headers
-  telluric: '#5d6494', // Text
-  venus: '#ea71bc',
-  // Algolia variations
-  'neptune-0': '#3944a0',
-  'neptune-1': '#565db6',
-  'neptune-2': '#7178cc',
-  'neptune-3': '#8c93e2',
-  'neptune-4': '#a6b0f9',
-  'mercury-0': '#008fba',
-  'mercury-1': '#2da7cb',
-  'mercury-2': '#5bbfdd',
-  'mercury-3': '#88d6ee',
-  'mercury-4': '#b5eeff',
-  'jupiter-0': '#3ab2bd',
-  'jupiter-1': '#61c5c8',
-  'jupiter-2': '#89d9d3',
-  'jupiter-3': '#b0ecde',
-  'jupiter-4': '#d7ffe9',
-  'saturn-0': '#ec8b63',
-  'saturn-1': '#f3a57e',
-  'saturn-2': '#f8be9a',
-  'saturn-3': '#fcd7b7',
-  'saturn-4': '#fdf1d4',
-  'mars-0': '#ed5a6a',
-  'mars-1': '#f27885',
-  'mars-2': '#f695a0',
-  'mars-3': '#fbb3ba',
-  'mars-4': '#ffd0d5',
-  'venus-0': '#ae3e88',
-  'venus-1': '#d44fa4',
-  'venus-2': '#ea71bc',
-  'venus-3': '#f89ad3',
-  'venus-4': '#ffcae9',
+  'white-90': 'rgba(255, 255, 255, .90)',
 };
 
 const dimensionScale = {
@@ -417,10 +423,12 @@ module.exports = {
     poppins: '1.5px',
   },
   shadows: {
-    default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-    md: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    lg: '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-    inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+    '1':
+      '0 5px 15px 0 rgba(37, 44, 97, 0.15), 0 2px 4px 0 rgba(93, 100, 148, 0.2)',
+    '2': '0 7px 13px -3px rgba(45,35,66,0.3),0 2px 4px 0 rgba(45,35,66,0.4)',
+    '3': '0 11px 16px -3px rgba(45,35,66,0.3),0 4px 5px 0 rgba(45,35,66,0.4)',
+    inset:
+      'inset 0 2px 0 1px rgba(132,138,184,0.11),inset 0 2px 9px 0 rgba(93,100,148,0.5),inset 0 -1px 0 1px #fff',
     none: 'none',
   },
   svgFill: {
@@ -462,7 +470,7 @@ module.exports = {
     pointerEvents: ['responsive'],
     position: ['responsive'],
     resize: ['responsive'],
-    shadows: ['responsive'],
+    shadows: ['responsive', 'hover'],
     svgFill: [],
     svgStroke: [],
     textAlign: ['responsive'],

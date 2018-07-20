@@ -12,7 +12,7 @@ pre code.hljs {
     color: #e6db74;
   }
   .hljs-keyword {
-    @apply .text-saturn-0;
+    @apply .text-saturn-2;
   }
   .hljs-comment {
     @apply text-telluric;

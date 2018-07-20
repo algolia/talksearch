@@ -18,7 +18,7 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['tailwind'],
+        ignoreAtRules: ['tailwind', 'screen'],
       },
     ],
     // Stylelint

@@ -1,7 +1,31 @@
 /* Debug utilities */
 .debug,
 .debug * {
-  outline: 1px solid gold;
+  outline: 1px solid purple;
+}
+@screen sm {
+  .debug,
+  .debug * {
+    outline: 1px solid red;
+  }
+}
+@screen md {
+  .debug,
+  .debug * {
+    outline: 1px solid orange;
+  }
+}
+@screen lg {
+  .debug,
+  .debug * {
+    outline: 1px solid gold;
+  }
+}
+@screen xl {
+  .debug,
+  .debug * {
+    outline: 1px solid green;
+  }
 }
 
 /* See classes on hover */

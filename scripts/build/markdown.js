@@ -109,7 +109,12 @@ export default {
     });
     // Rebuild everything when a layout, include or data changes
     helper.watch(
-      ['./src/_layouts/*.pug', './src/_includes/*.pug', './src/_data.json'],
+      [
+        './src/_layouts/*.pug',
+        './src/_includes/*.pug',
+        './src/_mixins/*.pug',
+        './src/_data.json',
+      ],
       () => {
         this.run();
       }

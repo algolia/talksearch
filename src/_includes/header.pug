@@ -1,25 +1,25 @@
-.header.fixed.pin-t.w-100.h-3.z-5.bg-white
+.header.fixed.pin-t.w-100.h-3.z-5.bg-white-pure
   .max-w-xl.m-auto.h-100.flrnw
     // Algolia logo
     .fln.flcnw.flc.px-0x
       a.cursor-pointer.text-0(href="https://www.algolia.com/", target="_blank")
-        img.h-2(src="/assets/algolia-logo.svg")
+        img.h-1.sm_h-1x.lg_h-2(src="/assets/algolia-logo.svg")
     // Separator
     .fln.flrnw.flc
-      .w-2.h-2.text-telluric.fill-current
+      .w-1.h-1.sm_w-1x.sm_h-1x.lg_h-2.lg_w-2.text-telluric.fill-current
         include ../assets/arrow-separator.svg
     // Community logo
     .custom-community-link.fln.flcnw.flc.px-0x.relative
       a.cursor-pointer.text-0(href="https://www.algolia.com/", target="_blank")
-        img.h-2(src="/assets/community-logo.svg")
-      .custom-community-projects.absolute.z-5.pin-t.mt-3.w-6.border.border-proton.rounded-auto.bg-white.shadow-lg
+        img.h-1.sm_h-1x.lg_h-2(src="/assets/community-logo.svg")
+      .custom-community-projects.hidden.sm_block.absolute.z-5.pin-t.mt-3.ml-3.border.border-proton.rounded-auto.bg-white-pure.shadow-lg
         .flrw.pt-0x
           a.fln.w-50.flrnw.p-05.flc.hover_no-underline(href="https://community.algolia.com/docsearch/")
-            .fln.bg-mercury.rounded-auto.w-2x.h-2x
+            .fln.bg-teal.rounded-auto.w-2x.h-2x
               img.w-100(src="/assets/docsearch-icon.svg")
             .fla.pl-1.text-solstice.text-2.bold.hover_text-nebula DocSearch
           a.fln.w-50.flrnw.p-05.flc.hover_no-underline(href="https://community.algolia.com/jekyll-algolia/")
-            .fln.bg-neptune.rounded-auto.w-2x.h-2x
+            .fln.bg-purple.rounded-auto.w-2x.h-2x
               img.w-100(src="/assets/jekyll-icon.svg")
             .fla.pl-1.text-solstice.text-2.bold.hover_text-nebula Jekyll
           a.fln.w-50.flrnw.p-05.flc.hover_no-underline(href="https://community.algolia.com/instantsearch.js/")
@@ -27,15 +27,15 @@
               img.w-100(src="/assets/instantsearch-icon.svg")
             .fla.pl-1.text-solstice.text-2.bold.hover_text-nebula InstantSearch
           a.fln.w-50.flrnw.p-05.flc.hover_no-underline(href="https://community.algolia.com/react-instantsearch/")
-            .fln.bg-mercury-1.rounded-auto.w-2x.h-2x
+            .fln.bg-blue.rounded-auto.w-2x.h-2x
               img.w-100(src="/assets/react-icon.svg")
             .fla.pl-1.text-solstice.text-2.bold.hover_text-nebula React InstantSearch
           a.fln.w-50.flrnw.p-05.flc.hover_no-underline
-            .fln.bg-jupiter-0.rounded-auto.w-2x.h-2x(href="https://community.algolia.com/vue-instantsearch/")
+            .fln.bg-green.rounded-auto.w-2x.h-2x(href="https://community.algolia.com/vue-instantsearch/")
               img.w-100(src="/assets/vue-icon.svg")
             .fla.pl-1.text-solstice.text-2.bold.hover_text-nebula Vue InstantSearch
           a.fln.w-50.flrnw.p-05.flc.hover_no-underline(href="https://community.algolia.com/angular-instantsearch/")
-            .fln.bg-mars-0.rounded-auto.w-2x.h-2x.flrnw.flc
+            .fln.bg-red.rounded-auto.w-2x.h-2x.flrnw.flc
               img.w-80(src="/assets/angular-icon.svg")
             .fla.pl-1.text-solstice.text-2.bold.hover_text-nebula Angular InstantSearch
           a.fla.flrnw.p-0x.flc.text-solstice.bold.bg-moon.rounded-auto.py-1(href="https://discourse.algolia.com/")
@@ -43,7 +43,7 @@
 
     // Separator
     .fln.flrnw.flc
-      .w-2.h-2.text-telluric.fill-current
+      .w-1.h-1.sm_w-1x.sm_h-1x.lg_w-2.lg_h-2.text-telluric.fill-current
         include ../assets/arrow-separator.svg
     // TalkSearch link
     .fln.flrnw.flc
@@ -51,15 +51,16 @@
 
     // DocSearch
     .fla.flrnw.flrcv.flrar.ml-2
-      .fln.h-60.w-80.border.border-proton.rounded-auto.relative
-        label.absolute.pin-left.w-1.h-100.ml-05.text-solstice.fill-current.cursor-pointer(for="docsearch")
-          include ../assets/magnifying-glass.svg
-        input.custom-search-input.w-100.h-100.outline-none.text-solstice.pl-2.rounded-auto.bg-moon.focus_bg-transparent#docsearch
+      .hidden.md_block.w-100
+        .fla.h-60.w-80.border.border-proton.rounded-auto.relative
+          label.absolute.pin-left.w-1.h-100.ml-05.text-solstice.fill-current.cursor-pointer(for="docsearch")
+            include ../assets/magnifying-glass.svg
+          input.custom-search-input.w-100.h-100.outline-none.text-solstice.pl-2.rounded-auto.bg-moon.focus_bg-transparent#docsearch
     
     // Links
     .fln.flrnw.flc.px-2
       a.cursor-pointer.text-2.text-solstice.hover_text-nebula.hover_no-underline(href="/what-is-talksearch.html") Introduction
-    .fln.flrnw.flc
+    .fln.flrnw.flc.pr-0x
       a.w-2.h-2.text-solstice.fill-current(href="https://github.com/algolia/talksearch", target="_blank")
         include ../assets/github-logo.svg
 
