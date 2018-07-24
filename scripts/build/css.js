@@ -4,6 +4,8 @@ import autoprefixer from 'autoprefixer';
 import tailwind from 'tailwindcss';
 import postcssNested from 'postcss-nested';
 import postcssImport from 'postcss-import';
+import postcssPurge from '@fullhuman/postcss-purgecss';
+import postcssClean from 'postcss-clean';
 import path from 'path';
 import fs from 'fs';
 import pMap from 'p-map';
@@ -11,11 +13,30 @@ import pMap from 'p-map';
 export default {
   // Return the postcss compiler
   compiler(configFile) {
+    // Only keep classes used in files at the same level
+    let pathLevel = path.dirname(path.relative('./src', configFile));
+    if (pathLevel === '..') {
+      pathLevel = '';
+    }
+
+    const cleanCssOptions = {
+      level: {
+        1: {
+          specialComments: false,
+        },
+      },
+    };
+
     return postcss([
       postcssImport(),
       tailwind(configFile),
       postcssNested,
+      postcssPurge({
+        content: [`./dist/${pathLevel}/*.html`],
+        whitelistPatterns: [ /^ais-/, /^ats-/ ]
+      }),
       autoprefixer,
+      postcssClean(cleanCssOptions),
     ]);
   },
 

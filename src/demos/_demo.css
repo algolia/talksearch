@@ -22,7 +22,7 @@
   @apply .absolute .pin-y .pin-r;
   @apply .w-2;
   @apply .mr-1;
-  @apply .text-white-75 .fill-current;
+  @apply .text-white-75 .fill-current .bg-transparent;
 }
 @screen sm {
   .ais-search-box--reset {

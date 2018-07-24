@@ -221,9 +221,6 @@ const customFontWeight = _.reduce(fontWeights, (result, value, key) =>
   })
 );
 const customUtilities = {
-  'outline-none': {
-    outline: 'none',
-  },
   'text-outline': {
     'text-shadow':
       '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
@@ -295,27 +292,34 @@ const customFlexbox = {
   },
 };
 // Use the spacing scale for top/right/bottom/let positioning
-const customPositions = _.reduce(spacingScale, (result, value, key) =>
-  _.assign(result, {
-    [`top-${key}`]: { top: value },
-    [`right-${key}`]: { top: value },
-    [`bottom-${key}`]: { top: value },
-    [`left-${key}`]: { top: value },
-  })
+const customPositions = _.reduce(
+  spacingScale,
+  (result, value, key) =>
+    _.assign(result, {
+      [`top-${key}`]: { top: value },
+      [`right-${key}`]: { top: value },
+      [`bottom-${key}`]: { top: value },
+      [`left-${key}`]: { top: value },
+    }),
+  {}
 );
 // Add calculated height and width with cropped parts, like .h-100vh-3
-const customCroppedVhVw = _.reduce(dimensionScale, (result, value, key) => {
-  // Only do it for simple scale and half/scales
-  const isSimpleScale = key.length === 1;
-  const isHalfScale = key.length === 2 && key[1] === 'x';
-  if (!(isSimpleScale || isHalfScale)) {
-    return result;
-  }
-  return _.assign(result, {
-    [`h-100vh-${key}`]: { height: `calc(100vh - ${value})` },
-    [`w-100vw-${key}`]: { width: `calc(100vw - ${value})` },
-  });
-});
+const customCroppedVhVw = _.reduce(
+  dimensionScale,
+  (result, value, key) => {
+    // Only do it for simple scale and half/scales
+    const isSimpleScale = key.length === 1;
+    const isHalfScale = key.length === 2 && key[1] === 'x';
+    if (!(isSimpleScale || isHalfScale)) {
+      return result;
+    }
+    return _.assign(result, {
+      [`h-100vh-${key}`]: { height: `calc(100vh - ${value})` },
+      [`w-100vw-${key}`]: { width: `calc(100vw - ${value})` },
+    });
+  },
+  {}
+);
 
 function addCustomClasses(customClasses) {
   return ({ addUtilities }) => {

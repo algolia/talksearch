@@ -6,7 +6,7 @@ const sourcePattern = './src/{assets,demos}/**/*.{gif,png,html,svg,woff}';
 
 export default {
   async run() {
-    return await copy(sourcePattern, './dist', { clean: true });
+    return await copy(sourcePattern, './dist');
   },
 
   watch() {
