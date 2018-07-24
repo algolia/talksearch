@@ -1,26 +1,12 @@
 @import "../_demo.css";
 
-@font-face {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  src: url("./Montserrat-Medium.woff");
-}
-.montserrat {
-  font-family: Montserrat;
-}
-
-body {
-  @apply .montserrat;
-}
-
 .header {
-  @apply .bg-blue;
+  @apply .bg-grey;
 }
 
 /* Main highlight */
 .ats-hit--details em {
-  @apply .border-blue text-blue;
+  @apply .border-blue text-grey;
 }
 /* Caption highlight */
 .ats-hit--caption em {
@@ -30,11 +16,15 @@ body {
 /* Years/Conference menu hover/active */
 .ais-menu--item:hover,
 .ais-menu--item__active {
-  @apply .bg-blue text-white;
+  @apply .bg-grey text-blue;
 }
 
 /* Pagination active/hover */
 .ais-pagination--item:hover,
 .ais-pagination--item__active {
-  @apply .bg-blue;
+  @apply .bg-grey;
+}
+.ais-pagination--item:hover .ais-pagination--link,
+.ais-pagination--item__active .ais-pagination--link {
+  @apply text-blue;
 }

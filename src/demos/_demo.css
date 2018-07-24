@@ -41,7 +41,7 @@
   content: "";
   @apply absolute pin;
   @apply .bg-cover bg-no-repeat bg-center;
-  background-image: url("/youtube-overlay.png");
+  background-image: url("../youtube-overlay.png");
   background-size: 150px 100px;
   @apply opacity-75;
 }

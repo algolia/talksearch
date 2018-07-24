@@ -1,0 +1,27 @@
+@import "../_demo.css";
+
+.header {
+  @apply .bg-pink;
+}
+
+/* Main highlight */
+.ats-hit--details em {
+  @apply .border-pink text-pink;
+}
+/* Caption highlight */
+.ats-hit--caption em {
+  @apply .text-pink;
+}
+
+/* Years/Conference menu hover/active */
+.ais-menu--item:hover,
+.ais-menu--item__active {
+  @apply .bg-pink text-white;
+}
+
+/* Pagination active/hover */
+.ais-pagination--item:hover, 
+.ais-pagination--item__active {
+  @apply .bg-pink;
+}
+

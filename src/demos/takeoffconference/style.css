@@ -1,0 +1,54 @@
+@import "../_demo.css";
+
+@font-face {
+  font-family: Teratur;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./Teratur-Regular.woff");
+}
+.teratur {
+  font-family: Teratur;
+}
+
+/* stylelint-disable at-rule-no-unknown */
+.header {
+  @apply .bg-purple;
+}
+
+/* Year selection menu */
+.ais-menu {
+  @apply .teratur;
+}
+
+/* Main highlight */
+.ats-hit--details em {
+  @apply .border-grey;
+}
+
+/* Caption highlight */
+.ats-hit--caption em {
+  @apply .text-yellow;
+}
+
+/* Years/Conference menu hover/active */
+.ais-menu--item:hover,
+.ais-menu--item__active {
+  @apply .bg-purple text-white;
+}
+
+/* Menu count */
+.ais-menu--item:hover .ais-menu--count, 
+.ais-menu--item__active .ais-menu--count {
+  @apply bg-red text-white;
+}
+
+/* Pagination active/hover */
+.ais-pagination--item:hover, 
+.ais-pagination--item__active {
+  @apply .bg-purple;
+}
+.ais-pagination--item:hover .ais-pagination--link, 
+.ais-pagination--item__active .ais-pagination--link {
+  @apply text-white;
+}
+
