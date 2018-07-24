@@ -2,7 +2,7 @@ import pify from 'pify';
 import cpx from 'cpx';
 const copy = pify(cpx.copy);
 
-const sourcePattern = './src/{assets,demos}/**/*.{gif,png,svg,woff}';
+const sourcePattern = './src/{assets,demos}/**/*.{gif,png,html,svg,woff}';
 
 export default {
   async run() {
@@ -10,6 +10,6 @@ export default {
   },
 
   watch() {
-    cpx.watch(sourcePattern, './dist/assets');
+    cpx.watch(sourcePattern, './dist');
   },
 };
