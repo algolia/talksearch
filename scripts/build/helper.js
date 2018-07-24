@@ -14,8 +14,15 @@ const writeFile = pify(fs.writeFile);
 export default {
   // Read a file and return its content as a string
   async readFile(filepath) {
-    const content = await readFile(filepath);
-    return content.toString('utf-8');
+    return (await readFile(filepath)).toString('utf-8');
+  },
+  // Read a Json file
+  async readJson(filepath) {
+    return JSON.parse(await this.readFile(filepath));
+  },
+  // Return the site global data
+  async siteData() {
+    return await this.readJson('./src/_data.json');
   },
   // Write a file to disk
   async writeFile(filepath, content) {

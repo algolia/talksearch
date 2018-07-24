@@ -36,7 +36,7 @@
     position: absolute;
     margin-top: -2rem;
     content: attr(class);
-    @apply .code .text-white .p-0x;
+    @apply .text-white .p-0x;
     @apply .hidden;
     @apply .bg-green;
   }

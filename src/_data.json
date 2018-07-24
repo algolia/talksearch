@@ -7,7 +7,8 @@
   "config": {
     "InstantSearchVersion": "2.8.1",
     "TalkSearchVersion": "0.0.8",
-    "TalkSearchAppId": "8J7GPSC0XN"
+    "TalkSearchAppId": "8J7GPSC0XN",
+    "GoogleTagManagerUA": "UA-32446386-31"
   },
   "sidebar": [
     {
@@ -15,7 +16,7 @@
       "pages": [
         {
           "title": "What is TalkSearch?",
-          "url": "/what-is-talksearch.html"
+          "url": "what-is-talksearch.html"
         }
       ]
     },
@@ -24,11 +25,11 @@
       "pages": [
         {
           "title": "The crawler",
-          "url": "/crawler.html"
+          "url": "crawler.html"
         },
         {
           "title": "Config files",
-          "url": "/config-files.html"
+          "url": "config-files.html"
         }
       ]
     },
@@ -37,15 +38,15 @@
       "pages": [
         {
           "title": "TalkSearch.js",
-          "url": "/talksearch-js.html"
+          "url": "talksearch-js.html"
         },
         {
           "title": "InstantSearch.js",
-          "url": "/instantsearch-js.html"
+          "url": "instantsearch-js.html"
         },
         {
           "title": "Inside a record",
-          "url": "/anatomy-of-a-record.html"
+          "url": "anatomy-of-a-record.html"
         }
       ]
     }

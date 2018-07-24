@@ -10,11 +10,11 @@ TalkSearch.js helper. Both libraries come with some CSS styling, to provide
 a default styling.
 
 ```html
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/talksearch@0.0.8/dist/talksearch.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@{{InstantSearchVersion}}/dist/instantsearch.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/talksearch@{{TalkSearchVersion}}/dist/talksearch.min.css">
 
-  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/talksearch@0.0.8/dist/talksearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@{{InstantSearchVersion}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/talksearch@{{TalkSearchVersion}}/dist/talksearch.min.js"></script>
 ```
 
 _Note that we also have a [React InstantSearch][1], [Vue InstantSearch][2] and
@@ -30,7 +30,7 @@ don't hesitate to contact community@algolia.com
 
 ```javascript
 const search = instantsearch({
-  appId: '8J7GPSC0XN',
+  appId: '{{TalkSearchAppId}}',
   apiKey: '{{PROVIDED_BY_ALGOLIA}}',
   indexName: '{{PROVIDED_BY_ALGOLIA}}'
   poweredBy: true

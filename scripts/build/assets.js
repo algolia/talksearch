@@ -2,12 +2,14 @@ import pify from 'pify';
 import cpx from 'cpx';
 const copy = pify(cpx.copy);
 
+const sourcePattern = './src/{assets,demos}/**/*.{gif,png,svg}';
+
 export default {
   async run() {
-    return await copy('./src/assets/**', './dist/assets', { clean: true });
+    return await copy(sourcePattern, './dist', { clean: true });
   },
 
   watch() {
-    cpx.watch('./src/assets/**', './dist/assets');
+    cpx.watch(sourcePattern, './dist/assets');
   },
 };

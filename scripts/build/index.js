@@ -1,5 +1,6 @@
 import markdown from './markdown';
 import css from './css';
+import js from './js';
 import assets from './assets';
 import pAll from 'p-all';
 
@@ -7,6 +8,7 @@ import pAll from 'p-all';
   await pAll([
     async () => await markdown.run(),
     async () => await css.run(),
+    async () => await js.run(),
     async () => await assets.run(),
   ]);
 })();

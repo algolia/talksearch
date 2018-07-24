@@ -1,0 +1,26 @@
+@import "../_demo.css";
+
+.header {
+  @apply .bg-blue;
+}
+
+/* Main highlight */
+.ats-hit--details em {
+  @apply .border-blue text-blue;
+}
+/* Caption highlight */
+.ats-hit--caption em {
+  @apply .text-blue;
+}
+
+/* Years/Conference menu hover/active */
+.ais-menu--item:hover,
+.ais-menu--item__active {
+  @apply .bg-blue text-white;
+}
+
+/* Pagination active/hover */
+.ais-pagination--item:hover,
+.ais-pagination--item__active {
+  @apply .bg-blue;
+}

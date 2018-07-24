@@ -17,10 +17,6 @@ const markdown = markdownIt()
   .use(markdownItHighlight);
 
 export default {
-  // Return an object of all the generic site data
-  async siteData() {
-    return JSON.parse(await helper.readFile('./src/_data.json'));
-  },
   // Returns an array of all headings and their ids (to use in the sidebar)
   getHeadings(htmlBody) {
     const $ = cheerio.load(htmlBody);
@@ -34,21 +30,25 @@ export default {
       };
     });
   },
+
   // Build a markdown file to an html file
   async compile(filepath) {
-    const siteData = await this.siteData();
-    const sourceBasename = path.basename(filepath, '.md');
-    const destination = `./dist/${sourceBasename}.html`;
-    const currentUrl = `/${sourceBasename}.html`;
+    const siteData = await helper.siteData();
+    const currentUrl = path.relative(
+      './src',
+      _.replace(filepath, '.md', '.html')
+    );
+    const destination = `./dist/${currentUrl}`;
 
     // Read file, and extract front-matter from raw text
     const rawContent = await helper.readFile(filepath);
     const parsed = frontMatter(rawContent);
     const fileData = parsed.attributes;
+    const pageData = _.merge({}, siteData, fileData);
 
     // Update {{config}} placeholders
     let markdownBody = parsed.body;
-    _.each(siteData.config, (value, key) => {
+    _.each(pageData.config, (value, key) => {
       markdownBody = _.replace(
         markdownBody,
         new RegExp(`{{${key}}}`, 'g'),
@@ -61,11 +61,11 @@ export default {
 
     // Add the hierarchy of headings to the matching link in the sidebar
     const headings = this.getHeadings(htmlBody);
-    const sidebar = _.clone(siteData.sidebar);
+    const sidebar = _.clone(pageData.sidebar);
     _.each(sidebar, category => {
       _.each(category.pages, page => {
         const linkBasename = path.basename(page.url, '.html');
-        if (linkBasename === sourceBasename) {
+        if (linkBasename === currentUrl) {
           page.headings = headings; // eslint-disable-line no-param-reassign
         }
       });
@@ -79,7 +79,7 @@ export default {
 
     // Compile layout
     const compileData = {
-      ...siteData,
+      ...pageData,
       sidebar,
       current: {
         url: currentUrl,
@@ -95,7 +95,7 @@ export default {
 
   async run() {
     // Convert markdown to HTML
-    const markdownFiles = await helper.getFiles('*.md');
+    const markdownFiles = await helper.getFiles('**/*.md');
     await pMap(markdownFiles, async filepath => {
       await this.compile(filepath);
     });

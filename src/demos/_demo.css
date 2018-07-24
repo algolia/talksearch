@@ -1,0 +1,106 @@
+@import "../_styles/tailwind.css";
+@import "../_styles/debug.css";
+
+/* Searchbox magnifying glass */
+.ais-search-box--magnifier {
+  @apply .hidden;
+  @apply .absolute .pin-y .pin-l;
+  @apply .w-1;
+  @apply .ml-1;
+  @apply .text-white .fill-current;
+}
+@screen sm {
+  .ais-search-box--magnifier {
+    @apply .block;
+    @apply .w-2;
+  }
+}
+
+/* Searchbox close icon */
+.ais-search-box--reset {
+  @apply .hidden;
+  @apply .absolute .pin-y .pin-r;
+  @apply .w-2;
+  @apply .mr-1;
+  @apply .text-white-75 .fill-current;
+}
+@screen sm {
+  .ais-search-box--reset {
+    @apply .block;
+  }
+}
+
+/* No results found */
+.ais-hits__empty {
+  @apply .text-5 .text-grey .text-center;
+  @apply .pt-3;
+}
+
+/* Hit overlay */
+.ats-hit--thumbnail:hover:after {
+  content: "";
+  @apply absolute pin;
+  @apply .bg-cover bg-no-repeat bg-center;
+  background-image: url("/youtube-overlay.png");
+  background-size: 150px 100px;
+  @apply opacity-75;
+}
+
+/* Menu (years, conference) */
+.ais-menu--body {
+  @apply .text-center .bold;
+}
+.ais-menu--item {
+  @apply .inline-block;
+  @apply .cursor-pointer;
+  @apply .mx-0x .px-1 .py-0x;
+  @apply .rounded-100;
+}
+.ais-menu--item:hover,
+.ais-menu--item__active {
+  @apply .bg-black-50 text-white;
+}
+.ais-menu--link {
+  @apply text-inherit no-underline;
+  @apply flrnw flc;
+}
+.ais-menu--count {
+  @apply .rounded-100 px-05 py-0x ml-0x;
+  @apply .bg-black-50;
+  @apply .text--2 .text-white;
+}
+.ais-menu--item:hover .ais-menu--count,
+.ais-menu--item__active .ais-menu--count {
+  @apply bg-white-50 text-black-50;
+}
+
+/**
+ * PAGINATION
+ **/
+.ais-pagination {
+  @apply .list-reset;
+  @apply .text-center;
+  @apply .my-1;
+}
+.ais-pagination--item {
+  @apply .rounded-100;
+  @apply .inline-block;
+  @apply .bold .text-3;
+  @apply .mx-0x;
+}
+.ais-pagination--item:hover,
+.ais-pagination--item__active {
+  @apply .bg-grey;
+}
+.ais-pagination--item:hover .ais-pagination--link,
+.ais-pagination--item__active .ais-pagination--link {
+  @apply text-white;
+}
+.ais-pagination--link {
+  @apply .text-black;
+  @apply .no-underline;
+  @apply .px-1;
+}
+.ais-pagination--item__disabled {
+  @apply .hidden;
+}
