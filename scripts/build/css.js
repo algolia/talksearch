@@ -11,13 +11,32 @@ import fs from 'fs';
 import pMap from 'p-map';
 
 export default {
-  // Return the postcss compiler
-  compiler(configFile) {
+  postcssPlugins(tailwindConfigFile) {
+    const plugins = [
+      postcssImport(),
+      tailwind(tailwindConfigFile),
+      postcssNested,
+    ];
+
+    if (!this.isProduction()) {
+      return plugins;
+    }
+
+    // Add more plugins when building
+
     // Only keep classes used in files at the same level
-    let pathLevel = path.dirname(path.relative('./src', configFile));
+    let pathLevel = path.dirname(path.relative('./src', tailwindConfigFile));
     if (pathLevel === '..') {
       pathLevel = '';
     }
+    plugins.push(
+      postcssPurge({
+        content: [`./docs/${pathLevel}/*.html`],
+        whitelistPatterns: [/^ais-/, /^ats-/],
+      })
+    );
+
+    plugins.push(autoprefixer);
 
     const cleanCssOptions = {
       level: {
@@ -27,17 +46,19 @@ export default {
       },
     };
 
-    return postcss([
-      postcssImport(),
-      tailwind(configFile),
-      postcssNested,
-      postcssPurge({
-        content: [`./docs/${pathLevel}/*.html`],
-        whitelistPatterns: [/^ais-/, /^ats-/],
-      }),
-      autoprefixer,
-      postcssClean(cleanCssOptions),
-    ]);
+    plugins.push(postcssClean(cleanCssOptions));
+
+    return plugins;
+  },
+
+  // Are we building (as opposed to local serve)
+  isProduction() {
+    return process.env.NODE_ENV === 'production';
+  },
+
+  // Return the postcss compiler
+  compiler(tailwindConfigFile) {
+    return postcss(this.postcssPlugins(tailwindConfigFile));
   },
 
   // Compile the css source file to docs

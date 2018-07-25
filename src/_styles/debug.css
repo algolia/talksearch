@@ -1,12 +1,22 @@
 /* Debug utilities */
 .debug,
 .debug * {
-  outline: 1px solid purple;
+  outline: 1px solid blue;
+}
+.debug:before {
+  content: "N/A";
+  @apply absolute pin-t pin-l;
+  @apply bg-neptune-2 bold text-white;
+  @apply p-0x;
 }
 @screen sm {
   .debug,
   .debug * {
-    outline: 1px solid red;
+    outline: 1px solid teal;
+  }
+  .debug:before {
+    content: "sm";
+    @apply bg-mercury-2;
   }
 }
 @screen md {
@@ -14,17 +24,29 @@
   .debug * {
     outline: 1px solid orange;
   }
+  .debug:before {
+    content: "md";
+    @apply bg-saturn-2;
+  }
 }
 @screen lg {
   .debug,
   .debug * {
-    outline: 1px solid gold;
+    outline: 1px solid red;
+  }
+  .debug:before {
+    content: "lg";
+    @apply bg-mars-2;
   }
 }
 @screen xl {
   .debug,
   .debug * {
-    outline: 1px solid green;
+    outline: 1px solid pink;
+  }
+  .debug:before {
+    content: "xl";
+    @apply bg-venus-2;
   }
 }
 

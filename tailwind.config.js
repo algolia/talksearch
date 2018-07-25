@@ -231,20 +231,16 @@ const customUtilities = {
 };
 const customFlexbox = {
   flrnw: {
-    display: 'flex',
     flexDirection: 'row',
   },
   flrw: {
-    display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
   flcnw: {
-    display: 'flex',
     flexDirection: 'column',
   },
   flcw: {
-    display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
   },
