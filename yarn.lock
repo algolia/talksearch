@@ -2008,9 +2008,9 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-fragments.css@^1.0.48-alpha:
-  version "1.0.48-alpha"
-  resolved "https://registry.yarnpkg.com/fragments.css/-/fragments.css-1.0.48-alpha.tgz#4b8fe3cdaf1b6b5251da55efcf4eef75ff842e53"
+fragments.css@^1.0.49-alpha:
+  version "1.0.49-alpha"
+  resolved "https://registry.yarnpkg.com/fragments.css/-/fragments.css-1.0.49-alpha.tgz#be7a1c7b2355bd0055917654a4bfe8229a1c128e"
 
 fresh@0.5.2:
   version "0.5.2"

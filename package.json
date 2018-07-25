@@ -35,7 +35,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-prettier": "^2.6.0",
-    "fragments.css": "^1.0.48-alpha",
+    "fragments.css": "^1.0.49-alpha",
     "front-matter": "^2.3.0",
     "glob": "^7.1.2",
     "husky": "^0.14.3",
