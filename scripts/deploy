@@ -12,6 +12,7 @@ git rebase develop
 
 # Build
 yarn run build
+yarn run screenshots
 
 # Commit changes
 git commit -a -m "Build documentation website"

@@ -13,6 +13,17 @@ const search = instantsearch({
     facetingAfterDistinct: true
   }
 });
+search.on('render', () => {
+  const pageLoadElement = document.getElementById('firstRender');
+
+  if (!pageLoadElement) {
+    setTimeout(() => {
+      const span = document.createElement('span');
+      span.setAttribute('id', 'firstRender');
+      document.body.appendChild(span);
+    }, 1000);
+  }
+});
 search.addWidget(instantsearch.widgets.searchBox({
   container: '#searchbox',
   placeholder: placeholder || 'Search by topic, year, speaker or any sentence',
