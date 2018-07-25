@@ -1,6 +1,0 @@
-skip_frontmatter: true
-
-RuboCop:
-  enabled: true
-  ignored_cops:
-    - Lint/Syntax
