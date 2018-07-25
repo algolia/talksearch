@@ -898,6 +898,10 @@ table {
   background-color: rgba(255, 255, 255, .9);
 }
 
+.bg-blue-50 {
+  background-color: rgba(71, 104, 253, .5);
+}
+
 .hover_bg-moon:hover {
   background-color: #f5f5fa;
 }
@@ -1170,6 +1174,10 @@ table {
   background-color: rgba(255, 255, 255, .9);
 }
 
+.hover_bg-blue-50:hover {
+  background-color: rgba(71, 104, 253, .5);
+}
+
 .focus_bg-moon:focus {
   background-color: #f5f5fa;
 }
@@ -1440,6 +1448,10 @@ table {
 
 .focus_bg-white-90:focus {
   background-color: rgba(255, 255, 255, .9);
+}
+
+.focus_bg-blue-50:focus {
+  background-color: rgba(71, 104, 253, .5);
 }
 
 .bg-bottom {
@@ -6334,6 +6346,10 @@ table {
   color: rgba(255, 255, 255, .9);
 }
 
+.text-blue-50 {
+  color: rgba(71, 104, 253, .5);
+}
+
 .hover_text-moon:hover {
   color: #f5f5fa;
 }
@@ -6604,6 +6620,10 @@ table {
 
 .hover_text-white-90:hover {
   color: rgba(255, 255, 255, .9);
+}
+
+.hover_text-blue-50:hover {
+  color: rgba(71, 104, 253, .5);
 }
 
 .text-0 {
@@ -7812,6 +7832,7 @@ table {
 .ais-menu--link {
   color: inherit;
   text-decoration: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -8208,6 +8229,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .sm_bg-blue-50 {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .sm_hover_bg-moon:hover {
     background-color: #f5f5fa;
   }
@@ -8480,6 +8505,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .sm_hover_bg-blue-50:hover {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .sm_focus_bg-moon:focus {
     background-color: #f5f5fa;
   }
@@ -8750,6 +8779,10 @@ table {
 
   .sm_focus_bg-white-90:focus {
     background-color: rgba(255, 255, 255, .9);
+  }
+
+  .sm_focus_bg-blue-50:focus {
+    background-color: rgba(71, 104, 253, .5);
   }
 
   .sm_bg-bottom {
@@ -13620,6 +13653,10 @@ table {
     color: rgba(255, 255, 255, .9);
   }
 
+  .sm_text-blue-50 {
+    color: rgba(71, 104, 253, .5);
+  }
+
   .sm_hover_text-moon:hover {
     color: #f5f5fa;
   }
@@ -13890,6 +13927,10 @@ table {
 
   .sm_hover_text-white-90:hover {
     color: rgba(255, 255, 255, .9);
+  }
+
+  .sm_hover_text-blue-50:hover {
+    color: rgba(71, 104, 253, .5);
   }
 
   .sm_text-0 {
@@ -14569,6 +14610,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .md_bg-blue-50 {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .md_hover_bg-moon:hover {
     background-color: #f5f5fa;
   }
@@ -14841,6 +14886,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .md_hover_bg-blue-50:hover {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .md_focus_bg-moon:focus {
     background-color: #f5f5fa;
   }
@@ -15111,6 +15160,10 @@ table {
 
   .md_focus_bg-white-90:focus {
     background-color: rgba(255, 255, 255, .9);
+  }
+
+  .md_focus_bg-blue-50:focus {
+    background-color: rgba(71, 104, 253, .5);
   }
 
   .md_bg-bottom {
@@ -19981,6 +20034,10 @@ table {
     color: rgba(255, 255, 255, .9);
   }
 
+  .md_text-blue-50 {
+    color: rgba(71, 104, 253, .5);
+  }
+
   .md_hover_text-moon:hover {
     color: #f5f5fa;
   }
@@ -20251,6 +20308,10 @@ table {
 
   .md_hover_text-white-90:hover {
     color: rgba(255, 255, 255, .9);
+  }
+
+  .md_hover_text-blue-50:hover {
+    color: rgba(71, 104, 253, .5);
   }
 
   .md_text-0 {
@@ -20930,6 +20991,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .lg_bg-blue-50 {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .lg_hover_bg-moon:hover {
     background-color: #f5f5fa;
   }
@@ -21202,6 +21267,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .lg_hover_bg-blue-50:hover {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .lg_focus_bg-moon:focus {
     background-color: #f5f5fa;
   }
@@ -21472,6 +21541,10 @@ table {
 
   .lg_focus_bg-white-90:focus {
     background-color: rgba(255, 255, 255, .9);
+  }
+
+  .lg_focus_bg-blue-50:focus {
+    background-color: rgba(71, 104, 253, .5);
   }
 
   .lg_bg-bottom {
@@ -26342,6 +26415,10 @@ table {
     color: rgba(255, 255, 255, .9);
   }
 
+  .lg_text-blue-50 {
+    color: rgba(71, 104, 253, .5);
+  }
+
   .lg_hover_text-moon:hover {
     color: #f5f5fa;
   }
@@ -26612,6 +26689,10 @@ table {
 
   .lg_hover_text-white-90:hover {
     color: rgba(255, 255, 255, .9);
+  }
+
+  .lg_hover_text-blue-50:hover {
+    color: rgba(71, 104, 253, .5);
   }
 
   .lg_text-0 {
@@ -27291,6 +27372,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .xl_bg-blue-50 {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .xl_hover_bg-moon:hover {
     background-color: #f5f5fa;
   }
@@ -27563,6 +27648,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .xl_hover_bg-blue-50:hover {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .xl_focus_bg-moon:focus {
     background-color: #f5f5fa;
   }
@@ -27833,6 +27922,10 @@ table {
 
   .xl_focus_bg-white-90:focus {
     background-color: rgba(255, 255, 255, .9);
+  }
+
+  .xl_focus_bg-blue-50:focus {
+    background-color: rgba(71, 104, 253, .5);
   }
 
   .xl_bg-bottom {
@@ -32703,6 +32796,10 @@ table {
     color: rgba(255, 255, 255, .9);
   }
 
+  .xl_text-blue-50 {
+    color: rgba(71, 104, 253, .5);
+  }
+
   .xl_hover_text-moon:hover {
     color: #f5f5fa;
   }
@@ -32973,6 +33070,10 @@ table {
 
   .xl_hover_text-white-90:hover {
     color: rgba(255, 255, 255, .9);
+  }
+
+  .xl_hover_text-blue-50:hover {
+    color: rgba(71, 104, 253, .5);
   }
 
   .xl_text-0 {
@@ -33652,6 +33753,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .print_bg-blue-50 {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .print_hover_bg-moon:hover {
     background-color: #f5f5fa;
   }
@@ -33924,6 +34029,10 @@ table {
     background-color: rgba(255, 255, 255, .9);
   }
 
+  .print_hover_bg-blue-50:hover {
+    background-color: rgba(71, 104, 253, .5);
+  }
+
   .print_focus_bg-moon:focus {
     background-color: #f5f5fa;
   }
@@ -34194,6 +34303,10 @@ table {
 
   .print_focus_bg-white-90:focus {
     background-color: rgba(255, 255, 255, .9);
+  }
+
+  .print_focus_bg-blue-50:focus {
+    background-color: rgba(71, 104, 253, .5);
   }
 
   .print_bg-bottom {
@@ -39064,6 +39177,10 @@ table {
     color: rgba(255, 255, 255, .9);
   }
 
+  .print_text-blue-50 {
+    color: rgba(71, 104, 253, .5);
+  }
+
   .print_hover_text-moon:hover {
     color: #f5f5fa;
   }
@@ -39334,6 +39451,10 @@ table {
 
   .print_hover_text-white-90:hover {
     color: rgba(255, 255, 255, .9);
+  }
+
+  .print_hover_text-blue-50:hover {
+    color: rgba(71, 104, 253, .5);
   }
 
   .print_text-0 {

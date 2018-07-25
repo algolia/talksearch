@@ -21,6 +21,12 @@ wrapping them in a pug layouts. All CSS is processed through Postcss and
 JavaScript through Babel. You can run `yarn build` to build a new website in
 `./dist`.
 
+## Animated gif
+
+Demo gifs are recorded with a screen capture tool, then manually optimized
+through [https://ezgif.com/resize/](https://ezgif.com/resize/) (resized to 280px
+in width), and optimized by removing every 2nd frame.
+
 
 [1]: https://github.com/algolia/talksearch-scraper
 [2]: https://github.com/algolia/talksearch.js

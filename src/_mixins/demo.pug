@@ -1,11 +1,12 @@
-mixin demo(slug, name)
+mixin demo(slug, name, alternateLogo)
+  - const logo = alternateLogo || `demos/${slug}/logo-small.png`
   .fln.w-100.sm_w-50.md_w-33.p-1.flex.flrnw
     a.custom-demo.fla.border.border-grey.rounded-auto.shadow-1.flex.flcnw.p-05.hover_shadow-2.hover_no-underline(href=`demos/${slug}/`)
       .fln.flc.relative.text-0.max-w-5.m-auto
         .absolute.pin
-          img.custom-demo-mask.max-h-100.w-100(src="assets/demos/mask.png")
-        img(src=`assets/demos/gif/${slug}.gif`)
-      .fln.pt-0x.flex.flrnw.flc
+          img.custom-demo-mask.max-h-100.w-100(src="assets/mask.png")
+        img(src=`demos/${slug}/animated.gif`)
+      .fln.pt-0x.flex.flrnw.flc.pl-1
         .fln.text-0
-          img.h-2(src=`assets/demos/logo/${slug}.png`)
+          img.h-2(src=logo)
         .fla.pl-1.text-solstice.uppercase.bold=name

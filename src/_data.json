@@ -6,9 +6,14 @@
   },
   "config": {
     "InstantSearchVersion": "2.8.1",
-    "TalkSearchVersion": "0.0.8",
+    "TalkSearchVersion": "0.0.12",
     "TalkSearchAppId": "8J7GPSC0XN",
     "GoogleTagManagerUA": "UA-32446386-31"
+  },
+  "demo": {
+    "logoPath": "logo.png",
+    "logoSmallPath": "logo-small.png",
+    "logoAlgoliaPath": "../algolia-logo.svg"
   },
   "sidebar": [
     {

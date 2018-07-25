@@ -1,0 +1,34 @@
+@import "../_demo.css";
+
+.header {
+  @apply .bg-white-pure;
+  @apply border border-0 border-b-2 border-blue;
+}
+
+#searchbox {
+  @apply bg-blue-50
+}
+#searchbox:focus {
+  @apply bg-blue
+}
+
+/* Main highlight */
+.ats-hit--details em {
+  @apply .border-blue text-blue;
+}
+/* Caption highlight */
+.ats-hit--caption em {
+  @apply .text-blue;
+}
+
+/* Years/Conference menu hover/active */
+.ais-menu--item:hover,
+.ais-menu--item__active {
+  @apply .bg-blue text-white;
+}
+
+/* Pagination active/hover */
+.ais-pagination--item:hover,
+.ais-pagination--item__active {
+  @apply .bg-blue;
+}

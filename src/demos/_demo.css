@@ -62,7 +62,7 @@
 }
 .ais-menu--link {
   @apply text-inherit no-underline;
-  @apply flrnw flc;
+  @apply flex flrnw flc;
 }
 .ais-menu--count {
   @apply .rounded-100 px-05 py-0x ml-0x;

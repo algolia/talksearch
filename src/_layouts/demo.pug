@@ -4,10 +4,9 @@ html.no-js(lang='en')
     - const siteTitle = `${conferenceName} TalkSearch`
     - const siteDescription = `Search into all the ${conferenceName} talks`
     - const siteUrl = `${site.url}/${current.url}`
-    - const utmLink = `https://www.algolia.com/?utm_source=${conferenceName}&utm_medium=link&utm_campaign=talksearch`
+    - const utmSource = conferenceName.replace(' ', '_').replace('/', '_').toLowerCase()
+    - const utmLink = `https://www.algolia.com/?utm_source=${utmSource}&utm_medium=link&utm_campaign=talksearch`
     - const ogImage = siteUrl.split('/').slice(0, -1).join('/') + '/og_image.png';
-    - const logoPath = './logo.png'
-    - const logoSmallPath = './logo-small.png'
     meta(charset='utf-8')
     meta('http-equiv'='x-ua-compatible',content='ie-edge')
     title= siteTitle
@@ -20,18 +19,18 @@ html.no-js(lang='en')
     meta(property='og:title', content=siteTitle)
     meta(property='og:description', content=siteDescription)
     meta(property='og:image', content=ogImage)
-    link(rel="shortcut icon", href=logoSmallPath)
+    link(rel="shortcut icon", href=demo.logoSmallPath)
     link(rel='stylesheet', href=`https://cdn.jsdelivr.net/npm/talksearch@${config.TalkSearchVersion}/dist/talksearch.min.css`)
     link(rel='stylesheet', href='style.css')
     body
-      .header.fixed.w-100.z-5.flrnw.flc.h-3.sm_h-3x.px-0x.sm_px-1
-        a.flrnw.fln.flc.mr-0x.sm_mr-1(href=conferenceUrl)
-          img.h-2.lg_hidden.sm_h-3(src=logoSmallPath, alt=`Logo ${conferenceName}`)
-          img.hidden.lg_block.lg_h-3(src=logoPath, alt=`Logo ${conferenceName}`)
-        .fla.flcnw.h-2.relative.sm_h-3.mr-0x.md_mx-3
+      .header.fixed.w-100.z-5.flex.flrnw.flc.h-3.sm_h-3x.px-0x.sm_px-1
+        a.flex.flrnw.fln.flc.mr-0x.sm_mr-1(href=conferenceUrl)
+          img.h-2.lg_hidden.sm_h-3(src=demo.logoSmallPath, alt=`Logo ${conferenceName}`)
+          img.hidden.lg_block.lg_h-3(src=demo.logoPath, alt=`Logo ${conferenceName}`)
+        .flex.fla.flcnw.h-2.relative.sm_h-3.mr-0x.md_mx-3
           input#searchbox.w-100.fla.pl-1.bg-white-10.text-white-pure.text-1.rounded-100.outline-none.sm_pl-3.sm_text-3.focus_bg-white-25
         a.hidden.fln.flc.w-4.mx-1.md_flex.sm_mr-0x.md_w-4x.md_mr-2(href=utmLink, target='_blank')
-          img(src='../algolia-logo.svg', alt='Powered by Algolia')
+          img(src=demo.logoAlgoliaPath, alt='Powered by Algolia')
 
       .pt-3.max-w-xl.m-auto.sm_pt-3x.px-0x.sm_px-2
         #conferences.hidden.md_block.my-1.text-3
