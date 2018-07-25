@@ -105,6 +105,6 @@ If you'd like to use a different template or add other widgets (such as filters
 or pagination), check the [InstantSearch.js][2] section.
 
 
-[1]: /crawler.html#how-to-apply
-[2]: /instantsearch-js.html
+[1]: ./crawler.html#how-to-apply
+[2]: ./instantsearch-js.html
 [3]: mailto:talksearch@algolia.com

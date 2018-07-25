@@ -6,10 +6,10 @@ const sourcePattern = './src/{assets,demos}/**/*.{gif,png,html,svg,woff}';
 
 export default {
   async run() {
-    return await copy(sourcePattern, './dist');
+    return await copy(sourcePattern, './docs');
   },
 
   watch() {
-    cpx.watch(sourcePattern, './dist');
+    cpx.watch(sourcePattern, './docs');
   },
 };

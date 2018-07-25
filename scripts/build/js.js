@@ -53,7 +53,7 @@ export default {
 
   async compile(filepath) {
     const relativePath = path.relative('./src', filepath);
-    const destination = `./dist/${relativePath}`;
+    const destination = `./docs/${relativePath}`;
     let content = await helper.readFile(filepath);
     content = await this.includeTemplates(content);
     content = await this.interpolatePlaceholders(content);

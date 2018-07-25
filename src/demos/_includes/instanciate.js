@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const search = instantsearch({
   appId: '{{TalkSearchAppId}}',
   apiKey,
@@ -8,3 +9,4 @@ const search = instantsearch({
     facetingAfterDistinct: true,
   },
 });
+/* eslint-enable no-unused-vars */

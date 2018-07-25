@@ -1,4 +1,5 @@
 import markdown from './markdown';
+import _ from 'lodash';
 import css from './css';
 import js from './js';
 import assets from './assets';
@@ -18,5 +19,16 @@ import pAll from 'p-all';
   js.watch();
   assets.watch();
 
-  liveServer.start({ root: './dist', port: 8082 });
+  liveServer.start({
+    root: './docs',
+    open: '/talksearch/',
+    port: 8082,
+    middleware: [
+      // Redirect /talksearch to the root (mimicking GitHub pages)
+      function(req, res, next) {
+        req.url = _.replace(req.url, /^\/talksearch/, ''); // eslint-disable-line no-param-reassign
+        next();
+      },
+    ],
+  });
 })();

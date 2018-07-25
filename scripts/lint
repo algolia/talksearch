@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 
-# eslint .
-
+eslint ./scripts/build ./src/
 stylelint ./src/**/*.css

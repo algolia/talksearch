@@ -38,7 +38,7 @@ export default {
       './src',
       _.replace(filepath, '.md', '.html')
     );
-    const destination = `./dist/${currentUrl}`;
+    const destination = `./docs/${currentUrl}`;
 
     // Read file, and extract front-matter from raw text
     const rawContent = await helper.readFile(filepath);

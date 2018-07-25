@@ -32,19 +32,19 @@ export default {
       tailwind(configFile),
       postcssNested,
       postcssPurge({
-        content: [`./dist/${pathLevel}/*.html`],
-        whitelistPatterns: [ /^ais-/, /^ats-/ ]
+        content: [`./docs/${pathLevel}/*.html`],
+        whitelistPatterns: [/^ais-/, /^ats-/],
       }),
       autoprefixer,
       postcssClean(cleanCssOptions),
     ]);
   },
 
-  // Compile the css source file to dist
+  // Compile the css source file to docs
   async compile(source) {
     const rawContent = await helper.readFile(source);
     const relativePath = path.relative('./src', source);
-    const destination = `./dist/${relativePath}`;
+    const destination = `./docs/${relativePath}`;
 
     // Use a local tailwind file if one is found
     const dirname = path.dirname(source);

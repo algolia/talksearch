@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-parallelshell \
-  "live-server ./tmp/serve" \
-  "eleventy --serve --output ./tmp/serve" \
-  "yarn run serve:css"
