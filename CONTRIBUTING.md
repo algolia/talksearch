@@ -17,8 +17,8 @@ To run the website locally, run `yarn serve`. All the content is in `./src` and
 will be compiled into `./dist`.
 
 The website is built using custom scripts transforming markdown to html, and
-wrapping them in a pug layouts. All CSS is processed through postcss and
-JavaScript through Parcel. You can run `yarn build` to build a new website in
+wrapping them in a pug layouts. All CSS is processed through Postcss and
+JavaScript through Babel. You can run `yarn build` to build a new website in
 `./dist`.
 
 
