@@ -847,7 +847,7 @@ table {
 }
 
 .bg-pink {
-  background-color: #ea71bc;
+  background-color: #e4287d;
 }
 
 .bg-black-10 {
@@ -1119,7 +1119,7 @@ table {
 }
 
 .hover_bg-pink:hover {
-  background-color: #ea71bc;
+  background-color: #e4287d;
 }
 
 .hover_bg-black-10:hover {
@@ -1391,7 +1391,7 @@ table {
 }
 
 .focus_bg-pink:focus {
-  background-color: #ea71bc;
+  background-color: #e4287d;
 }
 
 .focus_bg-black-10:focus {
@@ -6283,7 +6283,7 @@ table {
 }
 
 .text-pink {
-  color: #ea71bc;
+  color: #e4287d;
 }
 
 .text-black-10 {
@@ -6555,7 +6555,7 @@ table {
 }
 
 .hover_text-pink:hover {
-  color: #ea71bc;
+  color: #e4287d;
 }
 
 .hover_text-black-10:hover {
@@ -8198,7 +8198,7 @@ body {
   }
 
   .sm_bg-pink {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .sm_bg-black-10 {
@@ -8470,7 +8470,7 @@ body {
   }
 
   .sm_hover_bg-pink:hover {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .sm_hover_bg-black-10:hover {
@@ -8742,7 +8742,7 @@ body {
   }
 
   .sm_focus_bg-pink:focus {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .sm_focus_bg-black-10:focus {
@@ -13610,7 +13610,7 @@ body {
   }
 
   .sm_text-pink {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .sm_text-black-10 {
@@ -13882,7 +13882,7 @@ body {
   }
 
   .sm_hover_text-pink:hover {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .sm_hover_text-black-10:hover {
@@ -14559,7 +14559,7 @@ body {
   }
 
   .md_bg-pink {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .md_bg-black-10 {
@@ -14831,7 +14831,7 @@ body {
   }
 
   .md_hover_bg-pink:hover {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .md_hover_bg-black-10:hover {
@@ -15103,7 +15103,7 @@ body {
   }
 
   .md_focus_bg-pink:focus {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .md_focus_bg-black-10:focus {
@@ -19971,7 +19971,7 @@ body {
   }
 
   .md_text-pink {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .md_text-black-10 {
@@ -20243,7 +20243,7 @@ body {
   }
 
   .md_hover_text-pink:hover {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .md_hover_text-black-10:hover {
@@ -20920,7 +20920,7 @@ body {
   }
 
   .lg_bg-pink {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .lg_bg-black-10 {
@@ -21192,7 +21192,7 @@ body {
   }
 
   .lg_hover_bg-pink:hover {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .lg_hover_bg-black-10:hover {
@@ -21464,7 +21464,7 @@ body {
   }
 
   .lg_focus_bg-pink:focus {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .lg_focus_bg-black-10:focus {
@@ -26332,7 +26332,7 @@ body {
   }
 
   .lg_text-pink {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .lg_text-black-10 {
@@ -26604,7 +26604,7 @@ body {
   }
 
   .lg_hover_text-pink:hover {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .lg_hover_text-black-10:hover {
@@ -27281,7 +27281,7 @@ body {
   }
 
   .xl_bg-pink {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .xl_bg-black-10 {
@@ -27553,7 +27553,7 @@ body {
   }
 
   .xl_hover_bg-pink:hover {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .xl_hover_bg-black-10:hover {
@@ -27825,7 +27825,7 @@ body {
   }
 
   .xl_focus_bg-pink:focus {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .xl_focus_bg-black-10:focus {
@@ -32693,7 +32693,7 @@ body {
   }
 
   .xl_text-pink {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .xl_text-black-10 {
@@ -32965,7 +32965,7 @@ body {
   }
 
   .xl_hover_text-pink:hover {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .xl_hover_text-black-10:hover {
@@ -33642,7 +33642,7 @@ body {
   }
 
   .print_bg-pink {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .print_bg-black-10 {
@@ -33914,7 +33914,7 @@ body {
   }
 
   .print_hover_bg-pink:hover {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .print_hover_bg-black-10:hover {
@@ -34186,7 +34186,7 @@ body {
   }
 
   .print_focus_bg-pink:focus {
-    background-color: #ea71bc;
+    background-color: #e4287d;
   }
 
   .print_focus_bg-black-10:focus {
@@ -39054,7 +39054,7 @@ body {
   }
 
   .print_text-pink {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .print_text-black-10 {
@@ -39326,7 +39326,7 @@ body {
   }
 
   .print_hover_text-pink:hover {
-    color: #ea71bc;
+    color: #e4287d;
   }
 
   .print_hover_text-black-10:hover {

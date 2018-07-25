@@ -799,7 +799,7 @@ table {
 }
 
 .bg-grey {
-  background-color: #1f1f1f;
+  background-color: #c5c9e0;
 }
 
 .bg-grey-1 {
@@ -823,7 +823,7 @@ table {
 }
 
 .bg-yellow {
-  background-color: #fadf1d;
+  background-color: #fdf1d4;
 }
 
 .bg-green {
@@ -1071,7 +1071,7 @@ table {
 }
 
 .hover_bg-grey:hover {
-  background-color: #1f1f1f;
+  background-color: #c5c9e0;
 }
 
 .hover_bg-grey-1:hover {
@@ -1095,7 +1095,7 @@ table {
 }
 
 .hover_bg-yellow:hover {
-  background-color: #fadf1d;
+  background-color: #fdf1d4;
 }
 
 .hover_bg-green:hover {
@@ -1343,7 +1343,7 @@ table {
 }
 
 .focus_bg-grey:focus {
-  background-color: #1f1f1f;
+  background-color: #c5c9e0;
 }
 
 .focus_bg-grey-1:focus {
@@ -1367,7 +1367,7 @@ table {
 }
 
 .focus_bg-yellow:focus {
-  background-color: #fadf1d;
+  background-color: #fdf1d4;
 }
 
 .focus_bg-green:focus {
@@ -6235,7 +6235,7 @@ table {
 }
 
 .text-grey {
-  color: #1f1f1f;
+  color: #c5c9e0;
 }
 
 .text-grey-1 {
@@ -6259,7 +6259,7 @@ table {
 }
 
 .text-yellow {
-  color: #fadf1d;
+  color: #fdf1d4;
 }
 
 .text-green {
@@ -6507,7 +6507,7 @@ table {
 }
 
 .hover_text-grey:hover {
-  color: #1f1f1f;
+  color: #c5c9e0;
 }
 
 .hover_text-grey-1:hover {
@@ -6531,7 +6531,7 @@ table {
 }
 
 .hover_text-yellow:hover {
-  color: #fadf1d;
+  color: #fdf1d4;
 }
 
 .hover_text-green:hover {
@@ -7762,7 +7762,7 @@ table {
 
 .ais-hits__empty {
   font-size: 1.875rem;
-  color: #1f1f1f;
+  color: #c5c9e0;
   text-align: center;
   padding-top: 4rem;
 }
@@ -7859,7 +7859,7 @@ table {
 
 .ais-pagination--item:hover,
 .ais-pagination--item__active {
-  background-color: #1f1f1f;
+  background-color: #c5c9e0;
 }
 
 .ais-pagination--item:hover .ais-pagination--link,
@@ -8105,7 +8105,7 @@ table {
   }
 
   .sm_bg-grey {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .sm_bg-grey-1 {
@@ -8129,7 +8129,7 @@ table {
   }
 
   .sm_bg-yellow {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .sm_bg-green {
@@ -8377,7 +8377,7 @@ table {
   }
 
   .sm_hover_bg-grey:hover {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .sm_hover_bg-grey-1:hover {
@@ -8401,7 +8401,7 @@ table {
   }
 
   .sm_hover_bg-yellow:hover {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .sm_hover_bg-green:hover {
@@ -8649,7 +8649,7 @@ table {
   }
 
   .sm_focus_bg-grey:focus {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .sm_focus_bg-grey-1:focus {
@@ -8673,7 +8673,7 @@ table {
   }
 
   .sm_focus_bg-yellow:focus {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .sm_focus_bg-green:focus {
@@ -13517,7 +13517,7 @@ table {
   }
 
   .sm_text-grey {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .sm_text-grey-1 {
@@ -13541,7 +13541,7 @@ table {
   }
 
   .sm_text-yellow {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .sm_text-green {
@@ -13789,7 +13789,7 @@ table {
   }
 
   .sm_hover_text-grey:hover {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .sm_hover_text-grey-1:hover {
@@ -13813,7 +13813,7 @@ table {
   }
 
   .sm_hover_text-yellow:hover {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .sm_hover_text-green:hover {
@@ -14466,7 +14466,7 @@ table {
   }
 
   .md_bg-grey {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .md_bg-grey-1 {
@@ -14490,7 +14490,7 @@ table {
   }
 
   .md_bg-yellow {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .md_bg-green {
@@ -14738,7 +14738,7 @@ table {
   }
 
   .md_hover_bg-grey:hover {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .md_hover_bg-grey-1:hover {
@@ -14762,7 +14762,7 @@ table {
   }
 
   .md_hover_bg-yellow:hover {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .md_hover_bg-green:hover {
@@ -15010,7 +15010,7 @@ table {
   }
 
   .md_focus_bg-grey:focus {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .md_focus_bg-grey-1:focus {
@@ -15034,7 +15034,7 @@ table {
   }
 
   .md_focus_bg-yellow:focus {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .md_focus_bg-green:focus {
@@ -19878,7 +19878,7 @@ table {
   }
 
   .md_text-grey {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .md_text-grey-1 {
@@ -19902,7 +19902,7 @@ table {
   }
 
   .md_text-yellow {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .md_text-green {
@@ -20150,7 +20150,7 @@ table {
   }
 
   .md_hover_text-grey:hover {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .md_hover_text-grey-1:hover {
@@ -20174,7 +20174,7 @@ table {
   }
 
   .md_hover_text-yellow:hover {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .md_hover_text-green:hover {
@@ -20827,7 +20827,7 @@ table {
   }
 
   .lg_bg-grey {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .lg_bg-grey-1 {
@@ -20851,7 +20851,7 @@ table {
   }
 
   .lg_bg-yellow {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .lg_bg-green {
@@ -21099,7 +21099,7 @@ table {
   }
 
   .lg_hover_bg-grey:hover {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .lg_hover_bg-grey-1:hover {
@@ -21123,7 +21123,7 @@ table {
   }
 
   .lg_hover_bg-yellow:hover {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .lg_hover_bg-green:hover {
@@ -21371,7 +21371,7 @@ table {
   }
 
   .lg_focus_bg-grey:focus {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .lg_focus_bg-grey-1:focus {
@@ -21395,7 +21395,7 @@ table {
   }
 
   .lg_focus_bg-yellow:focus {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .lg_focus_bg-green:focus {
@@ -26239,7 +26239,7 @@ table {
   }
 
   .lg_text-grey {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .lg_text-grey-1 {
@@ -26263,7 +26263,7 @@ table {
   }
 
   .lg_text-yellow {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .lg_text-green {
@@ -26511,7 +26511,7 @@ table {
   }
 
   .lg_hover_text-grey:hover {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .lg_hover_text-grey-1:hover {
@@ -26535,7 +26535,7 @@ table {
   }
 
   .lg_hover_text-yellow:hover {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .lg_hover_text-green:hover {
@@ -27188,7 +27188,7 @@ table {
   }
 
   .xl_bg-grey {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .xl_bg-grey-1 {
@@ -27212,7 +27212,7 @@ table {
   }
 
   .xl_bg-yellow {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .xl_bg-green {
@@ -27460,7 +27460,7 @@ table {
   }
 
   .xl_hover_bg-grey:hover {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .xl_hover_bg-grey-1:hover {
@@ -27484,7 +27484,7 @@ table {
   }
 
   .xl_hover_bg-yellow:hover {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .xl_hover_bg-green:hover {
@@ -27732,7 +27732,7 @@ table {
   }
 
   .xl_focus_bg-grey:focus {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .xl_focus_bg-grey-1:focus {
@@ -27756,7 +27756,7 @@ table {
   }
 
   .xl_focus_bg-yellow:focus {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .xl_focus_bg-green:focus {
@@ -32600,7 +32600,7 @@ table {
   }
 
   .xl_text-grey {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .xl_text-grey-1 {
@@ -32624,7 +32624,7 @@ table {
   }
 
   .xl_text-yellow {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .xl_text-green {
@@ -32872,7 +32872,7 @@ table {
   }
 
   .xl_hover_text-grey:hover {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .xl_hover_text-grey-1:hover {
@@ -32896,7 +32896,7 @@ table {
   }
 
   .xl_hover_text-yellow:hover {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .xl_hover_text-green:hover {
@@ -33549,7 +33549,7 @@ table {
   }
 
   .print_bg-grey {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .print_bg-grey-1 {
@@ -33573,7 +33573,7 @@ table {
   }
 
   .print_bg-yellow {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .print_bg-green {
@@ -33821,7 +33821,7 @@ table {
   }
 
   .print_hover_bg-grey:hover {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .print_hover_bg-grey-1:hover {
@@ -33845,7 +33845,7 @@ table {
   }
 
   .print_hover_bg-yellow:hover {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .print_hover_bg-green:hover {
@@ -34093,7 +34093,7 @@ table {
   }
 
   .print_focus_bg-grey:focus {
-    background-color: #1f1f1f;
+    background-color: #c5c9e0;
   }
 
   .print_focus_bg-grey-1:focus {
@@ -34117,7 +34117,7 @@ table {
   }
 
   .print_focus_bg-yellow:focus {
-    background-color: #fadf1d;
+    background-color: #fdf1d4;
   }
 
   .print_focus_bg-green:focus {
@@ -38961,7 +38961,7 @@ table {
   }
 
   .print_text-grey {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .print_text-grey-1 {
@@ -38985,7 +38985,7 @@ table {
   }
 
   .print_text-yellow {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .print_text-green {
@@ -39233,7 +39233,7 @@ table {
   }
 
   .print_hover_text-grey:hover {
-    color: #1f1f1f;
+    color: #c5c9e0;
   }
 
   .print_hover_text-grey-1:hover {
@@ -39257,7 +39257,7 @@ table {
   }
 
   .print_hover_text-yellow:hover {
-    color: #fadf1d;
+    color: #fdf1d4;
   }
 
   .print_hover_text-green:hover {
