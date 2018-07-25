@@ -12,7 +12,7 @@
     "build": "NODE_END=production babel-node ./scripts/build/index.js",
     "lint": "./scripts/lint",
     "serve": "babel-node ./scripts/build/serve.js",
-    "docs:deploy": "./scripts/docs-deploy",
+    "deploy": "./scripts/deploy",
     "precommit": "yarn lint"
   },
   "dependencies": {},
