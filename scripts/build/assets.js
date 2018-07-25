@@ -2,7 +2,7 @@ import pify from 'pify';
 import cpx from 'cpx';
 const copy = pify(cpx.copy);
 
-const sourcePattern = './src/{assets,demos}/**/*.{gif,png,html,svg,woff}';
+const sourcePattern = './src/**/*.{gif,png,ico,html,svg,woff}';
 
 export default {
   async run() {
