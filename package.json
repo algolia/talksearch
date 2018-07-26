@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "description": "The easiest way to add search to your conference videos.",
   "repository": "https://github.com/algolia/talksearch.git",
-  "bugs": {
-    "url": "https://github.com/algolia/talksearch/issues"
-  },
+  "bugs": "https://github.com/algolia/talksearch/issues",
   "homepage": "https://community.algolia.com/talksearch",
   "license": "MIT",
   "scripts": {
