@@ -1,25 +1,22 @@
 import helper from './helper';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
-import Tailwind from 'tailwindcss';
+import tailwind from 'tailwindcss';
 import postcssNested from 'postcss-nested';
 import postcssImport from 'postcss-import';
 import postcssPurge from '@fullhuman/postcss-purgecss';
 import postcssClean from 'postcss-clean';
 import path from 'path';
 import fs from 'fs';
-import pMap from 'p-map';
+import pEach from 'p-each-series';
 
 export default {
   postcssPlugins(tailwindConfigFile) {
     const plugins = [
       postcssImport(),
-      new Tailwind(tailwindConfigFile),
+      tailwind(tailwindConfigFile),
       postcssNested,
     ];
-
-    return plugins;
-
 
     // Add more plugins when building
     if (!this.isProduction()) {
@@ -83,7 +80,7 @@ export default {
   async run() {
     const cssFiles = await helper.getFiles('./**/style.css');
 
-    await pMap(cssFiles, async filepath => {
+    await pEach(cssFiles, async filepath => {
       await this.compile(filepath);
     });
   },
