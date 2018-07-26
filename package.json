@@ -9,7 +9,7 @@
   "homepage": "https://community.algolia.com/talksearch",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_END=production babel-node ./scripts/build/index.js",
+    "build": "NODE_ENV=production babel-node ./scripts/build/index.js",
     "lint": "./scripts/lint",
     "serve": "babel-node ./scripts/build/serve.js",
     "deploy": "./scripts/deploy",

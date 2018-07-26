@@ -1,7 +1,7 @@
 import helper from './helper';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
-import tailwind from 'tailwindcss';
+import Tailwind from 'tailwindcss';
 import postcssNested from 'postcss-nested';
 import postcssImport from 'postcss-import';
 import postcssPurge from '@fullhuman/postcss-purgecss';
@@ -14,15 +14,14 @@ export default {
   postcssPlugins(tailwindConfigFile) {
     const plugins = [
       postcssImport(),
-      tailwind(tailwindConfigFile),
+      new Tailwind(tailwindConfigFile),
       postcssNested,
     ];
 
+    // Add more plugins when building
     if (!this.isProduction()) {
       return plugins;
     }
-
-    // Add more plugins when building
 
     // Only keep classes used in files at the same level
     let pathLevel = path.dirname(path.relative('./src', tailwindConfigFile));
@@ -56,11 +55,6 @@ export default {
     return process.env.NODE_ENV === 'production';
   },
 
-  // Return the postcss compiler
-  compiler(tailwindConfigFile) {
-    return postcss(this.postcssPlugins(tailwindConfigFile));
-  },
-
   // Compile the css source file to docs
   async compile(source) {
     const rawContent = await helper.readFile(source);
@@ -74,7 +68,8 @@ export default {
       ? potentialTailwindConfig
       : './tailwind.config.js';
 
-    const result = await this.compiler(tailwindConfig).process(rawContent, {
+    const plugins = this.postcssPlugins(tailwindConfig);
+    const result = await postcss(plugins).process(rawContent, {
       from: source,
       to: destination,
     });
