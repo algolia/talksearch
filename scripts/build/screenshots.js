@@ -2,15 +2,28 @@ import pify from 'pify';
 import _ from 'lodash';
 import _glob from 'glob';
 import path from 'path';
+import fs from 'fs-extra';
 import liveServer from 'live-server';
 import puppeteer from 'puppeteer';
 import pEach from 'p-each-series';
 const glob = pify(_glob);
 
 (async function() {
-  const demos = _.map(await glob('./docs/demos/*/'), filepath =>
-    path.basename(filepath)
+  // Geting the list of demo folders that don't have an og_image
+  const demos = _.compact(
+    _.map(await glob('./src/demos/*/index.md'), filepath => {
+      const dirname = path.dirname(filepath);
+      const imagePath = `${dirname}/og_image.png`;
+      if (fs.existsSync(imagePath)) {
+        return null;
+      }
+      return path.basename(dirname);
+    })
   );
+
+  if (_.isEmpty(demos)) {
+    return;
+  }
 
   liveServer.start({
     root: './docs',
@@ -19,7 +32,6 @@ const glob = pify(_glob);
   });
 
   const browser = await puppeteer.launch();
-
   await pEach(demos, async demo => {
     const page = await browser.newPage();
     page.setViewport({ width: 1600, height: 900 });
@@ -34,9 +46,13 @@ const glob = pify(_glob);
       waitForRender = !renderDiv;
     }
 
+    const srcPath = `./src/demos/${demo}/og_image.png`;
+    const docsPath = `./docs/demos/${demo}/og_image.png`;
     await page.screenshot({
-      path: `./docs/demos/${demo}/og_image.png`,
+      path: srcPath,
     });
+
+    await fs.copy(srcPath, docsPath);
   });
   await browser.close();
   process.exit(0); // eslint-disable-line no-process-exit
