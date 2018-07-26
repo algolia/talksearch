@@ -18,6 +18,9 @@ export default {
       postcssNested,
     ];
 
+    return plugins;
+
+
     // Add more plugins when building
     if (!this.isProduction()) {
       return plugins;
