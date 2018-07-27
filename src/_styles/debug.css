@@ -80,3 +80,8 @@
     }
   }
 }
+
+// Make images without alt pop for debug
+img:not([alt]) {
+  filter: grayscale(100%);
+}
