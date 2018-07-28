@@ -30,9 +30,8 @@ export default {
     }
     plugins.push(
       postcssPurge({
-        content: [`./docs/index.html`],
-        // ${pathLevel}/*.html`],
-        // whitelistPatterns: [/^ais-/, /^ats-/],
+        content: [`./docs/${pathLevel}/*.html`],
+        whitelistPatterns: [/^ais-/, /^ats-/],
       })
     );
 
