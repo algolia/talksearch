@@ -11,7 +11,7 @@ const glob = pify(_glob);
 (async function() {
   // Geting the list of demo folders that don't have an og_image
   const demos = _.compact(
-    _.map(await glob('./src/demos/*/index.md'), filepath => {
+    _.map(await glob('./src/demos/[^_]*/index.md'), filepath => {
       const dirname = path.dirname(filepath);
       const imagePath = `${dirname}/og_image.png`;
       if (fs.existsSync(imagePath)) {
