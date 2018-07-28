@@ -30,8 +30,9 @@ export default {
     }
     plugins.push(
       postcssPurge({
-        content: [`./docs/${pathLevel}/*.html`],
-        whitelistPatterns: [/^ais-/, /^ats-/],
+        content: [`./docs/index.html`],
+        // ${pathLevel}/*.html`],
+        // whitelistPatterns: [/^ais-/, /^ats-/],
       })
     );
 
@@ -78,7 +79,7 @@ export default {
 
   // Compile all css files
   async run() {
-    const cssFiles = await helper.getFiles('./**/style.css');
+    const cssFiles = await helper.getFiles('{style.css,demos/[^_]*/style.css}');
 
     await pEach(cssFiles, async filepath => {
       await this.compile(filepath);
@@ -88,11 +89,16 @@ export default {
   // Listen to changes in css files and rebuild them
   watch() {
     // Rebuild files when changed
-    helper.watch('./src/**/*.css', () => {
-      this.run();
+    helper.watch('./src/**/*.css', filepath => {
+      this.compile(filepath);
     });
-    // Rebuild all files when tailwind config is changed
-    helper.watch('./**/tailwind.config.js', () => {
+    // Rebuild demo when tailwind config of a demo is changed
+    helper.watch('./src/demos/**/tailwind.config.js', tailwindPath => {
+      const cssPath = `${path.dirname(tailwindPath)}/style.css`;
+      this.compile(cssPath);
+    });
+    // Rebuild all files when main tailwind config is changed
+    helper.watch('./tailwind.config.js', () => {
       this.run();
     });
   },

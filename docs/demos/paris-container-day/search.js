@@ -1,7 +1,7 @@
 "use strict";
 
-const indexName = 'googleio';
-const apiKey = '23604cadb2de8740e24befaa62d93d43';
+const indexName = 'paris-container-day';
+const apiKey = '932f579255e939c0f16add2e0dcf80ed';
 const placeholder = null;
 const search = instantsearch({
   appId: '8J7GPSC0XN',

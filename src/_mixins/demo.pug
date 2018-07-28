@@ -4,9 +4,9 @@ mixin demo(slug, name, alternateLogo)
     a.custom-demo.fla.border.border-grey.rounded-auto.shadow-1.flex.flcnw.p-05.hover_shadow-2.hover_no-underline(href=`demos/${slug}/`)
       .fln.flc.relative.text-0.max-w-5.m-auto
         .absolute.pin
-          img.custom-demo-mask.max-h-100.w-100(src="assets/mask.png")
-        img(src=`demos/${slug}/animated.gif`)
+          img.custom-demo-mask.max-h-100.w-100(src="assets/mask.png", alt="")
+        img(src=`demos/${slug}/animated.gif`, alt=`Animated example of TalkSearch on #{name}`)
       .fln.pt-0x.flex.flrnw.flc.pl-1
         .fln.text-0
-          img.h-2(src=logo)
+          img.h-2(src=logo, alt=`Logo of #{name}`)
         .fla.pl-1.text-solstice.uppercase.bold=name

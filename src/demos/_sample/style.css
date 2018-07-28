@@ -1,26 +1,31 @@
 @import "../_demo.css";
 
 .header {
-  @apply .bg-pink;
+  @apply .bg-red;
 }
 
 /* Main highlight */
 .ats-hit--details em {
-  @apply .border-pink text-pink;
+  @apply .border-blue text-blue;
 }
 /* Caption highlight */
 .ats-hit--caption em {
-  @apply .text-pink;
+  @apply .text-yellow;
 }
 
 /* Years/Conference menu hover/active */
 .ais-menu--item:hover,
 .ais-menu--item__active {
-  @apply .bg-pink text-white;
+  @apply .bg-blue text-white;
+}
+/* Menu counts */
+.ais-menu--item:hover .ais-menu--count,
+.ais-menu--item__active .ais-menu--count {
+  @apply text-white;
 }
 
 /* Pagination active/hover */
 .ais-pagination--item:hover,
 .ais-pagination--item__active {
-  @apply .bg-pink;
+  @apply .bg-blue;
 }

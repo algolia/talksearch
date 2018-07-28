@@ -64,7 +64,7 @@ export default {
 
   async run() {
     // Compile JavaScript files
-    const jsFiles = await helper.getFiles('demos/**/search.js');
+    const jsFiles = await helper.getFiles('demos/[^_]*/search.js');
     await pMap(jsFiles, async filepath => {
       await this.compile(filepath);
     });

@@ -1,0 +1,36 @@
+@import "../_demo.css";
+
+.header {
+  background-image: linear-gradient(135deg, rgb(24, 24, 153) 0%, rgb(51, 51, 153) 40%, rgb(42, 125, 241) 97%, rgb(41, 129, 246) 100%);
+  @apply border border-0 border-b-2 border-white;
+}
+
+/* Speaker name extraction is not very good on this demo as all title follow
+ * a different format. So, better to hide it all */
+.ats-hit--videoSubtitle { display: none; }
+
+/* Main highlight */
+.ats-hit--details em {
+  @apply .border-blue text-blue;
+}
+/* Caption highlight */
+.ats-hit--caption em {
+  @apply .text-light-blue;
+}
+
+/* Years/Conference menu hover/active */
+.ais-menu--item:hover,
+.ais-menu--item__active {
+  @apply .bg-blue text-white;
+}
+/* Menu counts */
+.ais-menu--item:hover .ais-menu--count,
+.ais-menu--item__active .ais-menu--count {
+  @apply bg-light-blue text-white
+}
+
+/* Pagination active/hover */
+.ais-pagination--item:hover,
+.ais-pagination--item__active {
+  @apply .bg-blue;
+}

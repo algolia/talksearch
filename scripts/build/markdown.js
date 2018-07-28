@@ -95,7 +95,7 @@ export default {
 
   async run() {
     // Convert markdown to HTML
-    const markdownFiles = await helper.getFiles('**/*.md');
+    const markdownFiles = await helper.getFiles('{*.md,demos/[^_]*/*.md}');
     await pMap(markdownFiles, async filepath => {
       await this.compile(filepath);
     });
