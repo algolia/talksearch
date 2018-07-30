@@ -1,6 +1,11 @@
 @import "../_styles/tailwind.css";
 @import "../_styles/debug.css";
 
+/* Add an ellipsis to the placeholder */
+.ais-search-box--input::placeholder {
+  text-overflow: ellipsis !important;
+}
+
 /* Searchbox magnifying glass */
 .ais-search-box--magnifier {
   @apply .hidden;

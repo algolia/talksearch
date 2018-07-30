@@ -96,9 +96,13 @@ export default {
       this.compile('./src/style.css');
     });
     // Rebuild demo when tailwind config of a demo is changed
-    helper.watch('./src/demos/**/tailwind.config.js', tailwindPath => {
+    helper.watch('./src/demos/[^_]*/tailwind.config.js', tailwindPath => {
       const cssPath = `${path.dirname(tailwindPath)}/style.css`;
       this.compile(cssPath);
+    });
+    // Rebuild demo when style of a demo is changed
+    helper.watch('./src/demos/[^_]*/style.css', filepath => {
+      this.compile(filepath);
     });
     // Rebuild all files when main tailwind config is changed
     helper.watch('./tailwind.config.js', () => {
