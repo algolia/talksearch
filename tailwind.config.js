@@ -87,14 +87,14 @@ const dimensionScale = {
   auto: 'auto',
   '0': '0',
   '1': '1rem',
-  '2': '2rem',
-  '3': '4rem',
-  '4': '8rem',
-  '5': '16rem',
   '1x': '1.5rem',
+  '2': '2rem',
   '2x': '3rem',
+  '3': '4rem',
   '3x': '6rem',
+  '4': '8rem',
   '4x': '12rem',
+  '5': '16rem',
   '10': '10%',
   '20': '20%',
   '25': '25%',
@@ -126,18 +126,18 @@ const heightScale = {
 
 const spacingScale = {
   '0': '0',
-  '05': '.5rem',
-  '1': '1rem',
-  '2': '2rem',
-  '3': '4rem',
-  '4': '8rem',
-  '5': '16rem',
   '0x': '.25rem',
+  '05': '.5rem',
   '05x': '.75rem',
+  '1': '1rem',
   '1x': '1.5rem',
+  '2': '2rem',
   '2x': '3rem',
+  '3': '4rem',
   '3x': '6rem',
+  '4': '8rem',
   '4x': '12rem',
+  '5': '16rem',
   '10': '10%',
   '20': '20%',
   '25': '25%',
@@ -423,12 +423,22 @@ module.exports = {
     poppins: '1.5px',
   },
   shadows: {
+    button:
+      '0 7px 14px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #cfd1e3',
+    'button-up':
+      '0 11px 16px -3px rgba(45, 35, 66, 0.3), 0 4px 5px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #cfd1e3',
+    'button-down':
+      'inset 0 2px 0 1px rgba(132, 138, 184, 0.11), inset 0 2px 9px 0 rgba(93, 100, 148, 0.5), inset 0 -1px 0 1px #fff',
+
+    'button-primary':
+      '0 7px 14px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #4b58ba;',
+    'button-primary-up':
+      '0 11px 16px -3px rgba(45, 35, 66, 0.3), 0 4px 5px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #4b58ba;',
+    'button-primary-down':
+      'inset 0 2px 0 1px rgba(132, 138, 184, 0.11), inset 0 2px 9px 0 rgba(93, 100, 148, 0.5), inset 0 -1px 0 1px #5468ff;',
+
     '1':
       '0 5px 15px 0 rgba(37, 44, 97, 0.15), 0 2px 4px 0 rgba(93, 100, 148, 0.2)',
-    '2': '0 7px 13px -3px rgba(45,35,66,0.3),0 2px 4px 0 rgba(45,35,66,0.4)',
-    '3': '0 11px 16px -3px rgba(45,35,66,0.3),0 4px 5px 0 rgba(45,35,66,0.4)',
-    inset:
-      'inset 0 2px 0 1px rgba(132,138,184,0.11),inset 0 2px 9px 0 rgba(93,100,148,0.5),inset 0 -1px 0 1px #fff',
     none: 'none',
   },
   svgFill: {

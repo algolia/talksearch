@@ -87,9 +87,13 @@ export default {
 
   // Listen to changes in css files and rebuild them
   watch() {
-    // Rebuild files when changed
-    helper.watch('./src/**/*.css', filepath => {
+    // Rebuild main file when changed
+    helper.watch('./src/style.css', filepath => {
       this.compile(filepath);
+    });
+    // Rebuild main file when includes are changed
+    helper.watch('./src/_styles/*.css', () => {
+      this.compile('./src/style.css');
     });
     // Rebuild demo when tailwind config of a demo is changed
     helper.watch('./src/demos/**/tailwind.config.js', tailwindPath => {

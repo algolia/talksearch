@@ -1,5 +1,6 @@
 @import "./_styles/tailwind.css";
 @import "./_styles/debug.css";
+@import "./_styles/components.css";
 @import "./_styles/fonts.css";
 @import "./_styles/highlight.css";
 
@@ -80,6 +81,7 @@ code {
   pointer-events: auto;
 }
 
+/* Demo on the homepage */
 .custom-demo-mask {
   opacity: 1;
   transition-property: opacity;
