@@ -20,8 +20,18 @@ html(lang='en')
     link(rel="shortcut icon", href="./favicon.ico")
     link(href="https://fonts.googleapis.com/css?family=Hind:400,600|Poppins:700", rel="stylesheet")
     link(type="text/css", rel="stylesheet", href="./style.css")
+    link(type="text/css", rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css")
     body.hind.text-telluric
       include ../_includes/header.pug
       .block.mt-3
         block content
+
+      script(src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js")
+      script
+        |docsearch({
+        |  apiKey: 'e3082526e1d5f37055241c335ab10f72',
+        |  indexName: 'talksearch',
+        |  inputSelector: '.custom-search-input',
+        |  debug: false 
+        |});
 

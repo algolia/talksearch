@@ -3,6 +3,7 @@
 @import "./_styles/components.css";
 @import "./_styles/fonts.css";
 @import "./_styles/highlight.css";
+@import "./_styles/docsearch.css";
 
 /* Gradients */
 .bgtb-white-pure-moon {
@@ -46,7 +47,7 @@ code {
     &:before {
       content: "";
       display: block;
-      @apply .h-2x;
+      @apply .h-3;
     }
     .anchor {
       @apply .hidden;
@@ -61,13 +62,6 @@ code {
 }
 
 /* Custom styles */
-.custom-search-input {
-  /* Inputs are always too high of 2px, so we put it down, but we also add some
-   * specific padding around it, to center it
-   **/
-  padding-top: calc(0.5rem + 2px);
-  @apply .pb-05;
-}
 .custom-community-projects {
   width: 400px;
   opacity: 0;

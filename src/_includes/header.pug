@@ -10,7 +10,7 @@
         include ../assets/arrow-separator.svg
     //- Community logo
     .hidden.lg_flex.custom-community-link.fln.flcnw.flc.px-0x.relative
-      a.cursor-pointer.text-0(href="https://www.algolia.com/", target="_blank")
+      a.cursor-pointer.text-0(href="https://community.algolia.com/", target="_blank")
         img.h-1.sm_h-1x.lg_h-2(src="assets/community-logo.svg", alt="Algolia Community")
       .custom-community-projects.hidden.sm_block.absolute.z-5.pin-t.mt-3.ml-3.border.border-proton.rounded-auto.bg-white-pure.shadow-1
         .flex.flrw.pt-0x
@@ -53,11 +53,11 @@
     .flex.fla.md_hidden
     //- DocSearch
     .hidden.md_flex.fla.flrnw.flrcv.flrar.ml-2
-      .w-100
-        .fla.h-60.w-80.border.border-proton.rounded-auto.relative
-          label.absolute.pin-left.w-1.h-100.ml-05.text-solstice.fill-current.cursor-pointer(for="docsearch")
+      .w-100.flrnw.flex.flrar
+        .custom-search-wrapper.fln.h-60.w-50.border.border-proton.rounded-auto.relative
+          label.absolute.pin-left.z-1.w-1.h-100.ml-05.text-solstice.fill-current.cursor-pointer(for="docsearch")
             include ../assets/magnifying-glass.svg
-          input.custom-search-input.w-100.h-100.outline-none.text-solstice.pl-2.rounded-auto.bg-moon.focus_bg-transparent#docsearch
+          input.custom-search-input.w-100.h-100.outline-none.text-solstice.pl-2.rounded-auto.bg-moon.focus_bg-transparent#docsearch(placeholder="Search the documentation...")
     
     //- Links
     .flex.fln.flrnw.flc.px-2
