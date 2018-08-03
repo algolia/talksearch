@@ -37,6 +37,9 @@ methods applied at run time and can import their own dependencies.</p>
 
     <span class="hljs-keyword">return</span> settings;
   },
+  <span class="hljs-attr">blockList</span>: [
+    <span class="hljs-string">'05ZvII57p_M'</span>
+  ]
 };
 </code></pre>
 <h2 id="indexname">indexName <a class="anchor" href="#indexname" aria-hidden="true"></a></h2>
@@ -49,6 +52,13 @@ config file.</p>
 adding comments after each playlist id to identify them.</p>
 <p><em>Note that the crawler does not yet allow the indexing of channels or individual
 videos.</em></p>
+<h2 id="blocklist">blockList <a class="anchor" href="#blocklist" aria-hidden="true"></a></h2>
+<p>The <code>blockList</code> key accepts an array of video ids that you'd like to exclude
+from the indexing. This can be used for example to remove some teaser or test
+videos from the final set.</p>
+<p>Those videos won't even be crawled by the API. If you want finer grain on which
+video to exclude based on more data than the <code>id</code>, check the <code>transformData</code>
+method below.</p>
 <h2 id="transformdata">transformData <a class="anchor" href="#transformdata" aria-hidden="true"></a></h2>
 <p>If present, the <code>transformData</code> method will be called on each record, right
 before pushing them to Algolia. It takes the raw record as input and expects the
