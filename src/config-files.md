@@ -34,6 +34,9 @@ export default {
 
     return settings;
   },
+  blockList: [
+    '05ZvII57p_M'
+  ]
 };
 ```
 
@@ -52,6 +55,16 @@ adding comments after each playlist id to identify them.
 
 _Note that the crawler does not yet allow the indexing of channels or individual
 videos._
+
+## blockList
+
+The `blockList` key accepts an array of video ids that you'd like to exclude
+from the indexing. This can be used for example to remove some teaser or test
+videos from the final set.
+
+Those videos won't even be crawled by the API. If you want finer grain on which
+video to exclude based on more data than the `id`, check the `transformData`
+method below.
 
 ## transformData
 
@@ -77,6 +90,7 @@ through `transformData`.
 
 Note that the usage of `transformSettings` requires some knowledge of the
 [Algolia Settings API parameters][3].
+
 
 ## ConfigHelper
 
