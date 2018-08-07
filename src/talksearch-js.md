@@ -81,7 +81,8 @@ const search = instantsearch(options);
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#searchbar',
-    poweredBy: true // This is mandatory if we're doing the crawling for you
+    poweredBy: talksearch.poweredBy 
+    //         ^ You have to set this if we're doing the crawling for you
   })
 );
 
@@ -89,7 +90,7 @@ search.addWidget(
   instantsearch.widgets.hits({
     container: '#results',
     templates: {
-      item: talksearch.templates.hits.item,
+      item: talksearch.hit,
     },
   })
 );
