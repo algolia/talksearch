@@ -12,9 +12,6 @@
 .ats-hit--caption .ats-highlight {
   @apply .text-pink;
 }
-.ats-hit--caption {
-  @apply bg-red;
-}
 
 /* Years/Conference menu hover/active */
 .ais-menu--item:hover,

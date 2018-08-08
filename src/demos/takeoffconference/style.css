@@ -27,7 +27,7 @@
 
 /* Caption highlight */
 .ats-hit--caption .ats-highlight {
-  @apply .text-yellow;
+  @apply .text-red;
 }
 
 /* Years/Conference menu hover/active */
@@ -37,18 +37,17 @@
 }
 
 /* Menu count */
-.ais-menu--item:hover .ais-menu--count, 
+.ais-menu--item:hover .ais-menu--count,
 .ais-menu--item__active .ais-menu--count {
   @apply bg-red text-white;
 }
 
 /* Pagination active/hover */
-.ais-pagination--item:hover, 
+.ais-pagination--item:hover,
 .ais-pagination--item__active {
   @apply .bg-purple;
 }
-.ais-pagination--item:hover .ais-pagination--link, 
+.ais-pagination--item:hover .ais-pagination--link,
 .ais-pagination--item__active .ais-pagination--link {
   @apply text-white;
 }
-
