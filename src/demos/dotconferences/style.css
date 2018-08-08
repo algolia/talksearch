@@ -46,12 +46,12 @@ body {
 }
 
 /* Main highlight */
-.ats-hit--details em {
+.ats-hit--details .ats-highlight {
   @apply .border-grey;
 }
 
 /* Caption highlight */
-.ats-hit--caption em {
+.ats-hit--caption .ats-highlight {
   @apply .text-yellow;
 }
 

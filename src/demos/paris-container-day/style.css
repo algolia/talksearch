@@ -10,11 +10,11 @@
 .ats-hit--videoSubtitle { display: none; }
 
 /* Main highlight */
-.ats-hit--details em {
+.ats-hit--details .ats-highlight {
   @apply .border-blue text-blue;
 }
 /* Caption highlight */
-.ats-hit--caption em {
+.ats-hit--caption .ats-highlight {
   @apply .text-light-blue;
 }
 
