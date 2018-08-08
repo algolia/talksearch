@@ -89,7 +89,7 @@ Here is an example of a full record:
     }
   ],
   "caption": {
-    "content": "asked to come and talk to you guys and I",
+    "content": "asked to come and talk to you guys and I was like super excited",
     "duration": 4.02,
     "start": 30,
     "position": 6,
@@ -222,7 +222,7 @@ resolutions, along with the dimensions.
 
 ## caption
 
-The `caption` contains information about the current matching line of caption.
+The `caption` contains information about the current matching caption.
 If no caption is actually matching (for example if you're doing an empty query),
 then the first caption of the video will be used.
 
@@ -236,7 +236,7 @@ the caption itself.
 ```json
 {
   "caption": {
-    "content": "asked to come and talk to you guys and I",
+    "content": "asked to come and talk to you guys and I was like super excited",
     "duration": 4.02,
     "start": 30,
     "position": 6,

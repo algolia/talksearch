@@ -25,7 +25,7 @@ more widgets, check the [InstantSearch.js section][2]._
 ## Include libraries
 
 You'll need to include both the InstantSearch.js library, and the TalkSearch.js
-helper. Both libraries come with some CSS styling, to provide a default styling.
+helper. Both libraries come with some CSS, to provide a default styling.
 
 ```html
 <script
