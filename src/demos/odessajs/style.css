@@ -1,0 +1,38 @@
+@import "../_demo.css";
+
+.header {
+  @apply .bg-white-pure border-b border-b-2 border-red;
+}
+
+#searchbox {
+  @apply bg-red;
+}
+#searchbox:focus {
+  @apply bg-red
+}
+
+/* Main highlight */
+.ats-hit--details .ats-highlight {
+  @apply .border-red text-red;
+}
+/* Caption highlight */
+.ats-hit--caption .ats-highlight {
+  @apply .text-red;
+}
+
+/* Years/Conference menu hover/active */
+.ais-menu--item:hover,
+.ais-menu--item__active {
+  @apply .bg-red text-white;
+}
+/* Menu counts */
+.ais-menu--item:hover .ais-menu--count,
+.ais-menu--item__active .ais-menu--count {
+  @apply text-white;
+}
+
+/* Pagination active/hover */
+.ais-pagination--item:hover,
+.ais-pagination--item__active {
+  @apply .bg-red;
+}
