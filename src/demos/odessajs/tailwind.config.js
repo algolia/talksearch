@@ -2,8 +2,12 @@
 const _ = require('lodash');
 const defaultConfig = require('../../../tailwind.config.js');
 
+const colors = {
+  red: '#db1c31',
+};
+
 module.exports = _.merge(defaultConfig, {
-  colors: {
-    red: '#db1c31',
-  },
+  colors,
+  borderColors: colors,
+  textColors: colors,
 });
