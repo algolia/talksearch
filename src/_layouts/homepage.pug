@@ -36,12 +36,17 @@ block content
       include ../_mixins/demo.pug
       .max-w-lg.m-auto.pb-4
         .flex.flrw
-          +demo('dotconferences', 'dotConferences')
-          +demo('saastr', 'Saastr')
-          +demo('googleio', 'Google I/O')
-          +demo('usi', 'USI')
-          +demo('chatbot-summit', 'Chatbot Summit', 'demos/chatbot-summit/logo-alternate.png')
-          +demo('takeoffconference', 'TakeOff Conf')
+          +demo('dotconferences', 'dotConferences', { isAnimated: true })
+          +demo('saastr', 'Saastr', { isAnimated: true })
+          +demo('googleio', 'Google I/O', { isAnimated: true })
+          +demo('usi', 'USI', { isAnimated: true })
+          +demo('chatbot-summit', 'Chatbot Summit', { isAnimated: true, alternateLogo: 'logo-alternate.png' })
+          +demo('takeoffconference', 'TakeOff Conf', { isAnimated: true })
+
+          +demo('dataxday', 'DataXDay', { alternateLogo: 'logo-alternate.png' })
+          +demo('odessajs', 'OdessaJS')
+          +demo('paris-container-day', 'Paris Container Day', { alternateLogo: 'logo-alternate.png' })
+
           .fln.w-100.sm_w-50.md_w-33.p-1.h-5.flex.flrnw
             a.c-card.fla.flex.flcnw.p-05.text-telluric(href="mailto:talksearch@algolia.com")
               .fla.text-solstice.text-5.normal.flex.flrnw.flc.bold You?

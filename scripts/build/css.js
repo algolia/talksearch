@@ -8,7 +8,7 @@ import postcssPurge from '@fullhuman/postcss-purgecss';
 import postcssClean from 'postcss-clean';
 import path from 'path';
 import fs from 'fs';
-import pEach from 'p-each-series';
+import pMap from 'p-map';
 
 export default {
   postcssPlugins(tailwindConfigFile) {
@@ -80,7 +80,7 @@ export default {
   async run() {
     const cssFiles = await helper.getFiles('{style.css,demos/[^_]*/style.css}');
 
-    await pEach(cssFiles, async filepath => {
+    await pMap(cssFiles, async filepath => {
       await this.compile(filepath);
     });
   },

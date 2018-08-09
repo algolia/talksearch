@@ -1,12 +1,11 @@
-mixin demo(slug, name, alternateLogo)
-  - const logo = alternateLogo || `demos/${slug}/logo-small.png`
+mixin demo(slug, name, options = {})
+  - const logo = options.alternateLogo || 'logo-small.png';
+  - const thumbnail = options.isAnimated ? 'animated.gif' : 'og_image.png'
   .fln.w-100.sm_w-50.md_w-33.p-1.flex.flrnw
     a.c-card.custom-demo.fla.flex.flcnw.p-05(href=`demos/${slug}/`)
       .fln.flc.relative.text-0.max-w-5.m-auto
-        .absolute.pin
-          img.custom-demo-mask.max-h-100.w-100(src="assets/mask.png", alt="")
-        img(src=`demos/${slug}/animated.gif`, alt=`Animated example of TalkSearch on ${name}`)
-      .fln.pt-0x.flex.flrnw.flc.pl-1
+        img(src=`demos/${slug}/${thumbnail}`, alt=`Example of TalkSearch on ${name}`)
+      .fln.pt-1.flex.flrnw.flc.pl-1
         .fln.text-0
-          img.h-2(src=logo, alt=`Logo of ${name}`)
+          img.h-2(src=`demos/${slug}/${logo}`, alt=`Logo of ${name}`)
         .fla.pl-1.text-solstice.uppercase.bold=name
