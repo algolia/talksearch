@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const indexName = 'kiwiparty';
 const apiKey = '11bf2e111e3f412077c327e755ebc4fa';
-const placeholder = null;
+const placeholder = 'Recherchez dans le contenu des vidéos...';
 /* eslint-enable no-unused-vars */
 
 // include: instanciate.js
