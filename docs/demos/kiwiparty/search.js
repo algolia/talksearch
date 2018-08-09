@@ -2,7 +2,7 @@
 
 const indexName = 'kiwiparty';
 const apiKey = '11bf2e111e3f412077c327e755ebc4fa';
-const placeholder = null;
+const placeholder = 'Recherchez dans le contenu des vidéos...';
 const search = instantsearch({
   appId: '8J7GPSC0XN',
   apiKey,
@@ -26,7 +26,7 @@ search.on('render', () => {
 });
 search.addWidget(instantsearch.widgets.searchBox({
   container: '#searchbox',
-  placeholder: placeholder || 'Search by topic, speaker or any sentence',
+  placeholder: placeholder || 'Search inside all videos',
   poweredBy: false,
   wrapInput: false,
   loadingIndicator: false
