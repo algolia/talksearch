@@ -22,7 +22,7 @@ import pAll from 'p-all';
   liveServer.start({
     root: './docs',
     open: '/talksearch/',
-    port: 8082,
+    port: 8085,
     middleware: [
       // Redirect /talksearch to the root (mimicking GitHub pages)
       function(req, res, next) {
