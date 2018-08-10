@@ -6,8 +6,9 @@ const colors = {
   // 'colorName': '#AAAAAA',
 };
 
-module.exports = _.merge(defaultConfig, {
+module.exports = _.merge({}, defaultConfig, {
   colors,
+  backgroundColors: colors,
   borderColors: colors,
   textColors: colors,
 });

@@ -3,7 +3,8 @@ const _ = require('lodash');
 const defaultConfig = require('../../../tailwind.config.js');
 
 const colors = {
-  green: '#82941f',
+  black: '#101010',
+  blue: '#64c9d9',
 };
 
 module.exports = _.merge({}, defaultConfig, {
