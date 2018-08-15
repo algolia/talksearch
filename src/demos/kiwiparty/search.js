@@ -2,6 +2,7 @@
 const indexName = 'kiwiparty';
 const apiKey = '11bf2e111e3f412077c327e755ebc4fa';
 const placeholder = 'Recherchez dans le contenu des vidéos...';
+const searchParameters = {};
 /* eslint-enable no-unused-vars */
 
 // include: instanciate.js

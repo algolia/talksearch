@@ -2,6 +2,7 @@
 const indexName = 'googleio';
 const apiKey = '23604cadb2de8740e24befaa62d93d43';
 const placeholder = null;
+const searchParameters = {};
 /* eslint-enable no-unused-vars */
 
 // include: instanciate.js

@@ -2,6 +2,7 @@
 const indexName = '{{indexName}}';
 const apiKey = '{{apiKey}}';
 const placeholder = null;
+const searchParameters = {};
 /* eslint-enable no-unused-vars */
 
 // include: instanciate.js

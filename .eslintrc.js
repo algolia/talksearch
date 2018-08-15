@@ -8,6 +8,7 @@ module.exports = {
     indexName: true,
     apiKey: true,
     placeholder: true,
+    searchParameters: true,
   },
   rules: {
     'no-console': 0,

@@ -7,6 +7,7 @@ const search = instantsearch({
   searchParameters: {
     hitsPerPage: 21,
     facetingAfterDistinct: true,
+    ...searchParameters,
   },
 });
 // Add a div to the page after the first render. This will be used to take

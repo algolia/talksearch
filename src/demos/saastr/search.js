@@ -2,6 +2,7 @@
 const indexName = 'saastr';
 const apiKey = '6e7463a1c6bd72ccbdf5caf750d17cbd';
 const placeholder = null;
+const searchParameters = {};
 /* eslint-enable no-unused-vars */
 
 // include: instanciate.js
