@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie-edge"><title>Inside a record</title><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="description" content="The easiest way to add search to your conference videos."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@Algolia"><meta name="twitter:creator" content="@Algolia"><meta property="og:url" content="https://community.algolia.com/talksearch"><meta property="og:title" content="Inside a record"><meta property="og:description" content="The easiest way to add search to your conference videos."><meta property="og:image" content="https://community.algolia.com/talksearch/assets/og_image.png"><link rel="shortcut icon" href="./favicon.ico"><link href="https://fonts.googleapis.com/css?family=Hind:400,600|Poppins:700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./style.css"><link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><body class="hind text-telluric"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8JP8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div class="header fixed pin-t w-100 h-3 z-5 bg-white-pure"><div class="max-w-xl m-auto h-100 flex flrnw"><div class="hidden sm_flex fln flcnw flc px-0x"><a class="cursor-pointer text-0" href="https://www.algolia.com/" target="_blank"><img class="h-1 sm_h-1x" src="assets/algolia-logo.svg" alt="Algolia"></a></div><div class="hidden sm_flex fln flrnw flc"><div class="w-1 h-1 sm_w-1x sm_h-1x text-telluric fill-current"><svg height="100%" width="100%" viewBox="0 0 18 35" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1.8537 34.7643l15.5597-17.268L1.8537 0H0l15.5597 17.4964L0 34.7644z" fill-rule="evenodd"></path>
+</svg>
+</div></div><div class="hidden lg_flex custom-community-link fln flcnw flc px-0x relative"><a class="cursor-pointer text-0" href="https://community.algolia.com/" target="_blank"><img class="h-1 sm_h-1x lg_h-2" src="assets/community-logo.svg" alt="Algolia Community"></a><div class="custom-community-projects hidden sm_block absolute z-5 pin-t mt-3 ml-3 border border-proton rounded-auto bg-white-pure shadow-1"><div class="flex flrw pt-0x"><a class="fln w-50 flex flrnw p-05 flc hover_no-underline" href="https://community.algolia.com/docsearch/"><div class="fln bg-teal rounded-auto w-2x h-2x"><img class="w-100" src="assets/docsearch-icon.svg" alt="DocSearch"></div><div class="fla pl-1 text-solstice text-2 bold hover_text-nebula">DocSearch</div></a><a class="fln w-50 flex flrnw p-05 flc hover_no-underline" href="https://community.algolia.com/jekyll-algolia/"><div class="fln bg-purple rounded-auto w-2x h-2x"><img class="w-100" src="assets/jekyll-icon.svg" alt="Jekyll"></div><div class="fla pl-1 text-solstice text-2 bold hover_text-nebula">Jekyll</div></a><a class="fln w-50 flex flrnw p-05 flc hover_no-underline" href="https://community.algolia.com/instantsearch.js/"><div class="fln bg-yellow rounded-auto w-2x h-2x"><img class="w-100" src="assets/instantsearch-icon.svg" alt="InstantSearch"></div><div class="fla pl-1 text-solstice text-2 bold hover_text-nebula">InstantSearch</div></a><a class="fln w-50 flex flrnw p-05 flc hover_no-underline" href="https://community.algolia.com/react-instantsearch/"><div class="fln bg-blue rounded-auto w-2x h-2x"><img class="w-100" src="assets/react-icon.svg" alt="React InstantSearch"></div><div class="fla pl-1 text-solstice text-2 bold hover_text-nebula">React InstantSearch</div></a><a class="fln w-50 flex flrnw p-05 flc hover_no-underline"><div class="fln bg-green rounded-auto w-2x h-2x" href="https://community.algolia.com/vue-instantsearch/"><img class="w-100" src="assets/vue-icon.svg" alt="Vue InstantSearch"></div><div class="fla pl-1 text-solstice text-2 bold hover_text-nebula">Vue InstantSearch</div></a><a class="fln w-50 flex flrnw p-05 flc hover_no-underline" href="https://community.algolia.com/angular-instantsearch/"><div class="fln bg-red rounded-auto w-2x h-2x flex flrnw flc"><img class="w-80" src="assets/angular-icon.svg" alt="Angular InstantSearch"></div><div class="fla pl-1 text-solstice text-2 bold hover_text-nebula">Angular InstantSearch</div></a><a class="fla flex flrnw p-0x flc text-solstice bold bg-moon rounded-auto py-1" href="https://discourse.algolia.com/">Community forum</a></div></div></div><div class="hidden lg_flex fln flrnw flc"><div class="w-1 h-1 sm_w-1x sm_h-1x text-telluric fill-current"><svg height="100%" width="100%" viewBox="0 0 18 35" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1.8537 34.7643l15.5597-17.268L1.8537 0H0l15.5597 17.4964L0 34.7644z" fill-rule="evenodd"></path>
+</svg>
+</div></div><div class="flex fln flrnw flc pl-1 sm_pl-0"><a class="cursor-pointer uppercase tracking-poppins poppins text-solstice hover_text-nebula hover_no-underline" href="https://community.algolia.com/talksearch">TalkSearch</a></div><div class="flex fla md_hidden"></div><div class="hidden md_flex fla flrnw flrcv flrar ml-2"><div class="w-100 flrnw flex flrar"><div class="custom-search-wrapper fln h-60 w-50 border border-proton rounded-auto relative"><label class="absolute pin-left z-1 w-1 h-100 ml-05 text-solstice fill-current cursor-pointer" for="docsearch"><svg height="100%" viewBox="0 0 15 15" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.052 10.88c-1.1.91-2.483 1.406-3.91 1.403C2.75 12.283 0 9.533 0 6.14 0 2.75 2.75 0 6.142 0c3.392 0 6.14 2.75 6.14 6.142 0 1.485-.526 2.847-1.403 3.91l3.95 3.95c.227.227.228.596-.002.826-.228.227-.597.228-.826 0l-3.95-3.95zm-3.91.234c2.745 0 4.972-2.227 4.972-4.972 0-2.747-2.227-4.972-4.972-4.972-2.747 0-4.972 2.225-4.972 4.972 0 2.745 2.225 4.972 4.972 4.972z" fill-rule="evenodd"></path>
+</svg>
+</label><input class="custom-search-input w-100 h-100 outline-none text-solstice pl-2 rounded-auto bg-moon focus_bg-transparent" id="docsearch" placeholder="Search the documentation..."></div></div></div><div class="flex fln flrnw flc px-2"><a class="cursor-pointer text-2 text-solstice hover_text-nebula hover_no-underline" href="./what-is-talksearch.html">Documentation</a></div><div class="flex fln flrnw flc pr-0x"><a class="w-1x h-1x text-solstice fill-current" href="https://github.com/algolia/talksearch" target="_blank"><svg viewBox="0 0 40 39" xmlns="http://www.w3.org/2000/svg">
+  <path d="M19.998 0C8.955 0 0 8.954 0 20c0 8.837 5.73 16.333 13.678 18.977 1 .184 1.365-.433 1.365-.964 0-.475-.017-1.732-.027-3.4C9.453 35.82 8.28 31.93 8.28 31.93c-.91-2.31-2.222-2.925-2.222-2.925-1.816-1.24.137-1.215.137-1.215 2.008.14 3.064 2.06 3.064 2.06 1.783 3.057 4.68 2.174 5.82 1.662.18-1.29.698-2.173 1.27-2.673-4.442-.505-9.11-2.222-9.11-9.885 0-2.183.78-3.97 2.058-5.367-.206-.506-.893-2.54.196-5.293 0 0 1.68-.538 5.5 2.05A19.156 19.156 0 0 1 20 9.67c1.7.01 3.41.23 5.008.675 3.818-2.588 5.494-2.05 5.494-2.05 1.09 2.753.405 4.787.2 5.293 1.282 1.397 2.055 3.184 2.055 5.367 0 7.683-4.676 9.374-9.13 9.868.716.618 1.356 1.838 1.356 3.703 0 2.675-.025 4.832-.025 5.487 0 .536.36 1.158 1.376.963C34.274 36.326 40 28.836 40 20 40 8.955 31.045 0 19.998 0" />
+</svg>
+</a></div></div></div><div class="block mt-3"><div class="bgtb-white-moon pt-3x pb-3 poppins"><div class="max-w-lg m-auto text-center"><div class="text-6 lg_text-8 uppercase tracking-poppins text-solstice bold">Inside a record</div></div></div><div class="flex flrnw max-w-xl m-auto"><div class="fln w-30"><!-- Adding subsections from markdown--><div class="sticky pin-t top-3 h-100vh-3 pl-1 lg_pl-2 overflow-y-auto"><div class="category text-nebula poppins uppercase mt-1">Essentials</div><ul class="list-reset pt-05 pb-1 text-2"><li><a class="block py-0x text-solstice" href="what-is-talksearch.html">What is TalkSearch?</a></li></ul><div class="category text-nebula poppins uppercase mt-1">Back-end</div><ul class="list-reset pt-05 pb-1 text-2"><li><a class="block py-0x text-solstice" href="crawler.html">The crawler</a></li><li><a class="block py-0x text-solstice" href="config-files.html">Config files</a></li></ul><div class="category text-nebula poppins uppercase mt-1">Front-end</div><ul class="list-reset pt-05 pb-1 text-2"><li><a class="block py-0x text-solstice" href="talksearch-js.html">TalkSearch.js</a></li><li><a class="block py-0x text-solstice" href="instantsearch-js.html">InstantSearch.js</a></li><li><a class="block py-0x text-nebula" href="anatomy-of-a-record.html">Inside a record</a></li></ul></div></div><div class="documentation-content fla text-2 pb-2 pr-1 sm_px-2 md_px-3 overflow-hidden"><p>All TalkSearch records follow the same schema of nested keys. Each top key
+contains informations regarding a specific aspect of the result, such as the
+<code>channel</code>, <code>playlist</code>, <code>video</code> or even <code>speakers</code> or <code>caption</code>. Use this page as
+a reference to see what each key contains.</p>
+<p><em>Note: If you're using TalkSearch.js, you shouldn't have to worry about any of
+those. It's all already handled in the template for you.</em></p>
+<p>Here is an example of a full record:</p>
+<pre><code class="hljs language-json">{
+  <span class="hljs-attr">"objectID"</span>: <span class="hljs-string">"11d227100f19d6d54a226221905845845f194d208a87876e60da9832f38f2ca8"</span>,
+  <span class="hljs-attr">"channel"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UCSRhwaM00ay0fasnsw6EXKA"</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"dotconferences"</span>
+  },
+  <span class="hljs-attr">"conference"</span>: {
+    <span class="hljs-attr">"year"</span>: <span class="hljs-number">2012</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"dotJS"</span>
+  },
+  <span class="hljs-attr">"playlist"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Our first dotConference on November 30th , 2012."</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"PLMW8Xq7bXrG77SV1VAAiAciRyq3VSC2Gq"</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"dotJS 2012"</span>
+  },
+  <span class="hljs-attr">"video"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Filmed in Paris on Nov 30th, 2012."</span>,
+    <span class="hljs-attr">"duration"</span>: {
+      <span class="hljs-attr">"minutes"</span>: <span class="hljs-number">26</span>,
+      <span class="hljs-attr">"seconds"</span>: <span class="hljs-number">33</span>
+    },
+    <span class="hljs-attr">"hasCaptions"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"hasManualCaptions"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UIDb6VBO9os"</span>,
+    <span class="hljs-attr">"popularity"</span>: {
+      <span class="hljs-attr">"comments"</span>: <span class="hljs-number">81</span>,
+      <span class="hljs-attr">"dislikes"</span>: <span class="hljs-number">70</span>,
+      <span class="hljs-attr">"favorites"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"likes"</span>: <span class="hljs-number">788</span>,
+      <span class="hljs-attr">"views"</span>: <span class="hljs-number">66798</span>,
+      <span class="hljs-attr">"score"</span>: <span class="hljs-number">67737</span>
+    },
+    <span class="hljs-attr">"positionInPlaylist"</span>: <span class="hljs-number">15</span>,
+    <span class="hljs-attr">"publishedDate"</span>: {
+      <span class="hljs-attr">"year"</span>: <span class="hljs-number">1356994800</span>,
+      <span class="hljs-attr">"month"</span>: <span class="hljs-number">1356994800</span>,
+      <span class="hljs-attr">"day"</span>: <span class="hljs-number">1358377200</span>,
+      <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1358460292</span>
+    },
+    <span class="hljs-attr">"thumbnails"</span>: {
+      <span class="hljs-attr">"default"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">90</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/default.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">120</span>
+      },
+      <span class="hljs-attr">"high"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">360</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/hqdefault.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">480</span>
+      },
+      <span class="hljs-attr">"maxres"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">720</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/maxresdefault.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">1280</span>
+      },
+      <span class="hljs-attr">"medium"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">180</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/mqdefault.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">320</span>
+      },
+      <span class="hljs-attr">"standard"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">480</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/sddefault.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">640</span>
+      }
+    },
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"What Is Open Source &amp; Why Do I Feel So Guilty?"</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://www.youtube.com/watch?v=UIDb6VBO9os"</span>
+  },
+  <span class="hljs-attr">"speakers"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Fat"</span>
+    }
+  ],
+  <span class="hljs-attr">"caption"</span>: {
+    <span class="hljs-attr">"content"</span>: <span class="hljs-string">"asked to come and talk to you guys and I was like super excited"</span>,
+    <span class="hljs-attr">"duration"</span>: <span class="hljs-number">4.02</span>,
+    <span class="hljs-attr">"start"</span>: <span class="hljs-number">30</span>,
+    <span class="hljs-attr">"position"</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://www.youtube.com/watch?v=UIDb6VBO9os&amp;t=30s"</span>
+  }
+}
+</code></pre>
+<h2 id="channel">channel <a class="anchor" href="#channel" aria-hidden="true"></a></h2>
+<p>The <code>channel</code> key contains data relative to the YouTube channel. You can think
+of a channel more or less as a YouTube user.</p>
+<p>It contains two keys, <code>id</code> and <code>title</code>. Those are extracted directly from
+the YouTube API.</p>
+<pre><code class="hljs language-json">{
+  <span class="hljs-attr">"channel"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UCSRhwaM00ay0fasnsw6EXKA"</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"dotconferences"</span>
+  }
+}
+</code></pre>
+<h2 id="playlist">playlist <a class="anchor" href="#playlist" aria-hidden="true"></a></h2>
+<p>The <code>playlist</code> key contains data relative to the YouTube playlist defined in the
+config.</p>
+<p>It contains a <code>description</code>, <code>id</code> and <code>title</code> key, all extracted from the YouTube API.</p>
+<pre><code class="hljs language-json">{
+  <span class="hljs-attr">"playlist"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Our first dotConference on November 30th , 2012."</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"PLMW8Xq7bXrG77SV1VAAiAciRyq3VSC2Gq"</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"dotJS 2012"</span>
+  }
+}
+</code></pre>
+<h2 id="video">video <a class="anchor" href="#video" aria-hidden="true"></a></h2>
+<p>The <code>video</code> key is the one that contains the most information, so let's break it
+down:</p>
+<p><code>description</code>, <code>id</code>, <code>title</code>, <code>positionInPlaylist</code>  and <code>url</code> are all coming
+straight from YouTube.</p>
+<p><code>duration.minutes</code> and <code>duration.seconds</code> can be used to display the total time
+of the video.</p>
+<p><code>hasCaptions</code> is set to <code>true</code> when YouTube had captions available for this
+video. YouTube adds automatic captioning to most of the videos, but sometimes
+they might not have been processed yet. <code>hasManualCaptions</code> is set to true when
+some captions weren't automatic but manually added by. Those captions are of
+much higher quality.</p>
+<p>The <code>popularity</code> key contains a breakdown of the number of views, likes,
+dislikes, comments and favorites this video had. A (naive) <code>score</code> is computed
+by adding all those values together and is used in the ranking.</p>
+<p>The <code>publishedDate</code> contains the publishing date of the video in various
+formats, for your convenience. The <code>.timestamp</code> subkey contains the exact
+second, while <code>day</code>, <code>month</code> and <code>year</code> contains rounded values. All those
+values can be used for filtering.</p>
+<p>Finally, the <code>thumbnails</code> key contains the video thumbnail at different
+resolutions, along with the dimensions.</p>
+<pre><code class="hljs">{
+  <span class="hljs-attr">"video"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Filmed in Paris on Nov 30th, 2012."</span>,
+    <span class="hljs-attr">"duration"</span>: {
+      <span class="hljs-attr">"minutes"</span>: <span class="hljs-number">26</span>,
+      <span class="hljs-attr">"seconds"</span>: <span class="hljs-number">33</span>
+    },
+    <span class="hljs-attr">"hasCaptions"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"hasManualCaptions"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"UIDb6VBO9os"</span>,
+    <span class="hljs-attr">"popularity"</span>: {
+      <span class="hljs-attr">"comments"</span>: <span class="hljs-number">81</span>,
+      <span class="hljs-attr">"dislikes"</span>: <span class="hljs-number">70</span>,
+      <span class="hljs-attr">"favorites"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"likes"</span>: <span class="hljs-number">788</span>,
+      <span class="hljs-attr">"views"</span>: <span class="hljs-number">66798</span>,
+      <span class="hljs-attr">"score"</span>: <span class="hljs-number">67737</span>
+    },
+    <span class="hljs-attr">"positionInPlaylist"</span>: <span class="hljs-number">15</span>,
+    <span class="hljs-attr">"publishedDate"</span>: {
+      <span class="hljs-attr">"year"</span>: <span class="hljs-number">1356994800</span>,
+      <span class="hljs-attr">"month"</span>: <span class="hljs-number">1356994800</span>,
+      <span class="hljs-attr">"day"</span>: <span class="hljs-number">1358377200</span>,
+      <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1358460292</span>
+    },
+    <span class="hljs-attr">"thumbnails"</span>: {
+      <span class="hljs-attr">"default"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">90</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/default.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">120</span>
+      },
+      <span class="hljs-attr">"high"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">360</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/hqdefault.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">480</span>
+      },
+      <span class="hljs-attr">"maxres"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">720</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/maxresdefault.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">1280</span>
+      },
+      <span class="hljs-attr">"medium"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">180</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/mqdefault.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">320</span>
+      },
+      <span class="hljs-attr">"standard"</span>: {
+        <span class="hljs-attr">"height"</span>: <span class="hljs-number">480</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://i.ytimg.com/vi/UIDb6VBO9os/sddefault.jpg"</span>,
+        <span class="hljs-attr">"width"</span>: <span class="hljs-number">640</span>
+      }
+    },
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"What Is Open Source &amp; Why Do I Feel So Guilty?"</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://www.youtube.com/watch?v=UIDb6VBO9os"</span>
+  }
+}
+</code></pre>
+<h2 id="caption">caption <a class="anchor" href="#caption" aria-hidden="true"></a></h2>
+<p>The <code>caption</code> contains information about the current matching caption.
+If no caption is actually matching (for example if you're doing an empty query),
+then the first caption of the video will be used.</p>
+<p>The <code>.content</code> key contains the actual caption and the <code>url</code> will give a direct
+link to the moment in the video matching this caption.</p>
+<p><code>position</code> contains the index of the caption (first caption of the video will
+have a value of <code>0</code>). <code>start</code> and <code>duration</code> will give you more context about
+the caption itself.</p>
+<pre><code class="hljs language-json">{
+  <span class="hljs-attr">"caption"</span>: {
+    <span class="hljs-attr">"content"</span>: <span class="hljs-string">"asked to come and talk to you guys and I was like super excited"</span>,
+    <span class="hljs-attr">"duration"</span>: <span class="hljs-number">4.02</span>,
+    <span class="hljs-attr">"start"</span>: <span class="hljs-number">30</span>,
+    <span class="hljs-attr">"position"</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://www.youtube.com/watch?v=UIDb6VBO9os&amp;t=30s"</span>
+  }
+}
+</code></pre>
+<h2 id="conference">conference <a class="anchor" href="#conference" aria-hidden="true"></a></h2>
+<p>The <code>conference</code> key contains data relative to the conference event itself. This
+data is guessed from the playlist name, but can be overwritten in each
+individual config if needed.</p>
+<p>It contains a <code>year</code> and <code>name</code> key. Both those keys can be used for
+faceting.</p>
+<pre><code class="hljs language-json">{
+  <span class="hljs-attr">"conference"</span>: {
+    <span class="hljs-attr">"year"</span>: <span class="hljs-number">2012</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"dotJS"</span>
+  }
+}
+</code></pre>
+<h2 id="speakers">speakers <a class="anchor" href="#speakers" aria-hidden="true"></a></h2>
+<p>The <code>speakers</code> key contains the list of identified speakers in the video. Note
+that YouTube does not provide this information so we fallback to some NLP on the
+video titles, but this might not be 100% accurate.</p>
+<p>If your video titles contain the speaker name, it can be extracted from there
+instead, which yields much better results (but requires all your titles to
+follow the same pattern).</p>
+<pre><code class="hljs language-json">{
+  <span class="hljs-attr">"speakers"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Fat"</span>
+    }
+  ]
+}
+</code></pre>
+<h2 id="objectid">objectId <a class="anchor" href="#objectid" aria-hidden="true"></a></h2>
+<p>The <code>objectID</code> contains a unique identifier for each record, used internally for
+indexing. You shouldn't have to worry about this one.</p>
+<h2 id="dynamic-highlighting">Dynamic highlighting <a class="anchor" href="#dynamic-highlighting" aria-hidden="true"></a></h2>
+<p>All search results are returned with a key called <a href="https://www.algolia.com/doc/guides/searching/highlighting-snippeting/?language=php#response-information">_highlightResult</a>. This
+key is dynamic and based on the input search keyword.</p>
+<p>It will contain highlighted versions of the matching elements in the response.
+For example, when searching for <code>source</code> in the above record, you can have the
+highlighted version of the title through <code>_highlightResult.video.title.value</code>.</p>
+<p>The matching words will be wrapped in <code>&lt;em&gt;</code> tags by default, but you can use
+any HTML tag through the use of <a href="https://www.algolia.com/doc/api-reference/api-parameters/highlightPreTag/">highlightPreTag</a> and <a href="https://www.algolia.com/doc/api-reference/api-parameters/highlightPostTag/">highlightPostTag</a>
+options.</p>
+</div></div></div><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script>docsearch({
+ apiKey: 'e3082526e1d5f37055241c335ab10f72',
+ indexName: 'talksearch',
+ inputSelector: '.custom-search-input',
+ debug: false 
+});</script></body><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N8JP8G');</script></head></html>
