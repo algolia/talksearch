@@ -1,26 +1,6 @@
 #!/usr/bin/env sh
 
-# Update develop
-git pull --rebase origin develop
-
-# Go to master
-git checkout master
-git pull --rebase origin master
-
-# Merge develop
-git rebase develop
-
-# Build
 yarn run build
 yarn run screenshots
-sleep 1;
 
-# Commit changes
-git commit -a -m "Build documentation website"
-
-# Push
-git push origin
-
-# Get back to develop
-git checkout develop
-git rebase master
+gh-pages -d docs
