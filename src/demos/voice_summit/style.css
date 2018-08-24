@@ -10,7 +10,7 @@
 }
 /* Caption highlight */
 .ats-hit--caption .ats-highlight {
-  @apply .text-yellow;
+  @apply .text-blue;
 }
 
 /* Years/Conference menu hover/active */
