@@ -42,7 +42,7 @@
     "glob": "^7.1.2",
     "husky": "^0.14.3",
     "inquirer": "^6.0.0",
-    "live-server": "^1.2.0",
+    "live-server": "1.2.1",
     "lodash": "^4.17.10",
     "markdown-it": "^8.4.1",
     "markdown-it-anchor": "^5.0.2",
