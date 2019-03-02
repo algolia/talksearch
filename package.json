@@ -49,7 +49,7 @@
     "markdown-it-highlightjs": "^3.0.0",
     "mkdirp": "^0.5.1",
     "normalize.css": "^8.0.0",
-    "p-all": "^1.0.0",
+    "p-all": "^2.0.0",
     "p-each-series": "^1.0.0",
     "p-map": "^1.2.0",
     "pify": "^3.0.0",
