@@ -28,8 +28,8 @@
       "title": "Back-end",
       "pages": [
         {
-          "title": "The crawler",
-          "url": "crawler.html"
+          "title": "The scraper",
+          "url": "scraper.html"
         },
         {
           "title": "Config files",

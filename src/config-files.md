@@ -53,7 +53,7 @@ config file.
 The `playlists` key contains an array of all playlist ids to index. We suggest
 adding comments after each playlist id to identify them.
 
-_Note that the crawler does not yet allow the indexing of channels or individual
+_Note that the scraper does not yet allow the indexing of channels or individual
 videos._
 
 ## blockList

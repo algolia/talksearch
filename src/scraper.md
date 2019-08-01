@@ -1,9 +1,9 @@
 ---
 layout: two-columns
-title: The Crawler
+title: The Scraper
 ---
 
-The crawler is a JavaScript application that will extract data from the YouTube
+The scraper is a JavaScript application that will extract data from the YouTube
 API and push it to Algolia.
 
 The whole code is available on [GitHub][1] but we also have it running on our

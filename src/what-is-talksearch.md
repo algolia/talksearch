@@ -3,17 +3,17 @@ layout: two-columns
 title: What is TalkSearch?
 ---
 
-The TalkSearch project is made of two main parts: a back-end crawler and
-a front-end library called TalkSearch.js. The crawler will extract data from
+The TalkSearch project is made of two main parts: a back-end scraper and
+a front-end library called TalkSearch.js. The scraper will extract data from
 YouTube while TalkSearch.js will help you build a front-end for it.
 
-## The crawler
+## The scraper
 
-The crawler is the main beast here. Its responsibility is to extract data from
+The scraper is the main beast here. Its responsibility is to extract data from
 YouTube playlists and push records to an Algolia index. We run it on our own
 infrastructure at regular intervals, to keep content fresh.
 
-The crawler is piloted through a set of config files. Each conference has its
+The scraper is piloted through a set of config files. Each conference has its
 own config file containing the list of playlists to crawl. Config files also
 contains other hooks that can be used to enrich the records.
 
@@ -23,12 +23,12 @@ JSON objects that we push to Algolia. Each config results are pushed to
 a different index, that can then be queried directly from the front-end,
 directly into your website. That's where TalkSearch.js comes into play.
 
-_Note that the [crawler code][1] is entirely open-source. You can run it on your
+_Note that the [scraper code][1] is entirely open-source. You can run it on your
 own if you'd like._
 
 ## TalkSearch.js
 
-TalkSearch.js is the front-end counterpart of the crawler. Now that all the data
+TalkSearch.js is the front-end counterpart of the scraper. Now that all the data
 is in an Algolia index, the job of TalkSearch.js is to help you display it in
 your website.
 
