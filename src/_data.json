@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "TalkSearch",
-    "description": "The easiest way to add search to your conference videos.",
+    "description": "Recording conference talks is valuable, but searching them for relevant info is a pain. Learn about TalkSearch, the easiest way to add search to your videos.",
     "url": "https://community.algolia.com/talksearch"
   },
   "config": {
