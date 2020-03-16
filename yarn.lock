@@ -2075,9 +2075,9 @@ from@~0:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/from/-/from-0.1.7.tgz#83c60afc58b9c56997007ed1a768b3ab303a44fe"
 
-front-matter@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/front-matter/-/front-matter-2.3.0.tgz#7203af896ce357ee04e2aa45169ea91ed7f67504"
+front-matter@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/front-matter/-/front-matter-3.0.0.tgz#3430337b55a91c7320710a7b68fdd6dc96d639bc"
   dependencies:
     js-yaml "^3.10.0"
 
