@@ -35,7 +35,7 @@
     "eslint-config-algolia": "^13.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "front-matter": "^2.3.0",
     "fs-extra": "^7.0.0",
     "gh-pages": "^1.2.0",
