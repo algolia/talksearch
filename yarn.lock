@@ -3464,11 +3464,10 @@ p-all@^1.0.0:
   dependencies:
     p-map "^1.0.0"
 
-p-each-series@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/p-each-series/-/p-each-series-1.0.0.tgz#930f3d12dd1f50e7434457a22cd6f04ac6ad7f71"
-  dependencies:
-    p-reduce "^1.0.0"
+p-each-series@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/p-each-series/-/p-each-series-2.0.0.tgz#25e3eb3c957210e34502a152033a4b8b42ba11ed"
+  integrity sha512-f8qYQeWdhR+o/80sRDEcJl/id24ri09iZwoVvnCoFwA4jKR6G8m/A8i1j87TVw8YiL3WP457fjKS/tmap7ALoQ==
 
 p-finally@^1.0.0:
   version "1.0.0"
@@ -3489,10 +3488,6 @@ p-locate@^2.0.0:
 p-map@^1.0.0, p-map@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
-
-p-reduce@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/p-reduce/-/p-reduce-1.0.0.tgz#18c2b0dd936a4690a529f8231f58a0fdb6a47dfa"
 
 p-try@^1.0.0:
   version "1.0.0"
