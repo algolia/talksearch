@@ -25,7 +25,7 @@
     "@fullhuman/postcss-purgecss": "^1.0.1",
     "autoprefixer": "^8.6.4",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^10.0.0",
     "babel-plugin-dynamic-import-node-sync": "^2.0.1",
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",
