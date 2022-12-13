@@ -1,5 +1,8 @@
 # TalkSearch
 
+> Algolia no longer supports TalkSearch, but its individual components can
+> be self-hosted by you to create the experience.
+
 TalkSearch is a free tool provided by Algolia, to help conference organizers
 showcase the awesome talks featured in their events.
 
